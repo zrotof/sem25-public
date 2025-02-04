@@ -1,0 +1,35 @@
+.agenda-details-container{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 11rem;
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-image: url("../../../../../assets/img/agenda/crowd-flag-hands.jpeg");
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(0deg, rgba(255,254,254,1) 7%, rgba(0,0,0,0.47522759103641454) 28%);
+    }
+
+    .content{
+        width: 100%;
+        z-index: 1;
+    }
+}

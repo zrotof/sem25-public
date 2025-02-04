@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+Canonical: https://amadou-ba.sn/
+Sitemap: https://amadou-ba.sn/sitemap.xml

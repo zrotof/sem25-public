@@ -1,0 +1,117 @@
+.pact-modal-style-class{
+    max-height: 100%;
+    background-color: white;
+
+    .p-dialog-header{
+        .p-dialog-header-icons{
+            button{
+                color: var(--project-background-black-color);
+                width: 3rem;
+                height: 3rem;
+                border: 1px solid var(--project-background-black-color);
+
+                &:hover{
+                    background-color: var(--project-primary-color) !important;
+                    color: white !important;
+                }
+            }
+        }
+
+        .p-dialog-content {
+            border-radius: 0 !important;
+        }
+    }
+}
+
+.home-pact-modal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        h1{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 50px;
+            span{
+                width: 100%;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+        }
+
+        p{
+            margin-bottom: 10px;
+            font-size: 17px;
+            line-height: 28px;
+        }
+
+        ol{
+            li{
+                line-height: 26px;
+            }
+        }
+
+        .signature{
+            margin-top: 35px;
+            align-self: flex-end;
+            p{
+                text-align: right;
+                font-size: 17px;
+
+                &:last-child{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 768px){
+    .pact-modal-style-class{
+        .p-dialog-header{
+            .p-dialog-header-icons{
+                button{
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+        }
+
+        .p-dialog-content{
+            padding: 0 0 10px 0;
+        }
+    }
+    
+    .home-pact-modal{
+    
+        .content {
+    
+            h1{
+                span{
+                    font-size: 1.7rem;
+                }
+            }
+    
+            p{
+                margin-bottom: 10px;
+                font-size: 16px;
+                line-height: 25px;
+            }
+    
+            .signature{
+                p{
+                    font-size: 16px;
+    
+                    &:last-child{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

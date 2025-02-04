@@ -1,0 +1,22 @@
+<div class="biography-bloc">
+    <div class="content my-container">
+        <div class="title">
+            <h2>MA BIOGRAPHIE</h2>
+            <P>Amadou Ba est un homme politique sénégalais et membre de l'Alliance pour la République. Il est né le 17 mai 1961 à Dakar. Il a obtenu son baccalauréat technique de gestion en 1980, une maîtrise en sciences économiques, option gestion des entreprises et un brevet de l'École nationale d'administration et de magistrature (ENAM), en section Impôts et Domaines. Il a été ministre de l'Économie et des Finances de 2013 à 2019, ministre des Affaires étrangères et des Sénégalais de l'extérieur de 2019 à 2020, puis Premier ministre du Sénégal depuis le 17 septembre 2022.</P>
+        </div>
+
+        <div class="biography-elements">
+            <ng-container *ngFor="let biography of biographyBlocs ; let i=index">
+                <div class="biography-element" [ngClass]="i%2 === 0 ? 'reverse' : ''">
+                    <div class="texts">
+                        <span>{{biography.date}}</span>
+                        <h3> {{biography.title}} </h3>
+                        <ng-container *ngFor="let text of biography.texts">
+                            <p>{{text.text}} </p>
+                        </ng-container>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>

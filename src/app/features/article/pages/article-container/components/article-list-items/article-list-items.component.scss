@@ -1,0 +1,37 @@
+.article-list-items{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+
+    .content{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+}
+
+@media all and (max-width: 768px){
+    .article-list-items{
+        .content{
+            gap: 2rem 1rem;
+        }
+    }
+}
+
+@media all and (max-width: 635px){
+    .article-list-items{
+        .content{
+            gap: 2rem 0.5rem;
+        }
+    }
+}
+
+@media all and (max-width: 402px){
+    .article-list-items{
+        .content{
+            justify-content: center;
+        }
+    }
+}

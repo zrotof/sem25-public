@@ -1,0 +1,22 @@
+<ng-container *ngIf="events && events.length > 10">
+    <div class="agenda-data-next" >
+        <h3>Prochaines Dates</h3>
+    
+        <div class="events">
+            <ng-container *ngFor="let event of events">
+                <div class="event" routerLink="/agenda/{{event.id}}">
+                    <img src={{event.coverImage}} alt={{event.title}}>
+                    <p> {{event.title}} </p>
+                    
+                    <div class="date">
+                        <span>{{getDayDate(event.date)}}</span>
+                        <span>{{getMonthDate(event.date)}}</span>
+                    </div>
+    
+                    <span class="event-type-name"> {{event.eventTypeName}} </span>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</ng-container>
+

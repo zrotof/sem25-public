@@ -1,0 +1,20 @@
+<div class="secondary-hero">
+    <img ngSrc={{hero.image}} fill priority alt={{hero.title}}>
+    <div class="content my-container">
+        <h1>{{hero.title}}</h1>
+        <div class="breadcrumb">
+            <ng-container *ngFor="let menu of hero.menus ; let i= index">
+                <ng-container *ngIf="i < hero.menus.length - 1 ; else notMenu">
+                    <div class="link-bloc">
+                        <fa-icon [icon]="menu.icon | convertStringLabelToFontawesomeIcon" *ngIf="menu.icon" ></fa-icon>
+                        <a routerLink={{menu.url}}> {{menu.label}} </a>
+                    </div>
+                    <span class="separator"> > </span>
+                </ng-container>
+                <ng-template #notMenu>
+                    <span> {{menu.label}} </span>
+                </ng-template>
+            </ng-container>
+        </div>
+    </div>
+</div>

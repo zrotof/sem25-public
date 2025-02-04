@@ -1,0 +1,35 @@
+<div class="live-video-player">
+    <div class="content my-container">
+        <ng-container *ngIf="isBrowser">
+            <div class="live-bloc">
+              <h1>Connectez-Vous En Temps Réel Avec Notre Candidat</h1>
+              <div class="live"  data-aos="fade-up" data-aos-duration="700">
+                <vg-player>
+                    <vg-overlay-play></vg-overlay-play>
+                    <vg-buffering></vg-buffering>
+                    <vg-scrub-bar>
+                      <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                      <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+                    </vg-scrub-bar>
+                    <vg-controls>
+                      <vg-play-pause></vg-play-pause>
+                      <vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar>
+                      <vg-mute></vg-mute>
+                      <vg-volume></vg-volume>
+                      <vg-fullscreen></vg-fullscreen>
+                    </vg-controls>
+                    <video  
+                      #media
+                      [vgMedia]="$any(media)"
+                      [vgHls]="liveStreamingLink"
+                      id="singleVideo"
+                      crossorigin
+                      >
+                    </video>
+                </vg-player>
+              </div>
+            </div>
+          </ng-container>
+    </div>
+</div>
+  

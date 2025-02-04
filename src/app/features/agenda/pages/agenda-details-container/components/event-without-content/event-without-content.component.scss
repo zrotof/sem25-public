@@ -1,0 +1,144 @@
+.event-without-content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    color: white;
+
+    h1{
+        width: 100%;
+        text-align: center;
+        font-size: 2.5rem;
+        max-width: 1000px;
+        margin-bottom: 20px;
+    }
+
+    .date{
+        position: relative;
+        padding-left: 25px;
+        &::before{
+            position: absolute;
+            content: "";
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: red;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    .share-bloc{
+        margin-top: 60px;
+        padding: 4rem 2rem;
+        max-width: 700px;
+        height: fit-content;
+        background-color: var(--project-primary-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 10px;
+
+        .pi-info{
+            font-size: 1.5rem;
+            border-radius: 50%;
+            color: var(--project-primary-color);
+            margin-bottom: 30px;
+            padding: 10px;
+            background-color: white;
+            font-weight: bold;
+        }
+
+        p{
+            text-align: center;
+        }
+
+        .sharing-ways{
+            display: flex;
+            flex-direction: column;
+            margin-top: 30px;
+            gap: 1rem;
+
+            button{
+                text-decoration: none;
+                width: 300px;
+                height: 45px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                border-radius: 5px;
+                border: none;
+                transition: all 0.2s ease-in-out;
+
+                &:hover{
+                    transform: scale(1.2);
+                }
+
+                i{
+                    font-size: 1.6rem;
+                    margin-right: 10px;
+                }
+
+                span{
+                    font-size: 16px;
+                }
+            }
+
+            .whatsapp{
+                background-color: #6dd568;
+            }
+
+            .facebook{
+                background-color: #3b5998;
+            }
+
+            .x{
+                background-color: black;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 425px){
+    .event-without-content{
+    
+        h1{
+            font-size: 2rem;
+        }
+    
+        .share-bloc{
+            margin-top: 50px;
+            padding: 2.5rem 1rem;
+    
+            .pi-info{
+                font-size: 1.2rem;
+                padding: 7px;
+            }
+    
+            .sharing-ways{
+                display: flex;
+                flex-direction: column;
+                margin-top: 30px;
+                gap: 1rem;
+    
+                button{
+                    width: 270px;
+    
+                    &:hover{
+                        transform: scale(1.2);
+                    }
+    
+                    i{
+                        font-size: 1.4rem;
+                    }
+    
+                    span{
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

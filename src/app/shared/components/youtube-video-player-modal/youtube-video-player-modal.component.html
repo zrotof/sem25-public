@@ -1,0 +1,12 @@
+<div class="youtube-video-player">
+    <button class="close-modal" (click)="closeModal(urlSafe)">
+        <i class="pi pi-times"></i>
+    </button>
+    <iframe 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen
+        [src]="urlSafe"
+    >
+    </iframe>
+</div>

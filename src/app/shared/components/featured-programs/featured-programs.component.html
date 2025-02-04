@@ -1,0 +1,38 @@
+<div class="featured-programs">
+    <div class="content my-container">
+        <h2>
+            <span>Les Quatre</span>
+            <span>Piliers de Notre Programme</span>
+        </h2>
+
+        <div class="description-action">
+            <p>Découvrez notre vision stratégique pour un avenir meilleur, basée sur quatre piliers solides qui guideront notre nation vers la prospérité.</p>
+            <button routerLink="/le-programme">
+                <span>Consulter Tout Le Programme</span>
+                <i class="pi pi-arrow-up-right"></i>
+            </button>
+        </div>
+
+        <div class="programs" data-aos="fade-up" data-aos-duration="1000">
+            <ng-container *ngFor="let program of programs; let i= index">
+                <div class="program">
+                    <span class="number"> 0{{i+1}}</span>
+                    <h3> {{program.title}} </h3>
+
+                    <p> {{program.description}} </p>
+                    <a>
+                        <i class="pi pi-arrow-right"></i>
+                        <span>EN SAVOIR PLUS</span>
+                    </a>
+
+                    <div class="message">
+                        <span>
+                            Le Programme Sera Disponible Prochainement !
+                        </span>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,65 @@
+<div class="navigation-small-screen">
+
+    <ul>
+        <li>
+            <a (click)=" onNavigationClicked()" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" routerLink="/">
+                Accueil
+            </a>
+        </li>
+        <li>
+            <a (click)=" onNavigationClicked()" routerLinkActive="active-link" routerLink="/le-candidat">
+                <span>Votre Candidat</span>
+            </a>
+        </li>
+        <li>
+            <a (click)=" onNavigationClicked()" routerLinkActive="active-link" routerLink="/le-programme">
+                <span>Le Programme</span>
+            </a>
+        </li>
+        <li>
+            <a (click)=" onNavigationClicked()" routerLinkActive="active-link" routerLink="articles">
+                <span>Actualité De Campagne</span>
+            </a>
+        </li>
+        <li>
+            <a (click)=" onNavigationClicked()" routerLinkActive="active-link" routerLink="agenda">
+                <span>Agenda De Campagne</span>
+            </a>
+        </li>
+        <li>
+            <a (click)=" onNavigationClicked()" routerLinkActive="active-link" routerLink="/lives">
+                <span>Live / Replays</span>
+            </a>
+        </li>
+        <li>
+            <a (click)=" onNavigationClicked()" routerLinkActive="active-link" routerLink="/devenir-ambassadeur-de-campagne">
+                <span>Ambassadeur De Campagne</span>
+            </a>
+        </li>
+<!--
+        <li>
+            <a (click)=" onNavigationClicked()" routerLinkActive="active-link" routerLink="/dons">
+                <span>Faire Un Don</span>
+            </a>
+        </li>
+-->
+        <li>
+            <a (click)=" onNavigationClicked()" routerLinkActive="active-link" routerLink="/contact">
+                <span>Nous Contacter</span>
+            </a>
+        </li>
+        
+    </ul>
+    
+    <div class="networks-bloc">
+        <p>Suivez votre candidat sur</p>
+        <div class="networks">
+            <ng-container *ngFor="let network of networks">
+                <a href={{network.link}} target="_blank">
+                    <img src={{network.sourceImg}} alt={{network.name}}>
+                </a>
+            </ng-container>
+        </div>
+    </div>
+
+</div>

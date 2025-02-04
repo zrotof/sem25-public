@@ -1,0 +1,90 @@
+.agenda-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    app-secondary-hero{
+        width: 100%;
+    }
+
+    .content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 5rem;
+
+        h2{
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            color: var(--project-primary-color);
+        }
+    
+        p{
+            color: var(--project-background-black-color);
+            line-height: 23px;
+        }
+
+        .datas{
+            display: flex;
+            width: center;
+            justify-content: space-between;
+            margin-top: 50px;
+
+            .left{
+                width: 100%;
+            }
+
+        }
+    }
+}
+
+@media all and (max-width: 1024px){
+    .agenda-container{
+        .content{
+            margin-top: 4rem;
+    
+            h2{
+                font-size: 2.1rem;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 900px){
+    .agenda-container{
+        .content{
+            margin-top: 4rem;
+    
+            h2{
+                font-size: 2rem;
+            }
+    
+            .datas{
+                flex-direction: column-reverse;
+
+                .left{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 425px){
+    .agenda-container{
+        .content{    
+            margin-top: 3rem;
+
+            h2{
+                font-size: 1.8rem;
+                text-align: center;
+            }
+
+            p{
+                font-size: 15px;
+                text-align: center;
+            }
+        }
+    }
+}

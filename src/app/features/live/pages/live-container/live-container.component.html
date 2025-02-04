@@ -1,0 +1,6 @@
+<div class="live-container">
+    <app-live-video-player [liveStreamingLink]="liveStreamingLink"></app-live-video-player>
+    <app-replay-menu-list (replayMenuItemClikedEvent)="getYoutubeVideoListByReplayId($event)" [replayMenuList]="(menusList$ | async)!"></app-replay-menu-list>
+    <app-video-list [videoList]="(videoList$ | async)!" (videoClicked)="onOpenYoutubeVideo($event)"></app-video-list>
+    <app-ambassador-banner [ambassadorBanner]="ambassadorBanner"></app-ambassador-banner>
+</div>

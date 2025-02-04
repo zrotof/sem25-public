@@ -1,0 +1,281 @@
+.home-pact{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 6rem;
+    height: 45rem;
+
+    .content{
+        display : flex;
+        width: 100%;
+        align-items: flex-start;
+
+        .texts{
+            display: flex;
+            flex-direction: column;
+            color: var(--project-background-black-color);
+            padding-right: 4rem;
+            height: 100%;
+            width: 50%;
+            justify-content: space-between;
+    
+            .pact-text{
+                height: 40rem;
+
+                h4{
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 2rem;
+                    margin-bottom: 2.5rem;
+                    line-height: 2.8rem;
+                }
+        
+                .data{
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 13;
+                    overflow: hidden;
+                }
+                p{
+                    line-height: 26px;
+                    margin-bottom: 10px;
+                    font-size: 17px;
+                }
+            }
+    
+            button{
+                display: flex;
+                align-items: center;
+                padding: 10px 20px;
+                color: var(--project-background-black-color);
+                background-color: white;
+                border: none;
+                width: fit-content;
+                border-radius: 5px;
+                border: 2px solid var(--project-background-black-color);
+                cursor: pointer;
+
+                &:hover{
+
+                    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;                         
+                    
+                    i{    
+                            transform: rotate(45deg);
+                    }
+                }
+
+                span{
+                    font-size: 1rem;
+                }
+
+                i{
+                    margin-left: 7px;
+                    font-size: 1.2rem;
+                    transition: all 0.2s ease-out;
+                }
+            }
+        }
+
+        .image{
+            background-image: url('../../../../../../../assets/img/home/pact/background.jpeg');
+            background-position: top;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 50%;
+            height: 100%;
+            position: relative;
+
+            button{
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                background-color: #ffffff9b;
+                border: none;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                transition: all 0.3s ease-in-out;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: var(--project-primary-color);
+                    fa-icon{
+                        color: white;
+                    }
+                }
+
+                fa-icon{
+                    font-size: 3rem;
+                    color: var(--project-primary-color);
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 1227px){
+    .home-pact{
+        .content{
+            .texts{
+                .pact-text{
+            
+                    h4{
+                        margin-bottom: 1.7rem;
+                    }
+
+                    .data{
+                        -webkit-line-clamp: 12;
+                    }
+                    p{
+                        line-height: 25px;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 1130px){
+    .home-pact{
+        .content{
+            .texts{
+                .pact-text{
+            
+                    h4{
+                        margin-bottom: 1.6rem;
+                    }
+
+                    .data{
+                        -webkit-line-clamp: 11;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 1003px){
+    .home-pact{
+        height: 39rem;
+        .content{
+            .texts{
+                padding-right: 3rem;
+                .pact-text{
+            
+                    h4{
+                        font-size: 1.5rem;
+                        margin-bottom: 1.4rem;
+                        line-height: 2.3rem;
+                    }
+
+                    .data{
+                        -webkit-line-clamp: 11;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 1003px){
+    .home-pact{
+        height: 39rem;
+        .content{
+            .texts{
+                padding-right: 3rem;
+                .pact-text{
+            
+                    h4{
+                        font-size: 1.5rem;
+                        margin-bottom: 1.4rem;
+                        line-height: 2.3rem;
+                    }
+
+                    .data{
+                        -webkit-line-clamp: 11;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media all and (max-width: 810px){
+    .home-pact{
+        height: fit-content;
+        .content{
+            flex-direction: column;
+            .texts{
+                padding-right: 0;
+                width: 100%;
+                height: fit-content;
+                .pact-text{
+                    height: fit-content;
+
+                    h4{
+                        font-size: 1.5rem;
+                        margin-bottom: 1.4rem;
+                        line-height: 2.3rem;
+                    }
+
+                    .data{
+                        -webkit-line-clamp: 10;
+                    }
+                }
+
+                button{
+                    margin-top: 40px;
+                }
+            }
+
+            .image{
+                width: 100%;
+                height: 30rem;
+                margin-top: 50px;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 425px){
+    .home-pact{
+        margin-top: 4rem;
+        .content{
+            .texts{
+                width: 100%;
+                height: fit-content;
+                align-items: center;
+
+                .pact-text{
+                    height: fit-content;
+
+                    h4{
+                        text-align: center;
+                        font-size: 1.7rem;
+                        line-height: 30px;
+                    }
+
+                    .data{
+                        -webkit-line-clamp: 10;
+                        p{
+                            text-align: center;
+                        }
+                    }
+                }
+
+                button{
+                    margin-top: 30px;
+                    font-size: 15px;
+                }
+            }
+
+            .image{
+                height: 25rem;
+                margin-top: 40px;
+            }
+        }
+    }
+}

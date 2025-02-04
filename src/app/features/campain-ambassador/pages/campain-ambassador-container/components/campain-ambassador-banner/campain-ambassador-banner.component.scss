@@ -1,0 +1,290 @@
+.campain-ambassador-banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10rem;
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+
+        .hero{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+
+            .texts{
+                display: flex;
+                flex-direction: column;
+                width: calc(100% - 550px);
+    
+                h1{
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 2.6rem;
+                    margin-bottom: 40px;
+                    font-weight: bold;
+                }
+    
+                .ambassador-numer{
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 10px;
+                    position: relative;
+                    padding-left: 15px;
+    
+                    &::before{
+                        top: 0;
+                        left: 0;
+                        content: "";
+                        position: absolute;
+                        width: 5px;
+                        height: 100%;
+                        background-color: var(--project-primary-color);
+                        border-radius: 10px;
+                    }
+    
+                    span{
+                        &:first-child{
+                            font-weight: 900;
+                            font-size: 2.5rem;
+                            margin-bottom: 5px;
+                        }
+    
+                        &:last-child{
+                            font-size: 15px;
+                        }
+                    }
+                }
+
+                button{
+                    display: flex;
+                    align-items: center;
+                    padding: 10px 25px;
+                    color: black;
+                    background-color: white;
+                    border: 2px solid black;
+                    width: fit-content;
+                    cursor: pointer;
+                    margin-top: 30px;
+
+                    &:hover{
+    
+                        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;                         
+                        
+                        i{    
+                                transform: rotate(45deg);
+                        }
+                    }
+
+                    span{
+                        font-size: 1rem;
+                    }
+    
+                    i{
+                        margin-left: 7px;
+                        font-size: 1.2rem;
+                        transition: all 0.2s ease-out;
+                    }
+                }
+            }
+
+            img{
+                width: 500px;
+                height: 500px;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 20px 20px 0 0;
+            }
+        }
+
+        .intro{
+            text-align: center;
+            width : 100%;
+            margin-top: 97px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h2{
+                max-width: 880px;
+                margin-bottom: 50px;
+                font-size: 1.8rem;
+            }
+
+            p{
+                max-width: 1130px;
+                line-height: 23px;
+                font-size: 17px;
+
+            }
+        }
+        
+    }
+}
+
+@media all and (max-width: 1024px){
+    .campain-ambassador-banner{
+        padding-top: 8rem;
+    
+        .content{
+            .hero{
+                .texts{
+                    width: 400px;
+        
+                    h1{
+                        font-size: 2.4rem;
+                        margin-bottom: 30px;
+                    }
+        
+                    .ambassador-numer{
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: 10px;
+                        position: relative;
+                        padding-left: 15px;
+        
+                        &::before{
+                            top: 0;
+                            left: 0;
+                            content: "";
+                            position: absolute;
+                            width: 5px;
+                            height: 100%;
+                            background-color: var(--project-primary-color);
+                            border-radius: 10px;
+                        }
+        
+                        span{
+                            &:first-child{
+                                font-weight: 500;
+                                font-size: 1.8rem;
+                                margin-bottom: 5px;
+                            }
+        
+                            &:last-child{
+                                font-size: 15px;
+                            }
+                        }
+                    }
+    
+                    button{
+                        display: flex;
+                        align-items: center;
+                        padding: 10px 25px;
+                        color: black;
+                        background-color: white;
+                        border: 2px solid black;
+                        width: fit-content;
+                        cursor: pointer;
+                        margin-top: 30px;
+    
+                        &:hover{
+        
+                            box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;                         
+                            
+                            i{    
+                                    transform: rotate(45deg);
+                            }
+                        }
+    
+                        span{
+                            font-size: 1rem;
+                        }
+        
+                        i{
+                            margin-left: 7px;
+                            font-size: 1.2rem;
+                            transition: all 0.2s ease-out;
+                        }
+                    }
+                }
+    
+                img{
+                    width: 400px;
+                    height: 400px;
+                }
+            }
+    
+            .intro{
+                h2{
+                    margin-bottom: 40px;
+                    font-size: 1.5rem;
+                }
+    
+                p{
+                    font-size: 15px;
+                }
+            }
+            
+        }
+    }   
+}
+
+@media all and (max-width: 850px){
+    .campain-ambassador-banner{    
+        .content{
+            .hero{
+                flex-direction: column;
+
+                .texts{
+                    width: 100%;
+                    align-items: center;
+                    margin-bottom: 30px;
+
+                    h1{
+                        font-size: 2.4rem;
+                        display: inline-block;
+                        width: 100%;
+                        text-align: center;
+
+                        span{
+                            &:first-child{
+                                margin-left: 0;
+                            }
+                            margin-left: 10px;
+                        }
+                    }
+                }
+    
+                img{
+                    max-width: 400px;
+                    width: 100%;
+                    height: 300px;
+                }
+            }
+        }
+    }   
+}
+
+@media all and (max-width: 425px){
+    .campain-ambassador-banner{    
+        .content{
+            .hero{
+                .texts{
+
+                    h1{
+                        font-size: 2rem;
+                        display: contents;
+
+                    }
+        
+                    .ambassador-numer{
+                        margin-top: 20px;
+                    }
+                }
+            }
+    
+            .intro{
+                margin-top: 3rem;
+                h2{
+                    font-size: 1.2rem;
+                }
+            }
+            
+        }
+    }   
+}

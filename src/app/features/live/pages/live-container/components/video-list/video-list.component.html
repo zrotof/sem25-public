@@ -1,0 +1,35 @@
+<div class="video-list">
+    <div class="content my-container">
+
+        <div class="videos">
+            <ng-container *ngFor="let video of videoList; let i=index">
+                <div 
+                    class="video" 
+                    [ngClass]="video.isActive ? 'active-video' : ''"
+                    (click)="emitYoutubeVideoClickedEvent(video.link, i)"
+                >
+                    <div class="top">
+                        <img src={{video.image}} alt={{video.image}}>
+                        <div class="youtube-play-icon">
+                            <i class="pi pi-caret-right"></i>
+                        </div>
+                        <div class="youtube-duration">
+                            <small> {{video.duration! | convertYoutubeTime}} </small>
+                        </div>
+                    </div>
+        
+                    <div class="bottom">
+                        <div class="youtube-statistics">
+                            <small> {{video.viewCount | number}} Vues</small>
+                            <small> {{video.likeCount | number}} Likes </small>
+                        </div>
+                        
+                        <p> {{video.title}} </p>
+                    </div>
+                </div>
+            
+            </ng-container>
+        </div>
+        
+    </div>
+</div>

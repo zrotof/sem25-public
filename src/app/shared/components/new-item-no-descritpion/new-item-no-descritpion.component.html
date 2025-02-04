@@ -1,0 +1,8 @@
+<div class="new-item-no-descritpion" routerLink="/articles/{{article.id}}">
+    <img src={{article.coverImage}} alt={{article.title}}>
+    <h4>{{article.title}}</h4>
+    <span> {{article.date | convertTimeZoneToDate}} </span>
+    <ng-container *ngIf="article.hasVideo">
+        <fa-icon [icon]="'faVideo' | convertStringLabelToFontawesomeIcon"></fa-icon>
+    </ng-container>
+</div>

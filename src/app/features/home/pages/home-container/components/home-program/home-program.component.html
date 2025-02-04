@@ -1,0 +1,32 @@
+<div class="home-program">
+    <div class="content my-container">
+        <div class="our-values">
+            <div class="texts">
+                <h2>Nos Engagements</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero eveniet dolore labore animi natus suscipit aliquid aut repellendus fuga, ipsa sequi ipsum quasi vitae quis pariatur in perspiciatis sint laborum!</p>
+                <button routerLink="/le-projet">Voir toutes nos propositions</button>
+            </div>
+            <ul>
+                @for (figth of figths; track $index) {
+                    <li>
+                        <div class="image-wrapper">
+                            <img src={{figth.image}} alt="Projet de société du purs : {{figth.title}}">
+                        </div>
+    
+                        <div class="top">
+                            <h3>{{figth.title}}</h3>
+                            <p>
+                                {{figth.text}}
+                            </p>
+                        </div>
+                        
+                        <a routerLink={{figth.link}}> 
+                            <i class="pi pi-arrow-right"></i> 
+                            <span>Lire plus</span>
+                        </a>
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,91 @@
+<div class="contact-form">
+    <div class="content my-container">
+
+        <div class="texts-form">
+            <div class="texts">
+                <h3>N'hésitez Pas À Nous Contacter</h3>
+                <p>Vous pouvez nous joindre à tout moment pour tout savoir sur notre campagne électorale ! Utiliser l'un des moyens parmis ceux proposés.</p>
+                <div class="contact-ways">
+                    <ng-container *ngFor="let contactWay of contactWays">
+                        <div class="contact-way">
+                            <fa-icon [icon]="contactWay.icon | convertStringLabelToFontawesomeIcon"></fa-icon>
+                            <div class="infos">
+                                <p> {{contactWay.label}} </p>
+                                <p> {{contactWay.info}} </p>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+                <div class="networks-bloc">
+                    <span>Nos Réseaux Sociaux</span>
+                    <div class="networks">
+                        <ng-container *ngFor="let socialMedia of networks">
+                            <div class="network">
+                                <img src={{socialMedia.sourceImg}} alt={{socialMedia.name}}>
+                            </div>
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
+
+            <form [formGroup]="contactForm" (submit)="onContactForm()">
+
+                <div class="row-two">
+                    <div class="input-bloc">
+                        <label>Nom(s)</label>
+                        <input formControlName="lastname" type="text" placeholder="Entrez votre nom">
+                        <small *ngIf="formControls['lastname'].invalid && isFormSubmitted " class="error-feedback">nom(s) manquant(s)</small>
+            
+                    </div>
+                    <div class="input-bloc">
+                        <label>Prénom(s)</label>
+                        <input formControlName="firstname" type="text" placeholder="Entrez votre prénom">
+                        <small *ngIf="formControls['firstname'].invalid && isFormSubmitted " class="error-feedback">Prénom(s) manquant(s)</small>
+                    </div>
+                </div>
+
+                <div class="row-two">
+                    <div class="input-bloc">
+                        <label>Email</label>
+                        <input formControlName="email" type="email" placeholder="Entrez votre email">
+                        <small *ngIf="formControls['email'].invalid && isFormSubmitted " class="error-feedback">Email manquant</small>
+            
+                    </div>
+                    <div class="input-bloc">
+                        <label>Ville(optionnel)</label>
+                        <input formControlName="town" type="text" placeholder="Entrez votre ville">
+                    </div>
+                </div>
+
+                <div class="row-one">
+                    <div class="input-bloc">
+                        <label>Objet</label>
+                        <input formControlName="object" type="text" placeholder="Entrez l'objet du message">
+                        <small *ngIf="formControls['object'].invalid && isFormSubmitted " class="error-feedback">Objet du message manquant</small>
+                    </div>
+                </div>
+
+                <div class="row-one">
+                    <div class="input-bloc">
+                        <label>Message</label>
+                        <textarea formControlName="message" placeholder="Entrez votre message ici"></textarea>
+                        <div *ngIf="formControls['message'].errors && isFormSubmitted" class="error-feedback">
+                            <small *ngIf="formControls['message'].errors['minlength']">Votre message est trop court</small>
+                            <small *ngIf="formControls['message'].errors['required']">Veuille rensegner votre message</small>
+                        </div> 
+                    </div>
+                </div>
+
+                <button type="submit" >
+                    <ng-container *ngIf="isContactFormSubmittedAndNotErrorOnClientSide; else defaultText">
+                        <p-progressSpinner [style]="{width: '20px', height: '20px'}" strokeWidth="8"></p-progressSpinner>
+                    </ng-container>
+                </button>
+
+            </form>
+
+            <ng-template #defaultText>Envoyer</ng-template>
+            <p-toast  [styleClass]="'custom-toast'" position="top-right"></p-toast>     
+        </div>
+    </div>
+</div>

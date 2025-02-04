@@ -1,0 +1,10 @@
+<div class="agenda-details-container">
+    <div class="content my-container">
+        <ng-container *ngIf="(data$ | async)?.isArticleAssociated; else noContent">
+            <app-event-with-content [data]="(data$ | async)!"></app-event-with-content>
+        </ng-container>
+        <ng-template #noContent>
+            <app-event-without-content [data]="(data$ | async)!"></app-event-without-content>
+        </ng-template>
+    </div>
+</div>

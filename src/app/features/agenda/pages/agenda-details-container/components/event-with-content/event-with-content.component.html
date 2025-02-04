@@ -1,0 +1,38 @@
+    @if (data) {
+        <div class="event-with-content">
+            <h1> {{data.title}}</h1>
+            <span class="date"> {{getFormatedDate(data.date, data.hour)}} </span>
+        
+            <div class="datas-share-bloc">
+                <div class="datas-bloc">
+                    <div class="media">
+                        @if (!data.hasVideo) {
+                            <img src={{data.coverImage}} alt={{data.title}}>
+                        }
+                        @else {
+                            <app-article-video-player [link]="(data.videoLink)!"></app-article-video-player>
+                        }
+                    </div>
+                
+                    <div class="data" [innerHtml]="data.content"></div>
+                </div>
+                <div class="share-bloc">
+                    <div class="sharing-ways">
+                        <button class="whatsapp" (click)="onShareOnSocialMedia('whatsapp')">
+                            <i class="pi pi-whatsapp"></i> 
+                            <span>Partager sur Whatsapp</span>
+                        </button>
+                        <button class="facebook" (click)="onShareOnSocialMedia('facebook')" >
+                            <i class="pi pi-facebook"></i> 
+                            <span>Partager sur Facebook</span>
+                        </button>
+                        <button class="x" (click)="onShareOnSocialMedia('x')"> 
+                            <i class="pi pi-twitter"></i> 
+                            <span>Partager sur X</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    }

@@ -1,0 +1,186 @@
+.home-last-news{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 6rem;
+    color: var(--project-background-black-color);
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border-radius: 10px;
+        position: relative;
+
+        h2{
+            margin-bottom: 50px;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+
+            span{
+                &:first-child{
+                    -webkit-text-stroke: 2px var(--project-primary-color);
+                    color: transparent;
+                    font-size: 2rem;
+                }
+
+                &:last-child{
+                    font-size: 2.5rem;
+                    color: var(--project-primary-color);
+                }
+            }
+            
+        }
+
+        p{
+            font-size: 17px;
+            line-height: 23px;
+            font-weight: 100;
+            text-align: center;
+            max-width: 1000px;
+            margin: auto;
+            margin-bottom: 50px;
+        }
+
+        .navigation{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            position: absolute;
+            z-index: 9;
+            left: 0;
+            bottom: 245px;
+            padding: 0 20px;
+
+            button{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background-color: #00000087;
+                border: none;
+                color: white;
+                cursor: pointer;
+                transition : all 0.2s ease-in-out;
+
+                &:hover {
+                    background-color: var(--project-primary-color);
+                    color: white;
+                }
+
+                .pi {
+                    font-weight: bold;
+                    font-size: 1.1rem;
+                    pointer-events: none;
+                    z-index: -2;
+                }
+            }
+        }
+
+        .custom-carousel{
+            .p-carousel-content{
+
+                .p-carousel-container{
+                    button{
+                        display: none;
+                    }
+
+                    .p-carousel-item{
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+
+                .p-carousel-indicators{
+                    .p-carousel-indicator{
+                        button{
+                            width: 17px;
+                            height: 17px;
+                            margin-right: 5px;
+                            border-radius : 100px;
+                            background-color : transparent;
+                            cursor: pointer;
+                            border: 1px solid var(--project-background-black-color); 
+                            box-shadow: #0000002c 0px 3px 6px;
+                        }
+                    }
+
+                    .p-highlight{
+                        button{
+                            border: 1px solid var(--project-primary-color); 
+                            background-color : var(--project-primary-color);
+                            cursor: unset;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 1024px){
+    .home-last-news{
+        .content{
+            h2{
+                margin-bottom: 40px;
+    
+                span{
+                    &:first-child{
+                        font-size: 2.2rem;
+                    }
+    
+                    &:last-child{
+                        font-size: 2.2rem;
+                    }
+                }
+            }
+    
+            p{
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 768px){
+    .home-last-news{
+        .content{
+            h2{    
+                span{
+                    &:first-child{
+                        font-size: 2rem;
+                    }
+    
+                    &:last-child{
+                        font-size: 2rem;
+                    }
+                }
+            }
+
+            .navigation{
+                display: none;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 425px){
+    .home-last-news{
+        margin-top: 3rem;
+        .content{
+            h2{    
+                margin-bottom: 25px;
+                span{
+                    &:first-child{
+                        font-size: 1.7rem;
+                    }
+    
+                    &:last-child{
+                        font-size: 1.7rem;
+                    }
+                }
+            }
+        }
+    }
+}

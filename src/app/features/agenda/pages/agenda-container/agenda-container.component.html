@@ -1,0 +1,14 @@
+<div class="agenda-container">
+    <app-secondary-hero [hero]="secondaryHeroBannerData$ | async"></app-secondary-hero>
+    <div class="content my-container">
+        <h2>Cheminons Ensemble Durant La Campagne</h2>
+        <p>Ne manquez aucun évènement ( meeting, interviews, débats télévisés, ...) de votre candidat Amadou BÂ. Retrouvez l'ensemble de son agenda de campagne et suivez de très près sa marche vers la voie de la victoire !</p>
+        <div class="datas">
+            <div class="left">
+                <app-agenda-menu-items [menuList]="(menus$ | async)!" (menuItemClikedEvent)="getEventsByEventTypeId($event)"></app-agenda-menu-items>
+                <app-agenda-data-list [events]="(eventsByEventTypes$ | async)!"></app-agenda-data-list>
+            </div>
+            <app-agenda-data-next [events]="(nextEvents$ | async)!"></app-agenda-data-next>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,159 @@
+.program-bloc{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 7rem 0;
+
+    .content{
+        display: flex;
+        align-items: center;
+
+        width: 100%;
+        gap: 5rem;
+
+        .texts{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            h2{
+                color: var(--project-primary-color);
+                margin-bottom: 30px;
+                font-size: 2.5rem;
+            }
+
+            p{
+                line-height: 23px;
+                font-size: 15px;
+                margin-bottom: 10px;
+
+                span{
+                    color: var(--project-primary-color);
+                }
+            }
+
+            .buttons{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+                margin-top: 30px;
+
+                a{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 0.7rem;
+                    font-size: 15px;
+                    transition: all 0.2s ease-in-out;
+                    text-decoration: none;
+                    width: 270px;
+                    height: 42px;
+                }
+
+                .download{
+                    background-color: var(--project-primary-color);
+                    color: white;
+                    border: 2px solid transparent;
+                    cursor: pointer;
+
+                    &:hover{
+                        background-color: var(--project-secondary-color);
+                        color: var(--project-primary-color);
+                        border: 2px solid var(--project-primary-color);
+                    }
+                }
+
+                .view{
+                    background-color: transparent;
+                    color: var(--project-background-black-color);
+                    border: 2px solid var(--project-background-black-color);
+                    cursor: pointer;
+
+                    &:hover{
+                        background-color: var(--project-background-black-color);
+                        color: white;
+                        border: 2px solid var(--project-background-black-color);
+                    }
+                }
+            }
+        }
+
+        img{
+            width: 500px;
+        }
+    }
+}
+
+@media all and (max-width: 1024px){
+    .program-bloc{
+        .content{
+            .texts{
+                h2{
+                    font-size: 2.3rem;
+                }
+            }
+    
+            img{
+                width: 400px;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 900px){
+    .program-bloc{
+        .content{
+            flex-direction: column;
+
+            .texts{
+                h2{
+                    font-size: 2.3rem;
+                    text-align: center;
+                }
+
+                p{
+                    text-align: center;
+                }
+
+                .buttons{
+                    justify-content: center;
+                }
+            }
+    
+            img{
+                width: 100%;
+                max-width: 500px;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 505px){
+    .program-bloc{
+        margin: 6rem 0;
+
+        .content{
+            flex-direction: column;
+
+            .texts{
+                h2{
+                    font-size: 1.7rem;
+                    text-align: center;
+                }
+
+                p{
+                    text-align: center;
+                }
+
+                .buttons{
+                    justify-content: center;
+                }
+            }
+    
+            img{
+                width: 100%;
+                max-width: 500px;
+            }
+        }
+    }
+}

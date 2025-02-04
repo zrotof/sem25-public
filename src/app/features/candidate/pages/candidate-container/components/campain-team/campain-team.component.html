@@ -1,0 +1,32 @@
+<div class="campain-team">
+    <div class="content my-container">
+        <div class="title">
+            <h2>Mon Équipe de Campagne</h2>
+            <P>Nous vous présentons les membres de notre équipe de campagne, et nous voulons vous donner un aperçu de leur travail acharné pour atteindre nos objectifs. Nous sommes une équipe passionnée et déterminée à faire la différence.</P>
+        </div>
+
+        <div class="team-members">
+            <ng-container *ngFor="let member of teamMembers">
+                <div class="member">
+                    <div class="image-container">
+                        <div class="flag-part green"></div>
+                        <div class="flag-part yellow"></div>
+                        <div class="flag-part red"></div>
+                        <img src={{member.sourceImg}} alt={{member.name}}>
+                    </div>
+    
+                    <div class="texts">
+                        <h3> {{member.name}} </h3>
+                        <p> {{member.position}} </p>
+                        <div class="networks" *ngIf="member.networks">
+                            <ng-container *ngFor="let network of member.networks">
+                                <div class="network"></div>
+                            </ng-container>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+</div>
+    

@@ -1,0 +1,5 @@
+<div class="article-container">
+    <app-secondary-hero [hero]="secondaryHeroBannerData$ | async"></app-secondary-hero>
+    <app-article-list-menu [targetMenuId]="activatedMenuId" [menuList]="(blogMenuList$ | async)!" (menuItemClikedEvent)="getBlogArticleList($event)"></app-article-list-menu>
+    <app-article-list-items [articles]="(blogItemList$ | async)!"></app-article-list-items>
+</div>

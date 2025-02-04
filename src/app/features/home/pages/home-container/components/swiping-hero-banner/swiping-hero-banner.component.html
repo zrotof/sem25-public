@@ -1,0 +1,105 @@
+<swiper-container #swiperRef appHeroSwiper [config]="config" init="false">
+    <swiper-slide >
+        <div class="my-slide first-slide">
+            <img ngSrc="../../../../../../../assets/img/hero-banner/main/walking.webp" fill priority alt="">
+            <div class="text-bloc my-container">
+                <div class="text">
+<!--
+                    <div class="teasing">
+                        <p>Votez Pour</p>
+                        <p>Le Meilleur Candidat</p>
+                    </div>
+-->
+                    <h1 data-aos="fade-down" data-aos-duration="1000">Amadou BÂ</h1>
+
+                    <button routerLink="/le-programme" data-aos="fade-up" data-aos-duration="1000">
+                        <span>Mon Programme</span>
+                        <i class="pi pi-arrow-up-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </swiper-slide>
+    <swiper-slide>
+        <div class="my-slide second-slide">
+            <img ngSrc="../../../../../../../assets/img/hero-banner/main/amoudou-with-crowd.jpeg" fill priority alt="">
+            <div class="text-bloc my-container">
+                <div class="text">
+<!--
+                    <div class="teasing">
+                        <p>Votez Pour</p>
+                        <p>Le Meilleur Candidat</p>
+                    </div>
+-->
+                    <h1>Amadou BÂ</h1>
+
+                    <button routerLink="/le-candidat">
+                        <span>Ma Biographie</span>
+                        <i class="pi pi-arrow-up-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </swiper-slide>
+    <swiper-slide>
+        <div class="my-slide third-slide">
+            <img ngSrc="../../../../../../../assets/img/hero-banner/main/sport.jpeg" fill alt="">
+            <div class="text-bloc my-container">
+                <div class="text">
+<!--                   
+                    <div class="teasing">
+                        <p>Votez Pour</p>
+                        <p>Le Meilleur Candidat</p>
+                    </div>
+--> 
+                    <h1>Amadou BÂ</h1>
+
+                    <button routerLink="/articles">
+                        <span>Dernières Actualités</span>
+                        <i class="pi pi-arrow-up-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </swiper-slide>
+    <swiper-slide>
+        <div class="my-slide fourth-slide">
+            <img ngSrc="../../../../../../../assets/img/hero-banner/main/amadou-people-hands.jpeg" fill alt="">
+
+            <div class="text-bloc my-container">
+                <div class="text">
+<!--                   
+                    <div class="teasing">
+                        <p>Votez Pour</p>
+                        <p>Le Meilleur Candidat</p>
+                    </div>
+--> 
+                    <h1>Amadou BÂ</h1>
+
+                    <button routerLink="/agenda">
+                        <span>Agenda De Campage</span>
+                        <i class="pi pi-arrow-up-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </swiper-slide>
+</swiper-container>
+
+
+<div class="custom-controls">
+    <div class="controls my-container">
+
+        <div class="swiper-pagination"></div>
+        
+        <div class="navigation">
+            <button class="prev" (click)="onNavigationEvent(-1)">
+                <i class="pi pi-arrow-left"></i>
+            </button>
+        
+            <button class="next" (click)="onNavigationEvent(1)">
+                <i class="pi pi-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+</div>

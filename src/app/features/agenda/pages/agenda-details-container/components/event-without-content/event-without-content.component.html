@@ -1,0 +1,29 @@
+@if (data) {
+<div class="event-without-content">
+  <h1>{{ data.title }}</h1>
+  <span class="date"> {{ getFormatedDate(data.date, data.hour) }} </span>
+
+  <div class="share-bloc">
+    <i class="pi pi-info"></i>
+    <p>
+      Cet évènement n'a pas encore eu lieu, mais vous pouvez déjà le partager
+      sur vos réseaux par les moyens ci-après.
+    </p>
+
+    <div class="sharing-ways">
+      <button class="whatsapp" (click)="onShareOnSocialMedia('whatsapp')">
+        <i class="pi pi-whatsapp"></i>
+        <span>Partager sur Whatsapp</span>
+      </button>
+      <button class="facebook" (click)="onShareOnSocialMedia('facebook')">
+        <i class="pi pi-facebook"></i>
+        <span>Partager sur Facebook</span>
+      </button>
+      <button class="x" (click)="onShareOnSocialMedia('x')">
+        <i class="pi pi-twitter"></i>
+        <span>Partager sur X</span>
+      </button>
+    </div>
+  </div>
+</div>
+}

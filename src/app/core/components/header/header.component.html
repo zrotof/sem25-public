@@ -1,0 +1,85 @@
+<header #header>
+  <div class="content header-container">
+    <a class="logo" routerLink="">S.E.M 2025</a>
+    <nav>
+      <ul>
+        <li>
+          <a
+            rel="canonical"
+            routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{ exact: true }"
+            routerLink="/le-candidat"
+            >Le Candidat</a
+          >
+        </li>
+        <li>
+          <a
+            rel="canonical"
+            routerLinkActive="active-link"
+            routerLink="/le-programme"
+            >Le Programme</a
+          >
+        </li>
+        <li>
+          <a
+            rel="canonical"
+            routerLinkActive="active-link"
+            routerLink="/articles"
+            >Actualités</a
+          >
+        </li>
+        <li>
+          <a
+            rel="canonical"
+            routerLinkActive="active-link"
+            routerLink="/agenda"
+          >
+            Agenda
+          </a>
+        </li>
+
+        <li>
+          <a rel="canonical" routerLinkActive="active-link" routerLink="/lives">
+            Live</a
+          >
+          <!--
+                    <div [ngClass]="onLive ? 'online':'offline'" class="live-sign"></div>
+-->
+        </li>
+      </ul>
+      <button (click)="menu.toggle($event)" class="get-involved">
+        S'impliquer <i class="pi pi-angle-down"></i>
+      </button>
+      <p-menu
+        #menu
+        [model]="items"
+        styleClass="get-involved-menu"
+        [popup]="true"
+      ></p-menu>
+    </nav>
+
+    <div
+      class="burger"
+      [ngClass]="displayMenu === true ? 'show-cross' : ''"
+      (click)="onBurgerMenu()"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <p-dialog
+    [(visible)]="displayMenu"
+    position="right"
+    [draggable]="false"
+    [blockScroll]="true"
+    styleClass="nav-small-screen"
+    maskStyleClass="mask-nav-small-screen"
+  >
+    <app-nav-small-screen
+      (onNavigationOnSmallScreenEvent)="menuForSmallScreenHandler($event)"
+    >
+    </app-nav-small-screen>
+  </p-dialog>
+</header>

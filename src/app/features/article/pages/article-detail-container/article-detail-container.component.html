@@ -1,0 +1,7 @@
+<div class="article-detail">
+    <app-secondary-hero [hero]="secondaryHeroBannerData$ | async"></app-secondary-hero>
+    <div class="content my-container">
+        <app-article-data [data]="(articleData$ | async)!"></app-article-data>
+        <app-article-detail-side-block [blogCategories]="(blogCategories$ | async)!" [lastArticles]="(lastArticles$ | async)!"></app-article-detail-side-block>
+    </div>
+</div>

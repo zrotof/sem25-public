@@ -1,0 +1,32 @@
+<div class="article-side-block" *ngIf="lastArticles && blogCategories">
+    <div class="last">
+        <h4>Articles récents</h4>
+
+        <div class="articles">
+            <ng-container *ngFor="let article of lastArticles">
+                <div class="side-article" [routerLink]="['/articles/', article.id]">
+                    <img src={{article.coverImage}} alt="article.title">
+                    <div class="texts">
+                        <p> {{article.title}} </p>
+                        <p> 
+                            <fa-icon [icon]=" 'faCalendarDays' | convertStringLabelToFontawesomeIcon"></fa-icon>
+                            <span>{{article.date | convertTimeZoneToDate}} </span>
+                        </p>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    </div>
+
+    <div class="rubriques-bloc">
+        <h4>Rubriques</h4>
+
+        <div class="rubriques">
+            <ng-container *ngFor="let rubrique of blogCategories">
+                <button (click)="goToArticlesMenuList(rubrique.id)">
+                    {{rubrique.name}}
+                </button>
+            </ng-container>
+        </div>
+    </div>
+</div>
