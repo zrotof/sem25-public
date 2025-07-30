@@ -2,8 +2,11 @@
     <div class="content my-container">
         <div class="top">
             <div class="logo-networks-apps-blocs">
-                <img src="../../../../assets/img/header/logo.png" alt="Amadou Bâ 2024">
-                <p>Au service de la nation, Amadou Bâ est fier d'être candidat à l'élection présidentielle de 2024 au Sénégal. Avec une vision audacieuse pour l'avenir, il s'engage à apporter le changement positif dont notre pays a besoin. Ensemble, nous construirons une nation prospère, équitable et résiliante. Rejoignez-moi dans cette aventure pour un Sénégal meilleur pour tous.</p>
+                <img src="../../../../assets/img/header/logo-black.png" alt="Amadou Bâ 2024">
+                <p>Bâtissons ensemble un Cameroun libre, autonome et juste. Notre programme est fondé sur la
+                    souveraineté nationale, la refondation de l'État, une économie forte et une identité retrouvée
+                    pour tous les Camerounais.
+                </p>
                 <div class="networks">
                     <ng-container *ngFor="let network of networks">
                         <a href={{network.link}} target="_blank">
@@ -16,18 +19,18 @@
             <div class="inform">
                 <h3>S'informer</h3>
                 <ul>
-                   <ng-container *ngFor="let item of informLinks">
+                    <ng-container *ngFor="let item of informLinks">
                         <li routerLink={{item.link}}> {{item.label}} </li>
-                   </ng-container> 
+                    </ng-container>
                 </ul>
             </div>
 
             <div class="act">
                 <h3>Participer</h3>
                 <ul>
-                   <ng-container *ngFor="let item of actLinks">
+                    <ng-container *ngFor="let item of actLinks">
                         <li routerLink={{item.link}}> {{item.label}} </li>
-                   </ng-container> 
+                    </ng-container>
                 </ul>
             </div>
 
@@ -37,7 +40,7 @@
                     <ng-container *ngFor="let app of apps">
                         <li>
                             <a href={{app.link}} target="_blank">
-                                <img  src={{app.sourceImg}} alt={{app.name}}>
+                                <img src={{app.sourceImg}} alt={{app.name}}>
                             </a>
                         </li>
                     </ng-container>
@@ -45,7 +48,7 @@
             </div>
         </div>
         <div class="bottom">
-            <p>© 2023-2024 Amadou BÂ</p>
+            <p>© 2025 Serge Espoir MATOMBA</p>
         </div>
     </div>
 </footer>

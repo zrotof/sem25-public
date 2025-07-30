@@ -3,14 +3,14 @@
     margin-bottom: 10px;
     cursor: pointer;
     position: relative;
-    color: var(--project-background-black-color);
+    color: var(--project-black-primary-color);
     padding-bottom: 10px;
     border-radius: 7px;
     overflow: hidden;
 
     &:hover{
-        background-color: var(--project-primary-color);
-        color: white;
+        background-color: var(--project-blue-secondary-color);
+        color: var(--project-black-primary-color);
         transition: all 0.3s ease-in-out;
     }
     

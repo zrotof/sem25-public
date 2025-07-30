@@ -21,10 +21,10 @@
                 cursor: pointer;
                 border-radius: 10px;
                 border: 1px solid transparent;
-                color: var(--project-background-black-color);
+                color: var(--project-black-primary-color);
 
                 &:hover{
-                    border: 1px solid var(--project-background-black-color);
+                    border: 1px solid var(--project-black-primary-color);
                 }
         
                 .top{
@@ -113,7 +113,7 @@
     
             .active-video{
                 background-color: var(--project-primary-color);
-                color: var(--project-font-color-white-on-primary);
+                color: var(--project-white-primary-color);
             }
     }
     }

@@ -1,7 +1,7 @@
-.youtube-video-dialog-mask{
+.youtube-video-dialog-mask {
     pointer-events: unset;
     backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur( 3px );
+    -webkit-backdrop-filter: blur(3px);
     background-color: #00000094 !important;
 }
 
@@ -10,15 +10,17 @@
         padding: 0;
         overflow: unset;
         border-radius: 15px !important;
+        background: transparent;
+
     }
 }
 
-.youtube-video-player{
+.youtube-video-player {
     display: flex;
     flex-direction: column;
     position: relative;
 
-    .close-modal{
+    .close-modal {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -30,78 +32,78 @@
         position: absolute;
         top: 0;
         right: -60px;
-        cursor: pointer; 
-        color: var(--project-primary-color);
+        cursor: pointer;
+        background-color: var(--project-blue-secondary-color);
+        color: var(--project-black-primary-color);
         transition: all 0.3s ease-in-out;
-        
-        &:hover{
-            background-color: var(--project-primary-color);
-            color: white;
+
+        &:hover {
+            background-color: var(--project-yellow-primary-color);
+            color: var(--project-black-primary-color);
         }
-        
+
     }
 
-    
-    iframe{
+
+    iframe {
         width: 700px;
         height: 500px;
         border-radius: 15px;
     }
-        
+
 }
 
-@media all and (max-width: 980px){
+@media all and (max-width: 980px) {
 
-    .p-dialog{ 
+    .p-dialog {
         width: 95%;
 
         .p-dialog-content {
             border-radius: 10px !important;
-            background: transparent;
         }
     }
 
-    .youtube-video-player{
+    .youtube-video-player {
 
-        .close-modal{
+        .close-modal {
             position: relative;
             top: unset;
             right: unset;
             margin-bottom: 20px;
             align-self: flex-end;
         }
-    
-        iframe{
+
+        iframe {
             width: 100%;
             height: 462px;
             border-radius: 10px;
         }
-            
+
     }
 }
 
-@media all and (max-width: 680px){
+@media all and (max-width: 680px) {
 
-    .p-dialog{ 
+    .p-dialog {
         width: 93%;
     }
 
-    .youtube-video-player{
-        iframe{
-            height:300px;
+    .youtube-video-player {
+        iframe {
+            height: 300px;
         }
     }
 }
 
-@media all and (max-width: 565px){
+@media all and (max-width: 565px) {
 
-    .p-dialog{ 
+    .p-dialog {
         width: 95%;
     }
 
-    .youtube-video-player{
-        iframe{
-            height:400px;
+    .youtube-video-player {
+        iframe {
+            height: 400px;
         }
     }
 }

@@ -9,6 +9,7 @@ import { AsyncPipe } from '@angular/common';
 import { AmbassadorBannerComponent } from '../../../../shared/components/ambassador-banner/ambassador-banner.component';
 import { SecondaryHeroComponent } from '../../../../shared/components/secondary-hero/secondary-hero.component';
 import { ProgramBlocComponent } from './components/program-bloc/program-bloc.component';
+import { ProgramListComponent } from './components/program-list/program-list.component';
 
 @Component({
     selector: 'app-program-container',
@@ -20,6 +21,7 @@ import { ProgramBlocComponent } from './components/program-bloc/program-bloc.com
       SecondaryHeroComponent, 
       ProgramBlocComponent, 
       AmbassadorBannerComponent, 
+      ProgramListComponent
     ]
 })
 export class ProgramContainerComponent implements OnInit {

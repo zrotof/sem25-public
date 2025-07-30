@@ -20,7 +20,7 @@ export class CampainCounterEventComponent implements OnInit{
     seconds: 0
   };
 
-  targetDate: Date = new Date('2025-10-13T00:00:00');
+  targetDate: Date = new Date('2025-10-12T00:00:00');
 
   constructor() { }
 

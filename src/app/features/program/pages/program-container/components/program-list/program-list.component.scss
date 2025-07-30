@@ -1,124 +1,88 @@
-.program-list{
+.program-list {
     display: flex;
     justify-content: center;
 
-    .content{
+    .content {
         width: 100%;
         display: flex;
         flex-direction: column;
 
-        .title{
+        .title {
             display: flex;
             flex-direction: column;
-            align-items: center;
             margin-bottom: 60px;
             margin-top: 5rem;
 
-            h2{
-                color: var(--project-primary-color);
+            h2 {
+                color: var(--project-blue-primary-color);
                 margin-bottom: 30px;
                 font-size: 2.5rem;
-                text-align: center;
+                font-weight: 900;
+                line-height: 1;
+                letter-spacing: -1px;
             }
 
-            p{
+            p {
                 line-height: 23px;
-                text-align: center;
             }
         }
 
-        .programs{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 2rem 1rem;
+        .programs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+            gap: 1.5rem;
 
-            .program{
+            .program {
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
-                width: 14rem;
+                justify-content: space-between;
+                gap: 2rem;
                 cursor: pointer;
+                background-color: var(--project-blue-tertiary-color);
+                padding: 1rem;
+                border-radius: 0.5rem;
+                transition: all 0.2s ease-in-out;
+                box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
 
-                &:hover{
-                    .image-bloc{
-                        .message{
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            top: 50%;
-                            left: 50%;
-                            transform: translate(-50%,-50%);
-                            width: 90%;
-                            height: 92%;
-                            background-color: #ffffffa1;
-                            backdrop-filter: blur(3px);
-                            -webkit-backdrop-filter: blur(3px);
-                            padding: 15px;
-                            color: #000000;
-                            margin: 0 auto;
-                            border-radius: 7px;
-        
-                            span{
-                                text-align: center;
-                                color: black;
-                                font-weight: bold;
-                            }
-                        }
+                &:hover {
+                    transform: scale(1.05);
+                    background-color: var(--project-blue-secondary-color);
+                    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+                    button {
+                        background-color: var(--project-yellow-primary-color);
                     }
                 }
 
-                .image-bloc{
-                    width: 100%;
-                    height: 18rem;
-                    margin-bottom: 10px;
-                    border-radius: 7px;
-                    overflow: hidden;
-                    position: relative;
-
-                    img{
-                        object-fit: cover;
-                        object-position: top center;
-                        width: 100%;
-                        height: 100%;
-                    }
-
-                    .message{
-                        position: absolute;
-                        width: 100%;
-                        height: 100%;
-                        top: 100%;
-                        left: 50%;
-                        transform: translateX(-50%);
-                        transition: all 0.5s ease-in-out;
-    
-                        span{
-                            color: transparent;
-                            font-size: 1.2rem;
-                        }
-                    }
-                }
-                
-
-                h4{
-                    font-size: 1.3rem;
-                    text-align: center;
+                h3 {
+                    font-size: 1.05rem;
+                    font-weight: 700;
                     color: var(--project-font-black);
+                    max-width: 300px;
                 }
 
-                
-
-                
+                button {
+                    width: fit-content;
+                    padding: 0.5rem 0.7rem;
+                    font-size: 1rem;
+                    border-radius: 0.2rem;
+                    border: none;
+                    background-color: var(--project-white-primary-color);
+                    color: var(--project-black-primary-color);
+                    cursor: pointer;
+                    transition: background-color 0.2s ease-in-out;
+                    border: 1px solid var(--project-black-primary-color);
+                }
             }
         }
     }
 }
 
-@media all and (max-width: 986px){
-    .program-list{
-        .content{
-            .programs{
-                .program{
+@media all and (max-width: 986px) {
+    .program-list {
+        .content {
+            .programs {
+                .program {
                     width: 16rem;
                 }
             }
@@ -126,23 +90,25 @@
     }
 }
 
-@media all and (max-width: 845px){
-    .program-list{
-        .content{
+@media all and (max-width: 845px) {
+    .program-list {
+        .content {
 
 
-            .title{
+            .title {
                 margin-top: 4rem;
-                h2{
+
+                h2 {
                     font-size: 2rem;
                 }
-    
-                p{
+
+                p {
                     font-size: 15px;
                 }
             }
-            .programs{
-                .program{
+
+            .programs {
+                .program {
                     width: 14rem;
                 }
             }
@@ -150,13 +116,14 @@
     }
 }
 
-@media all and (max-width: 745px){
-    .program-list{
-        .content{
-            .programs{
-                .program{
+@media all and (max-width: 745px) {
+    .program-list {
+        .content {
+            .programs {
+                .program {
                     width: 14rem;
-                    .image-bloc{
+
+                    .image-bloc {
                         height: 16rem;
                     }
                 }
@@ -165,34 +132,36 @@
     }
 }
 
-@media all and (max-width: 505px){
-    .program-list{
-        .content{
-            .title{
+@media all and (max-width: 505px) {
+    .program-list {
+        .content {
+            .title {
                 margin-top: 3rem;
-                h2{
+
+                h2 {
                     font-size: 1.7rem;
                     text-align: center;
                 }
             }
 
-            .programs{
+            .programs {
                 gap: 1.5rem 0.5rem;
                 justify-content: space-evenly;
 
-                .program{
+                .program {
                     width: 11rem;
-                    .image-bloc{
+
+                    .image-bloc {
                         height: 12rem;
 
-                        .message{
-                            span{
+                        .message {
+                            span {
                                 font-size: 1.1rem;
                             }
                         }
                     }
 
-                    h4{
+                    h4 {
                         font-size: 1rem;
                     }
                 }
@@ -201,15 +170,16 @@
     }
 }
 
-@media all and (max-width: 385px){
-    .program-list{
-        .content{
-            .programs{
+@media all and (max-width: 385px) {
+    .program-list {
+        .content {
+            .programs {
                 justify-content: center;
 
-                .program{
+                .program {
                     width: 250px;
-                    .image-bloc{
+
+                    .image-bloc {
                         height: 16rem;
                     }
                 }

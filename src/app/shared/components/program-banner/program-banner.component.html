@@ -2,13 +2,34 @@
     <div class="content my-container">
         <h2>
             <span>Découvrez</span>
-            <span>Notre Programme Pour Le Sénégal</span>
+            <span>Notre Programme Pour Le Cameroun</span>
         </h2>
 
         <div class="description-action">
             <p>
-                 Je suis convaincu que vivre dans une paix véritable nous prédispose à relever le défi du développement et de garantir une prospérité partagée par l’ensemble des Sénégalaises et des Sénégalais. Nous nous y engageons avec la ferme conviction qu’ensemble nous ferons de ce rêve une réalité. Le Sénégal a besoin des contributions de chacune et de chacun de ses enfants pour continuer à rayonner l’esprit dynamique et vivant de la Téranga dans le monde.
+                Je suis convaincu que vivre dans une paix véritable nous prédispose à relever le défi du développement
+                et de garantir une prospérité partagée par l’ensemble des Sénégalaises et des Sénégalais. Nous nous y
+                engageons avec la ferme conviction qu’ensemble nous ferons de ce rêve une réalité. Le Sénégal a besoin
+                des contributions de chacune et de chacun de ses enfants pour continuer à rayonner l’esprit dynamique et
+                vivant de la Téranga dans le monde.
             </p>
+            <ul>
+                @for (figth of figths; track $index) {
+                <li>
+                    <div class="top">
+                        <h3>{{figth.title}}</h3>
+                        <p>
+                            {{figth.text}}
+                        </p>
+                    </div>
+
+                    <a routerLink={{figth.link}}>
+                        <i class="pi pi-arrow-right"></i>
+                        <span>Lire plus</span>
+                    </a>
+                </li>
+                }
+            </ul>
             <button routerLink="/le-programme">
                 <span>Consulter Tout Le Programme</span>
                 <i class="pi pi-arrow-up-right"></i>

@@ -1,23 +1,16 @@
 <div class="program-list">
     <div class="content my-container">
         <div class="title">
-            <h2>Mon Projet Pour Le Sénégal</h2>
-            <p>Le changement est en marche ! Je m'engage à transformer notre pays en un hub économique et social florissant. Avec une vision audacieuse et des politiques novatrices, nous construisons un avenir meilleur pour tous les Sénégalais.</p>
+            <h2>Les Thématiques Du Programme </h2>
+            <p>Le changement est en marche ! Je m'engage à transformer notre pays en un hub économique et social florissant. Avec une vision audacieuse et des politiques novatrices, nous construisons un avenir meilleur pour tous les camerounais.</p>
         </div>
-        <div class="programs">
-            <ng-container *ngFor="let program of programs; let i = index">
-                <div class="program">
-                    <div class="image-bloc">
-                        <img src={{program.sourceImg}} alt={{program.title}}>
-                        <div class="message">
-                            <span>
-                                Le Programme Sera Disponible Prochainement !
-                            </span>
-                        </div>
-                    </div>
-                    <h4> {{program.title}} </h4>
-                </div>
-            </ng-container>
-        </div>
+        <ul class="programs">
+            @for (program of programs; track $index) {
+                <li class="program" [routerLink]="program.link">
+                    <h3> {{program.title}} </h3>
+                    <button>Voir la thématique</button>
+                </li>
+            }
+        </ul>
     </div>
 </div>

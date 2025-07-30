@@ -11,19 +11,27 @@ import { ProgramBannerComponent } from '../../../../shared/components/program-ba
 import { CampainVideoComponent } from './components/campain-video/campain-video.component';
 import { BiographyComponent } from './components/biography/biography.component';
 import { TopAboutComponent } from './components/top-about/top-about.component';
-import { SecondaryHeroComponent } from '../../../../shared/components/secondary-hero/secondary-hero.component';
+import { BiographyHeroComponent } from './components/biography-hero/biography-hero.component';
 
 @Component({
-    selector: 'app-candidate-container',
-    templateUrl: './candidate-container.component.html',
-    styleUrls: ['./candidate-container.component.scss'],
-    standalone: true,
-    imports: [SecondaryHeroComponent, TopAboutComponent, BiographyComponent, CampainVideoComponent, ProgramBannerComponent, AmbassadorBannerComponent, AsyncPipe]
+  selector: 'app-candidate-container',
+  templateUrl: './candidate-container.component.html',
+  styleUrls: ['./candidate-container.component.scss'],
+  standalone: true,
+  imports: [
+    BiographyHeroComponent,
+    TopAboutComponent,
+    BiographyComponent, 
+    CampainVideoComponent, 
+    ProgramBannerComponent, 
+    AmbassadorBannerComponent, 
+    AsyncPipe
+  ]
 })
 export class CandidateContainerComponent implements OnInit {
 
   secondaryHeroBannerData$ !: Observable<SecondaryHeroBanner>;
-  
+
   ambassadorBanner !: AmbassadorBanner;
 
   //campainTeam$ !: Observable<CampainTeam[]>; 
@@ -32,8 +40,8 @@ export class CandidateContainerComponent implements OnInit {
 
   constructor(
     //private candidateService : CandidateService,
-    private heroService : HeroBannerService
-  ){}
+    private heroService: HeroBannerService
+  ) { }
 
   ngOnInit(): void {
     this.getSencondaryHeroBannerData(this.heroBannerId);
@@ -41,21 +49,21 @@ export class CandidateContainerComponent implements OnInit {
     //this.getCampainTeam();
   }
 
-  getSencondaryHeroBannerData(id : string) : void {
+  getSencondaryHeroBannerData(id: string): void {
     this.secondaryHeroBannerData$ = this.heroService.getSecondaryHeroData(id);
   }
 
-  initAmbassadorBanner() : void {
+  initAmbassadorBanner(): void {
     this.ambassadorBanner = {
-      text : "Passez à l'action et devenez un Ambassadeur de Campagne. Rejoignez notre communauté passionnée, partagez notre vision, soyez le moteur du changement.",
-      image : "../../../../../assets/img/campain-ambassador/crowded.jpeg",
-      alt : ''
+      text: "Passez à l'action et devenez un Ambassadeur de Campagne. Rejoignez notre communauté passionnée, partagez notre vision, soyez le moteur du changement.",
+      image: "../../../../../assets/img/campain-ambassador/crowded.jpeg",
+      alt: ''
     }
   }
 
-/*
-  getCampainTeam() : void{
-    this.campainTeam$ = this.candidateService.getCampainTeam();
-  }
-*/
+  /*
+    getCampainTeam() : void{
+      this.campainTeam$ = this.candidateService.getCampainTeam();
+    }
+  */
 }

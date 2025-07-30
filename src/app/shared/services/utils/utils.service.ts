@@ -12,24 +12,29 @@ export class UtilsService {
       {
         sourceImg : "../../../assets/img/social-medias/facebook.png",
         link : "https://www.facebook.com/amadoubalofficiel",
-        name : "Facebook"
+        name : "Facebook",
+        icon: "faFacebookF"
       },
       {
         sourceImg : "../../../assets/img/social-medias/instagram.png",
         link : "https://www.instagram.com/amadouba_officiel/",
-        name : "Instagram"
+        name : "Instagram",
+        icon: "faInstagram"
       },
       {
         sourceImg : "../../../assets/img/social-medias/twitter.png",
         link : "https://twitter.com/amadou_ba_",
-        name : "Twitter"
+        name : "Twitter",
+        icon: "faXTwitter"
       },
       {
         sourceImg : "../../../assets/img/social-medias/youtube.png",
         link : "https://www.youtube.com/@AmadouBa-sn",
-        name : "Youtube"
+        name : "Youtube",
+        icon: "faYoutube"
       }
     ]
+    
     return networks
   }
 }

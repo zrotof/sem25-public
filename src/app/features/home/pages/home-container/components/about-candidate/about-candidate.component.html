@@ -1,30 +1,38 @@
 <div class="about-candidate">
     <div class="content my-container">
         <div class="top">
-            <h3 >
+            <h3>
                 NOTRE MISSION EST DE CONSOLIDER LES ACQUIS ET AVANCER DANS LE PLAN SÉNÉGAL ÉMERGENT 2035
             </h3>
             <div class="right">
                 <p>Restez à l'affut des dernières actualités de la campagne en nous suivant sur nos réseaux</p>
                 <div class="networks">
-                    <ng-container *ngFor="let network of networks">
+                    @for (network of networks; track $index) {
                         <a href={{network.link}} target="_blank" data-aos="fade-left" data-aos-duration="1000">
-                            <img src={{network.sourceImg}} alt={{network.name}}>
+                            <fa-icon [icon]="network.icon | convertStringLabelToFontawesomeIcon"></fa-icon>
                         </a>
-                    </ng-container>
+                    }
                 </div>
             </div>
         </div>
         <div class="bottom">
-            <div class="image">
-                
+            <div class="image-wrapper">
+                <img ngSrc="../../../../../../../assets/img/home/about/a-propos-de-serge-espoir-matomba.webp" alt="À propos de Serge Espoir Matomba" fill>
             </div>
             <div class="about">
                 <h4>
                     <span>À propos de</span>
-                    <span>Amadou BÂ</span>
+                    <span>Serge Espoir MATOMBA</span>
                 </h4>
-                <p>Economiste de formation, Amadou Bâ est un Inspecteur principal des Impôts et des Domaines de classe exceptionnelle. Il est aussi Professeur associé à l’Ecole nationale d’Administration (ENA) et au Centre de formation de la BCEAO (Banque centrale des Etats de l’Afrique de l’ouest). Ayant gravi tous les échelons de l’Administration fiscale, il dirige la Direction générale des Impôts et des Domaines de 2006 à 2013. Durant cette période, il apporte de grandes réformes qui conduisent à la modernisation du service...</p>
+                <p>
+                    Entrepreneur précoce, Serge Espoir Matomba a fondé plusieurs entreprises au Cameroun et à l'étranger
+                    avant de se lancer en politique avec la création du Peuple Uni pour la Rénovation Sociale (PURS) en
+                    2010. Élu Conseiller municipal, il s'est distingué par son activisme, notamment une grève de la faim
+                    et ses prises de position fermes sur la crise anglophone et la démission du président Paul Biya.
+                    Candidat aux élections présidentielles de 2018 et 2025, il prône une souveraineté économique du
+                    Cameroun, incluant la sortie du Franc CFA. Son engagement et son dynamisme ont été maintes fois
+                    récompensés par des distinctions nationales. 
+                </p>
                 <button routerLink="/le-candidat">En Apprendre Plus Sur Le Candidat</button>
             </div>
         </div>

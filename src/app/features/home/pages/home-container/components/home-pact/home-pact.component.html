@@ -1,35 +1,37 @@
 <div class="home-pact">
     <div class="content my-container">
+        <div class="image-wrapper" (click)="onOpenYoutubeVideo()" data-aos="fade-right" data-aos-duration="1500">
+            <img ngSrc="../../../../../../../assets/img/home/pact/profession-de-foi-de-serge-espoir-matomba.webp" alt="Profession de foi du candidat Serge Espoir Matomba pour les élections présidentielles d'octobre 2025" fill>
+            <button class="icon-wrapper">
+                <fa-icon [icon]=" 'faPlay' | convertStringLabelToFontawesomeIcon "></fa-icon>
+            </button>
+        </div>
+
         <div class="texts">
             <div class="pact-text">
                 <h4>
-                    PACTE D’ENGAGEMENT ETHIQUE ET POLITIQUE DU CANDIDAT DE BENNOO BOKK YAAKAAR ET DE LA GRANDE MAJORITE PRESIDENTIELLE
+                    PROFESSION DE FOI DU CANDIDAT SERGE ESPOIR MATOMBA POUR LES ÉLECTIONS PRÉSIDENTIELLES D'OCTOBRE 2025
                 </h4>
 
                 <div class="data">
                     <p>
-                        Moi, <strong>M. Amadou BÂ</strong>, choisi de maniére consensuelle pour porter la candidature de Bennoo Bokk Yaakaar et de la Grande majorité présidentielle a I’élection présidentielle de février 2024,
+                        <b>Serge Espoir Matomba</b> se présente comme l'héritier des pères fondateurs du Cameroun,
+                        profondément inspiré par les figures historiques de la libération comme Douala Manga Bell et
+                        Ruben Oum Nyobè. Dès son jeune âge, il s'est senti investi d'une vocation politique noble, celle
+                        de servir et de bâtir sa patrie. Après un parcours d'apprentissage international pour acquérir
+                        l'expertise nécessaire, il est rentré au Cameroun.
                     </p>
                     <p>
-                        Conscient des enjeux de la Présidentielle de 2024 qui pose le choix de la sauvegarde du mode¢le sénégalais de République démocratique, dans la paix et la stabilité ou celui d’un régime obscurantiste de I’aventure et du chaos,
-                    </p>
-                    <p>
-                        Soucieux de I’avenir de notre pays et de la nécessité de poursuivre les politiques publiques portées par le PSE pour I’intérét exclusif des populations du Sénégal, dans le contexte particulier d’exploitation du pétrole et du gaz,
-                    </p>
-                    <p>
-                        Adossé au bilan magnifique, matériel comme immatériel, du Président Macky SALL qui a réalisé, grace au Plan Sénégal Emergent (PSE), des performances exceptionnelles, dans tous les secteurs d'activités de la vie politique, économique, sociale et culturelle du pays, plagant ainsi le Sénégal sur les rampes de |’émergence et a en faire un pays respecté partout dans le monde,
+                        Il a fondé ses propres entreprises pour financer son projet, refusant les financements douteux,
+                        puis a créé son parti pour promouvoir sa vision d'un Cameroun nouveau. Matomba voit sa
+                        génération comme celle qui doit bâtir la nation, cinquante ans après ses fondations. Il s'engage
+                        fermement à ne pas trahir cette mission exaltante, ni le peuple camerounais.
                     </p>
                 </div>
             </div>
             <button (click)="openPactModal()">
-                <span>Consulter Le Pacte En Entier</span>
+                <span>Voir La Profession De Foi En Entier</span>
                 <i class="pi pi-arrow-up-right"></i>
-            </button>
-        </div>
-    
-        <div class="image" (click)="onOpenYoutubeVideo()" data-aos="fade-left" data-aos-duration="1500">
-            <button>
-                <fa-icon [icon]=" 'faPlay' | convertStringLabelToFontawesomeIcon "></fa-icon>
             </button>
         </div>
     </div>

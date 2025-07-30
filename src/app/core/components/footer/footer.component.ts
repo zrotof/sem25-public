@@ -21,14 +21,16 @@ export class FooterComponent implements OnInit {
     {
       sourceImg : "../../../assets/img/apps/app-store.webp",
       link : "",
-      name : "App store"
+      name : "App store",
+      icon: ""
     },
     {
       sourceImg : "../../../assets/img/apps/android.webp",
       link : "",
-      name : "Android"
+      name : "Android",
+      icon:""
     }
-  ]
+  ];
 
   actLinks = [
     {

@@ -4,47 +4,48 @@ import { ConvertStringLabelToFontawesomeIconPipe } from 'src/app/shared/pipes/co
 import { HomePactModalComponent } from './home-pact-modal/home-pact-modal.component';
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { YoutubeVideoPlayerModalComponent } from 'src/app/shared/components/youtube-video-player-modal/youtube-video-player-modal.component';
+import { VideoPlayerModalComponent } from 'src/app/shared/components/video-player-modal/video-player-modal.component';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-home-pact',
   standalone: true,
-  imports: [
-    FontAwesomeModule,
-    ConvertStringLabelToFontawesomeIconPipe,
-    HomePactModalComponent,
-    YoutubeVideoPlayerModalComponent
-  ],
   templateUrl: './home-pact.component.html',
   styleUrls: ['./home-pact.component.scss'],
   providers: [DialogService],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  imports: [
+    FontAwesomeModule,
+    ConvertStringLabelToFontawesomeIconPipe,
+    NgOptimizedImage
+  ]
 
 })
 export class HomePactComponent {
 
   ref !: DynamicDialogRef;
 
-  constructor(private dialogService : DialogService){}
+  constructor(private dialogService: DialogService) { }
 
-  openPactModal(){
+  openPactModal() {
     this.dialogService.open(HomePactModalComponent, {
       width: '100%',
       height: '100%',
       baseZIndex: 99999,
-      styleClass : "pact-modal-style-class"
+      styleClass: "pact-modal-style-class"
     });
   }
 
-  onOpenYoutubeVideo(): void{
-    const link = '<iframe width="560" height="315" src="https://www.youtube.com/embed/DinhQWaf02E?si=43p2WHskFGmcwgwh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>'
+  onOpenYoutubeVideo(): void {
+    const link = '../../../../assets/videos/profession-de-foie.mp4';
 
-    this.ref = this.dialogService.open(YoutubeVideoPlayerModalComponent, {
+    this.ref = this.dialogService.open(VideoPlayerModalComponent, {
       data: {
-        youtubeVideo: link
+        videoSource: link
       },
       baseZIndex: 10000,
       showHeader: false,
-      maskStyleClass : "youtube-video-dialog-mask"
+      maskStyleClass: "youtube-video-dialog-mask"
     });
   }
 }

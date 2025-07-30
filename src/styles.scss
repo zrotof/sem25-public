@@ -1,45 +1,87 @@
 @import 'variables.scss';
 @import "primeicons/primeicons.css";
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
-    font-family: Verdana, sans-serif;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-ol{
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat", Verdana, sans-serif;
+}
+
+
+ol {
     padding-left: 0;
     margin-left: 0;
     list-style-position: inside;
 
-    li{
+    li {
         margin-left: 20px;
         margin-bottom: 7px;
     }
 }
 
 
-.header-container{
+.header-container {
     max-width: 1400px;
     padding: 0 20px;
 }
 
-.my-container{
+.my-container {
     max-width: 1300px;
     padding: 0 20px;
 }
 
-.navbar-background-on-scroll{
-    background-color: #191922;
+.navbar-background-on-scroll {
+    background-color: var(--project-white-primary-color);
     box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
     height: 6rem;
     transition: all 0.5s ease-in-out;
+
+    .content {
+        nav {
+            ul {
+                li {
+                    a {
+                        color: var(--project-blue-primary-color);
+                        font-weight: 500;
+
+                        &::before {
+                            background: var(--project-blue-primary-color);
+                        }
+                    }
+
+                    .active-link {
+                        &::before {
+                            left: 0;
+                        }
+                    }
+                }
+            }
+
+            .get-involved {
+                font-weight: 500;
+                color: var(--project-blue-primary-color) !important;
+                border: 2px solid var(--project-blue-primary-color);
+            }
+        }
+    }
 }
 
 .error-feedback {
@@ -48,8 +90,8 @@ ol{
     color: #dc3545;
 }
 
-@media all and (max-width: 425px){
-    .my-container{
+@media all and (max-width: 425px) {
+    .my-container {
         padding: 0 10px;
     }
 }

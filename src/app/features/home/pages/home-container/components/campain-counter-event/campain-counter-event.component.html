@@ -1,32 +1,36 @@
-<div class="campain-counter-event" >
+<div class="campain-counter-event">
     <div class="content my-container">
+        <h2>Élections Présidentielles 2025</h2>
+
         <div class="card">
-            <h2>Élections Présidentielles 2024</h2>
-            <button>
-                <span routerLink="articles/6" >Voir les détails</span>
-                <i class="pi pi-arrow-up-right"></i>
-            </button>
-            
             <div class="countdown">
                 <div class="countdown-item">
                     <span>{{ countdown.days }}</span>
                     <span>Jours</span>
                 </div>
+                <span class="double-bullet">:</span>
                 <div class="countdown-item">
                     <span>{{ countdown.hours }}</span>
                     <span>Heures</span>
-                     
                 </div>
+                <span class="double-bullet">:</span>
                 <div class="countdown-item">
                     <span>{{ countdown.minutes }}</span>
                     <span>Minutes</span>
-                     
                 </div>
+                <span class="double-bullet">:</span>
                 <div class="countdown-item">
                     <span>{{ countdown.seconds }}</span>
                     <span>Secondes</span>
                 </div>
             </div>
+
+            <button>
+                <span routerLink="articles/6">Voir les détails</span>
+                <i class="pi pi-arrow-up-right"></i>
+            </button>
+
+
             <img src="../../../../../assets/img/home/countdown/countdown-main-bg.png">
         </div>
     </div>

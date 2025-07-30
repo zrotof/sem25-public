@@ -1,22 +1,41 @@
 <div class="biography-bloc">
     <div class="content my-container">
-        <div class="title">
-            <h2>MA BIOGRAPHIE</h2>
-            <P>Amadou Ba est un homme politique sénégalais et membre de l'Alliance pour la République. Il est né le 17 mai 1961 à Dakar. Il a obtenu son baccalauréat technique de gestion en 1980, une maîtrise en sciences économiques, option gestion des entreprises et un brevet de l'École nationale d'administration et de magistrature (ENAM), en section Impôts et Domaines. Il a été ministre de l'Économie et des Finances de 2013 à 2019, ministre des Affaires étrangères et des Sénégalais de l'extérieur de 2019 à 2020, puis Premier ministre du Sénégal depuis le 17 septembre 2022.</P>
+        <div class="introduction">
+            <div class="header-networks">
+                <h3>Un Leader Engagé</h3>
+
+                <ul class="networks">
+                    @for (network of networks; track $index) {
+                        <li>
+                            <a href={{network.link}} target="_blank" data-aos="fade-left" data-aos-duration="1000">
+                                <fa-icon [icon]="network.icon | convertStringLabelToFontawesomeIcon"></fa-icon>
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+            <P>
+                Né à Douala le 30 septembre 1979, Serge Espoir Matomba est un homme politique camerounais, Premier
+                secrétaire du Peuple uni pour la rénovation sociale (PURS). Issu d'un milieu modeste et élevé selon
+                des valeurs chrétiennes, il est marié et auteur de plusieurs ouvrages. Dès son jeune âge, il s'est
+                affirmé comme l'une des premières voix jeunes à dénoncer les travers du régime en place.
+            </P>
         </div>
 
         <div class="biography-elements">
-            <ng-container *ngFor="let biography of biographyBlocs ; let i=index">
-                <div class="biography-element" [ngClass]="i%2 === 0 ? 'reverse' : ''">
-                    <div class="texts">
-                        <span>{{biography.date}}</span>
-                        <h3> {{biography.title}} </h3>
-                        <ng-container *ngFor="let text of biography.texts">
-                            <p>{{text.text}} </p>
-                        </ng-container>
-                    </div>
+            @for (biography of biographyBlocs; track $index) {
+            <div class="biography-element" [ngClass]="$index%2 != 0 ? 'reverse' : ''">
+                <div class="image-wrapper">
+                    <img [ngSrc]="biography.image" [alt]="biography.altImg" fill>
                 </div>
-            </ng-container>
+                <div class="texts">
+                    <h3> {{biography.title}} </h3>
+                    <ng-container *ngFor="let text of biography.texts">
+                        <p>{{text.text}} </p>
+                    </ng-container>
+                </div>
+            </div>
+            }
         </div>
     </div>
 </div>

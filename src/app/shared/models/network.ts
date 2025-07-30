@@ -1,6 +1,6 @@
-
 export interface Network {
     sourceImg : string,
     link : string,
-    name: string
+    name: string,
+    icon: string;
 }

@@ -1,0 +1,11 @@
+.image-wrapper{
+    position: relative;
+    height: 60vh;
+    margin-bottom: 4rem;
+    margin-top: 6rem;
+
+    img{
+        object-fit: cover;
+        object-position: center;
+    }
+}
