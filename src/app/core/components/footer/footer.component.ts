@@ -3,14 +3,22 @@ import { Network } from 'src/app/shared/models/network';
 import { UtilsService } from 'src/app/shared/services/utils/utils.service';
 import { RouterLink } from '@angular/router';
 import { NgFor } from '@angular/common';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ConvertStringLabelToFontawesomeIconPipe } from 'src/app/shared/pipes/convertStringLabelToFontawesomeIcon/convert-string-label-to-fontawesome-icon.pipe';
 
 @Component({
     selector: 'app-footer',
     templateUrl: './footer.component.html',
     styleUrls: ['./footer.component.scss'],
     standalone: true,
-    imports: [NgFor, RouterLink]
+    imports: [
+      NgFor, 
+      RouterLink,
+      FontAwesomeModule,
+      ConvertStringLabelToFontawesomeIconPipe
+    ]
 })
+
 export class FooterComponent implements OnInit {
 
   constructor( private utilsService: UtilsService){}

@@ -1,224 +1,245 @@
-swiper-container {
-    height: 100vh;
-    height: 100svh;
+.carousel-progress-container {
+    z-index: 10;
+    /* Assure que la barre est au-dessus du contenu du slider si nécessaire */
     width: 100%;
+    height: 8px;
+    background-color: #e0e0e0;
+    overflow: hidden;
+    position: absolute;
+    /* margin-bottom: 5px; Si tu veux de l'espace entre la barre et le slider */
+}
 
-    swiper-slide {
-        height: 100%;
+.carousel-progress-bar {
+    height: 100%;
+    width: 0%;
+    background-color: var(--project-yellow-primary-color);
+    /* Utilise ta couleur primaire */
+    transition: width 0s linear;
+    /* La transition est gérée par l'animation */
+    /* z-index: 999; Pas strictement nécessaire ici, car le container gère le z-index */
+}
+
+@keyframes fillProgressBar {
+    from {
+        width: 0%;
+    }
+
+    to {
         width: 100%;
-        position: relative;
-
-        &::before {
-            position: absolute;
-            content: "";
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(0deg, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0.6124824929971988) 93%);
-            z-index: 2;
-            left: 0;
-            top: 0;
-        }
-
-        .my-slide {
-            background-size: cover;
-            background-repeat: no-repeat;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-
-            img {
-                object-fit: cover;
-            }
-
-            .text-bloc {
-                width: 100%;
-                position: relative;
-                height: 100%;
-
-                .text {
-                    display: flex;
-                    flex-direction: column;
-                    position: absolute;
-                    gap: 1rem;
-                    top: 40%;
-                    left: 0;
-                    z-index: 2;
-
-                    h1 {
-                        font-size: 3.5rem;
-                        letter-spacing: -1px;
-                        line-height: 1;
-                        color: var(--project-yellow-primary-color);
-                        font-weight: 900;
-                        max-width: 650px;
-                        text-shadow: 0px 3px 1px #0000008c;
-                    }
-
-                    p {
-                        font-size: 1.1rem;
-                        color: var(--project-white-primary-color);
-                        line-height: 1.4;
-                        max-width: 650px;
-                        text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.496);
-                    }
-
-                    button {
-                        display: flex;
-                        align-items: center;
-                        padding: 12px 15px;
-                        background-color: var(--project-white-primary-color);
-                        width: fit-content;
-                        cursor: pointer;
-                        font-weight: 600;
-                        color: var(--project-black-primary-color);
-                        position: relative;
-                        overflow: hidden;
-                        flex-wrap: nowrap;
-                        margin-top: 2rem;
-                        box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-                        gap: 1rem;
-                        border: none;
-
-                        &::before {
-                            content: "";
-                            position: absolute;
-                            width: 100%;
-                            height: 100%;
-                            top: 0;
-                            background-color: var(--project-yellow-primary-color);
-                            left: -100%;
-                            transition: left 0.2s ease-in-out;
-                        }
-
-                        &:hover {
-                            box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
-
-                            &::before {
-                                left: 0;
-                            }
-
-                            span {
-                                z-index: 1;
-                            }
-
-                            i {
-                                transform: rotate(45deg);
-                            }
-                        }
-
-                        span {
-                            font-size: 1.1rem;
-                            white-space: nowrap;
-                        }
-
-                        i {
-                            font-size: 1.2rem;
-                            transition: all 0.2s ease-out;
-                        }
-                    }
-                }
-            }
-        }
-
-        .first-slide {
-            img {
-                object-position: top right;
-            }
-        }
-
-        .second-slide,
-        .third-slide {
-            img {
-                background-position: top center;
-            }
-        }
-
-        .fourth-slide {
-            img {
-                background-position: center bottom;
-            }
-        }
-
     }
 }
 
-.custom-controls {
+.swiping-hero-banner {
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 100%;
     position: relative;
-    top: -80px;
-    z-index: 3;
+    height: 100%;
+    width: 100%;
+    color: var(--project-white-primary-color);
 
-    .controls {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    &::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0.6124824929971988) 93%);
+        z-index: 2;
+        left: 0;
+        top: 0;
+        pointer-events: none;
+    }
+
+    swiper-container {
+        height: 100vh;
+        height: 100svh;
         width: 100%;
 
-        .swiper-pagination {
-            display: flex;
-            align-items: center;
+        swiper-slide {
+            height: 100%;
+            width: 100%;
+            position: relative;
 
-            .swiper-pagination-bullet {
-                width: 12px;
-                height: 12px;
-                margin-right: 5px;
-                border-radius: 100px;
-                background-color: none;
-                cursor: pointer;
-                border: 2px solid rgb(255, 255, 255);
-                box-shadow: #0000002c 0px 3px 6px;
-                transition: all 0.3s ease-in-out;
-            }
+            .my-slide {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                width: 100%;
+                height: 100%;
 
-            .swiper-pagination-bullet-active {
-                background-color: white;
-                border: 2px solid transparent;
-                width: 60px;
-                height: 12px;
-                cursor: unset;
+                img {
+                    object-fit: cover;
+                    object-position: top center;
+                    /* Centré pour un meilleur cadrage */
+                    width: 100%;
+                    height: 100%;
+                    z-index: 0;
+                }
             }
         }
+    }
 
-        .navigation {
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+
+        .texts {
             display: flex;
+            flex-direction: column;
+            position: absolute;
+            gap: 1rem;
+            top: 40%;
+            left: 0;
+            z-index: 2;
+            padding: 0 1rem;
+
+            h1 {
+                font-size: 3.5rem;
+                letter-spacing: -1px;
+                line-height: 1;
+                color: var(--project-yellow-primary-color);
+                font-weight: 900;
+                max-width: 650px;
+                text-shadow: 0px 3px 1px #0000008c;
+            }
+
+            p {
+                font-size: 1.1rem;
+                color: var(--project-white-primary-color);
+                line-height: 1.4;
+                max-width: 650px;
+                text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.496);
+            }
 
             button {
-                width: 40px;
-                height: 40px;
-                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                padding: 12px 15px;
                 background-color: var(--project-white-primary-color);
-                border: none;
-                box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-                color: var(--project-black-primary-color);
+                width: fit-content;
                 cursor: pointer;
-                transition: all 0.2s ease-in-out;
-                box-shadow: #00000088 0px 3px 6px;
+                font-weight: 600;
+                color: var(--project-black-primary-color);
+                position: relative;
+                overflow: hidden;
+                flex-wrap: nowrap;
+                margin-top: 2rem;
+                box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+                gap: 1rem;
+                border: none;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    background-color: var(--project-yellow-primary-color);
+                    left: -100%;
+                    transition: left 0.2s ease-in-out;
+                }
 
                 &:hover {
-                    background-color: var(--project-yellow-primary-color);
-                    color: var(--project-black-primary-color);
+                    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+
+                    &::before {
+                        left: 0;
+                    }
+
+                    span {
+                        z-index: 1;
+                    }
+
+                    i {
+                        transform: rotate(45deg);
+                    }
                 }
 
-                .pi {
-                    font-weight: bold;
+                span {
                     font-size: 1.1rem;
-                    pointer-events: none;
-                    z-index: -2;
+                    white-space: nowrap;
                 }
-            }
 
-            .prev {
-                margin-right: 25px;
+                i {
+                    font-size: 1.2rem;
+                    transition: all 0.2s ease-out;
+                }
             }
         }
 
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            position: absolute;
+            bottom: 1rem;
+            padding: 0 1rem;
+            
+            .swiper-pagination {
+                display: flex;
+                align-items: center;
 
+                .swiper-pagination-bullet {
+                    width: 12px;
+                    height: 12px;
+                    margin-right: 5px;
+                    border-radius: 100px;
+                    background-color: none;
+                    cursor: pointer;
+                    border: 2px solid rgb(255, 255, 255);
+                    box-shadow: #0000002c 0px 3px 6px;
+                    transition: all 0.3s ease-in-out;
+                }
+
+                .swiper-pagination-bullet-active {
+                    background-color: white;
+                    border: 2px solid transparent;
+                    width: 60px;
+                    height: 12px;
+                    cursor: unset;
+                }
+            }
+
+            .navigation {
+                display: flex;
+
+                button {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    background-color: var(--project-white-primary-color);
+                    border: none;
+                    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+                    color: var(--project-black-primary-color);
+                    cursor: pointer;
+                    transition: all 0.2s ease-in-out;
+                    box-shadow: #00000088 0px 3px 6px;
+
+                    &:hover {
+                        background-color: var(--project-yellow-primary-color);
+                        color: var(--project-black-primary-color);
+                    }
+
+                    .pi {
+                        font-weight: bold;
+                        font-size: 1.1rem;
+                        pointer-events: none;
+                        z-index: -2;
+                    }
+                }
+
+                .prev {
+                    margin-right: 25px;
+                }
+            }
+        }
     }
 }
 

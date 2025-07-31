@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { interval } from 'rxjs';
 import { RouterLink } from '@angular/router';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-campain-counter-event',
@@ -8,7 +9,8 @@ import { RouterLink } from '@angular/router';
   templateUrl: './campain-counter-event.component.html',
   styleUrls: ['./campain-counter-event.component.scss'],
   imports : [
-    RouterLink
+    RouterLink,
+    NgOptimizedImage
   ]
 })
 export class CampainCounterEventComponent implements OnInit{

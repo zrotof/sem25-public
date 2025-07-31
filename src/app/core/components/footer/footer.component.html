@@ -7,13 +7,13 @@
                     souveraineté nationale, la refondation de l'État, une économie forte et une identité retrouvée
                     pour tous les Camerounais.
                 </p>
-                <div class="networks">
-                    <ng-container *ngFor="let network of networks">
-                        <a href={{network.link}} target="_blank">
-                            <img src={{network.sourceImg}} alt={{network.name}}>
+                <ul class="networks">
+                    @for (network of networks; track $index) {
+                        <a href={{network.link}} target="_blank" data-aos="fade-left" data-aos-duration="1000">
+                            <fa-icon [icon]="network.icon | convertStringLabelToFontawesomeIcon"></fa-icon>
                         </a>
-                    </ng-container>
-                </div>
+                    }
+                </ul>
             </div>
 
             <div class="inform">

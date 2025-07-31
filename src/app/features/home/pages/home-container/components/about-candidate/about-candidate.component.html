@@ -1,23 +1,23 @@
 <div class="about-candidate">
+    <img class="african-icons" ngSrc="../../../../../../../assets/img/home/about/about-gb.png" width="100" height="80"
+        alt="African Icons">
     <div class="content my-container">
         <div class="top">
             <h3>
                 NOTRE MISSION EST DE CONSOLIDER LES ACQUIS ET AVANCER DANS LE PLAN SÉNÉGAL ÉMERGENT 2035
             </h3>
-            <div class="right">
-                <p>Restez à l'affut des dernières actualités de la campagne en nous suivant sur nos réseaux</p>
-                <div class="networks">
-                    @for (network of networks; track $index) {
-                        <a href={{network.link}} target="_blank" data-aos="fade-left" data-aos-duration="1000">
-                            <fa-icon [icon]="network.icon | convertStringLabelToFontawesomeIcon"></fa-icon>
-                        </a>
-                    }
-                </div>
-            </div>
+            <ul class="networks">
+                @for (network of networks; track $index) {
+                <a href={{network.link}} target="_blank" data-aos="fade-left" data-aos-duration="1000">
+                    <fa-icon [icon]="network.icon | convertStringLabelToFontawesomeIcon"></fa-icon>
+                </a>
+                }
+            </ul>
         </div>
         <div class="bottom">
             <div class="image-wrapper">
-                <img ngSrc="../../../../../../../assets/img/home/about/a-propos-de-serge-espoir-matomba.webp" alt="À propos de Serge Espoir Matomba" fill>
+                <img ngSrc="../../../../../../../assets/img/home/about/a-propos-de-serge-espoir-matomba.webp"
+                    alt="À propos de Serge Espoir Matomba" fill>
             </div>
             <div class="about">
                 <h4>
@@ -31,7 +31,7 @@
                     et ses prises de position fermes sur la crise anglophone et la démission du président Paul Biya.
                     Candidat aux élections présidentielles de 2018 et 2025, il prône une souveraineté économique du
                     Cameroun, incluant la sortie du Franc CFA. Son engagement et son dynamisme ont été maintes fois
-                    récompensés par des distinctions nationales. 
+                    récompensés par des distinctions nationales.
                 </p>
                 <button routerLink="/le-candidat">En Apprendre Plus Sur Le Candidat</button>
             </div>

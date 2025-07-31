@@ -30,33 +30,34 @@ footer{
                     margin-bottom: 17px;
                 }
 
-                .networks{
-                    margin-top: 20px;
+                .networks {
+                    margin-top: 3rem;
                     display: flex;
-                    
-    
-                     a{
-                        width: 35px;
-                        height : 35px;
-                        border-radius: 50%;
+
+                    a {
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        background-color: var(--project-primary-color);
+                        background-color: transparent;
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
                         margin-right: 10px;
-    
-                        &:hover{
-                           transform: scale(1.2);
-                           box-shadow: rgba(0, 0, 0, 0.499) 0px 54px 55px, rgba(0, 0, 0, 0.247) 0px -12px 30px, rgba(0, 0, 0, 0.24) 0px 4px 6px, rgba(0, 0, 0, 0.348) 0px 12px 13px, rgba(0, 0, 0, 0.185) 0px -3px 5px;
+                        color: var(--project-blue-primary-color);
+                        background-color: var(--project-white-primary-color);
+                        box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+
+                        &:hover {
+                            transform: scale(1.2);
+                            background-color: var(--project-yellow-primary-color);
+                            box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+                            transition: all 0.2s ease-in-out;
                         }
-    
-                        img{
-                            height: 20px;
-                            object-fit: cover;
-                            object-position: center;
-                            margin-bottom: 0;
+
+                        fa-icon {
+                            font-size: 1.3rem;
                         }
-                     }                    
+                    }
                 }
             }
 

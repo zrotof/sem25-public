@@ -6,6 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
+    font-size: 1rem;
 }
 
 html {
@@ -38,15 +39,11 @@ ol {
 }
 
 
-.header-container {
+  .header-container,
+  .my-container {
     max-width: 1400px;
-    padding: 0 20px;
-}
-
-.my-container {
-    max-width: 1300px;
-    padding: 0 20px;
-}
+    padding: 0 1rem;
+  }
 
 .navbar-background-on-scroll {
     background-color: var(--project-white-primary-color);
