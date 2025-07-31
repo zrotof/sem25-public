@@ -15,6 +15,7 @@ import { UtilsService } from 'src/app/shared/services/utils/utils.service';
     NgFor
   ]
 })
+
 export class NavSmallScreenComponent implements OnInit {
 
   @Output() onNavigationOnSmallScreenEvent = new EventEmitter<boolean>();

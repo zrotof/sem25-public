@@ -60,9 +60,10 @@
 
                         &:hover {
                             transform: scale(1.2);
-                            background-color: var(--project-yellow-primary-color);
+                            background-color: var(--project-blue-secondary-color);
                             box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
                             transition: all 0.2s ease-in-out;
+                            color: var(--project-yellow-primary-color);
                         }
 
                         fa-icon {

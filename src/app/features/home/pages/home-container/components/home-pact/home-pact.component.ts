@@ -19,7 +19,6 @@ import { NgOptimizedImage } from '@angular/common';
     ConvertStringLabelToFontawesomeIconPipe,
     NgOptimizedImage
   ]
-
 })
 export class HomePactComponent {
 

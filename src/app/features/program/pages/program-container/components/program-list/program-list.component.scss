@@ -16,10 +16,11 @@
             h2 {
                 color: var(--project-blue-primary-color);
                 margin-bottom: 30px;
-                font-size: 2.5rem;
+                font-size: 3rem;
                 font-weight: 900;
                 line-height: 1;
                 letter-spacing: -1px;
+                max-width: 850px;
             }
 
             p {
@@ -36,7 +37,7 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                gap: 2rem;
+                gap: 1rem;
                 cursor: pointer;
                 background-color: var(--project-blue-tertiary-color);
                 padding: 1rem;
@@ -55,13 +56,18 @@
                 }
 
                 h3 {
-                    font-size: 1.05rem;
+                    font-size: 1.5rem;
                     font-weight: 700;
-                    color: var(--project-font-black);
+                    color: var(--project-black-primary-color);
                     max-width: 300px;
                 }
 
+                p{
+                    font-size: 1rem;
+                }
+
                 button {
+                    margin-top: 1rem;
                     width: fit-content;
                     padding: 0.5rem 0.7rem;
                     font-size: 1rem;

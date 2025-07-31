@@ -1,5 +1,5 @@
 import { NgFor } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Program } from 'src/app/shared/models/program';
 
@@ -16,4 +16,9 @@ import { Program } from 'src/app/shared/models/program';
 
 export class ProgramListComponent {
   @Input() programs !: Program[];
+  @Output() onProjectSelectedEvent = new EventEmitter<string>();
+
+  onProjectSelected(projectId: string): void {
+    this.onProjectSelectedEvent.emit(projectId);
+  }
 }

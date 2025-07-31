@@ -1,8 +1,6 @@
 <div class="program-container">
-    <app-secondary-hero [hero]="secondaryHeroBannerData$ | async"></app-secondary-hero>
+    <app-program-top></app-program-top>
     <app-program-bloc></app-program-bloc>
-
-    <app-program-list [programs]="(programs$ | async)!"></app-program-list>
-
+    <app-program-list [programs]="(programs$ | async)!" (onProjectSelectedEvent)="onGetProgranByIdEventHandler($event)"></app-program-list>
     <app-ambassador-banner [ambassadorBanner]="ambassadorBanner"></app-ambassador-banner>
 </div>

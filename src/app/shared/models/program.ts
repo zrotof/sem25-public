@@ -1,11 +1,6 @@
 export interface Program {
+    id: string,
     title: string,
-    theme : string,
-    sourceImg: string,
-    link: string,
-    texts ?: [ 
-        {
-            text : string
-        }
-    ]
+    description: string,
+    list: string[],
 }
