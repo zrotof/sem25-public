@@ -4,6 +4,7 @@ import { ConvertStringLabelToFontawesomeIconPipe } from '../../../../../../share
 import { RouterLink } from '@angular/router';
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { YoutubeVideoPlayerModalComponent } from 'src/app/shared/components/youtube-video-player-modal/youtube-video-player-modal.component';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-campain-video',
@@ -12,7 +13,8 @@ import { YoutubeVideoPlayerModalComponent } from 'src/app/shared/components/yout
     FontAwesomeModule,
     ConvertStringLabelToFontawesomeIconPipe,
     RouterLink,
-    YoutubeVideoPlayerModalComponent
+    YoutubeVideoPlayerModalComponent,
+    NgOptimizedImage
   ],
   templateUrl: './campain-video.component.html',
   styleUrls: ['./campain-video.component.scss'],

@@ -56,7 +56,7 @@ export class CandidateContainerComponent implements OnInit {
   initAmbassadorBanner(): void {
     this.ambassadorBanner = {
       text: "Passez à l'action et devenez un Ambassadeur de Campagne. Rejoignez notre communauté passionnée, partagez notre vision, soyez le moteur du changement.",
-      image: "../../../../../assets/img/campain-ambassador/crowded.jpeg",
+      image: "../../../../../assets/img/campain-ambassador/soutenez-serge-espoir-matomba.png",
       alt: ''
     }
   }

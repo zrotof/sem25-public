@@ -38,11 +38,11 @@ ol {
 }
 
 
-  .header-container,
-  .my-container {
+.header-container,
+.my-container {
     max-width: 1400px;
     padding: 0 1rem;
-  }
+}
 
 .navbar-background-on-scroll {
     background-color: var(--project-white-primary-color);
@@ -51,6 +51,15 @@ ol {
     transition: all 0.5s ease-in-out;
 
     .content {
+
+        .blue-logo {
+            display: block;
+        }
+
+        .white-logo{
+            display: none;
+        }
+
         nav {
             ul {
                 li {

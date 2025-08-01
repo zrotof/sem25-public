@@ -9,7 +9,7 @@
         width: 100%;
         height: 475px;
         position: absolute;
-        background-color: var(--project-primary-color);
+        background-color: var(--project-blue-secondary-color);
         z-index: -1;
     }
 
@@ -28,7 +28,7 @@
 
             h1{
                 text-align: center;
-                color: white;
+                color: var(--project-black-primary-color);
                 margin-bottom: 50px;
             }
 

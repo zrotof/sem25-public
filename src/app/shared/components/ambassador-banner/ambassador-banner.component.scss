@@ -1,96 +1,97 @@
-.ambassador-banner{
-    display:flex;
+.ambassador-banner {
+    display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 5rem;
+    margin-top: 10rem;
 
-    .content{
-        width : 100%;
+    .content {
+        width: 100%;
         display: flex;
+        flex-direction: column;
         justify-content: center;
 
 
-        .bloc{
+        h3 {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+
+            span {
+                font-size: 3rem;
+                font-weight: 900;
+                letter-spacing: -1px;
+                line-height: 1;
+
+                &:first-child {
+                    -webkit-text-stroke: 3px var(--project-black-primary-color);
+                    color: transparent;
+                }
+            }
+        }
+
+        .bloc {
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            position:relative;
-            background-color: var(--project-primary-color);
+            position: relative;
+            background-color: #05416b;
             padding: 30px 70px;
             border-radius: 15px;
             width: 100%;
 
-            .text{
+            .text {
                 display: flex;
                 flex-direction: column;
                 color: white;
                 width: 70%;
                 z-index: 2;
-    
-                h3{
-                    margin-bottom: 20px;
-                    display: flex;
-                    flex-direction: column;
-    
-                    span{
-                        &:first-child{
-                            -webkit-text-stroke: 1px white; 
-                            color: transparent;
-                            font-size: 2.5rem;
-                        }
+                gap: 3rem;
 
-                        &:last-child{
-                            font-size: 2rem;
-                        }
-                    }
-                }
-    
-                p{
-                    margin-bottom: 20px;
-                    font-weight: 100;
+                p {
                     color: #eeeeee;
                     font-size: 1rem;
+                    line-height: 1.5;
+                    max-width: 700px;
                 }
-    
-                button{
+
+                button {
                     display: flex;
                     align-items: center;
-                    padding: 7px 20px;
-                    color: var(--project-primary-color);
+                    padding: 12px 20px;
+                    color: var(--project-black-primary-color);
                     background-color: white;
                     border: none;
                     width: fit-content;
                     border-radius: 5px;
                     cursor: pointer;
 
-                    &:hover{
-    
-                        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;                         
-                        
-                        i{    
-                                transform: rotate(45deg);
+                    &:hover {
+                        background-color: var(--project-yellow-primary-color);
+                        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+
+                        i {
+                            transform: rotate(45deg);
                         }
                     }
 
-                    span{
+                    span {
                         font-size: 1rem;
                     }
-    
-                    i{
+
+                    i {
                         margin-left: 7px;
                         font-size: 1.2rem;
                         transition: all 0.2s ease-out;
                     }
                 }
             }
-    
-            img{
+
+            img {
                 position: absolute;
                 right: 20px;
-                top: 50%;
-                transform: translateY(-50%);
-                height: 86%;
-                width: 300px;
+                bottom: 0;
+                height: 500px;
+                width: 500px;
                 object-fit: cover;
                 object-position: center;
                 border-radius: 5px;
@@ -99,38 +100,38 @@
     }
 }
 
-@media all and (max-width: 1024px){
-    .ambassador-banner{
-        .content{
-            .bloc{
+@media all and (max-width: 1024px) {
+    .ambassador-banner {
+        .content {
+            .bloc {
                 padding: 30px 20px;
-    
-                .text{
+
+                .text {
                     width: 70%;
-        
-                    h3{
+
+                    h3 {
                         margin-bottom: 15px;
-        
-                        span{
-                            &:first-child{
-                                -webkit-text-stroke: 1px white; 
+
+                        span {
+                            &:first-child {
+                                -webkit-text-stroke: 1px white;
                                 color: transparent;
                                 font-size: 2.5rem;
                             }
-    
-                            &:last-child{
+
+                            &:last-child {
                                 font-size: 2rem;
                             }
                         }
                     }
-        
-                    p{
+
+                    p {
                         font-size: 15px;
                         line-height: 20px;
                     }
                 }
-        
-                img{
+
+                img {
                     right: 20px;
                     height: 75%;
                     width: 270px;
@@ -140,22 +141,22 @@
     }
 }
 
-@media all and (max-width: 924px){
-    .ambassador-banner{
-        .content{
-            .bloc{
+@media all and (max-width: 924px) {
+    .ambassador-banner {
+        .content {
+            .bloc {
                 padding: 20px;
 
-                .text{
+                .text {
                     max-width: 415px;
 
-                    h3{
-                        span{
-                            &:first-child{
+                    h3 {
+                        span {
+                            &:first-child {
                                 font-size: 2rem;
                             }
 
-                            &:last-child{
+                            &:last-child {
                                 font-size: 1.7rem;
                             }
                         }
@@ -166,37 +167,38 @@
     }
 }
 
-@media all and (max-width: 768px){
-    .ambassador-banner{
-        .content{
-            .bloc{
+@media all and (max-width: 768px) {
+    .ambassador-banner {
+        .content {
+            .bloc {
                 padding: 20px;
                 flex-direction: column;
 
-                .text{
+                .text {
                     max-width: 100%;
                     width: 100%;
                     align-items: center;
 
-                    h3{
+                    h3 {
                         text-align: center;
-                        span{
-                            &:first-child{
+
+                        span {
+                            &:first-child {
                                 font-size: 2rem;
                             }
 
-                            &:last-child{
+                            &:last-child {
                                 font-size: 1.7rem;
                             }
                         }
                     }
 
-                    p{
+                    p {
                         text-align: center;
                     }
                 }
 
-                img{
+                img {
                     position: unset;
                     height: 165px;
                     max-width: 400px;
@@ -208,18 +210,19 @@
     }
 }
 
-@media all and (max-width: 425px){
-    .ambassador-banner{
-        .content{
-            .bloc{
+@media all and (max-width: 425px) {
+    .ambassador-banner {
+        .content {
+            .bloc {
                 padding: 20px 10px;
-                .text{
-                    p{
+
+                .text {
+                    p {
                         font-size: 14px;
                     }
                 }
 
-                img{
+                img {
                     height: 140px;
                     width: 225px;
                 }

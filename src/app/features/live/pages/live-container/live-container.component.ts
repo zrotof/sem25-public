@@ -72,7 +72,7 @@ export class LiveContainerComponent implements OnInit{
   initAmbassadorBanner() : void {
     this.ambassadorBanner = {
       text : "Passez à l'action et devenez un Ambassadeur de Campagne. Rejoignez notre communauté passionnée, partagez notre vision, soyez le moteur du changement.",
-      image : "../../../../assets/img/campain-ambassador/crowd-celebrate-women.jpeg",
+      image : "../../../../assets/img/campain-ambassador/je-soutiens-serge-espoir-matomba.png",
       alt : ''
     }
   }

@@ -19,6 +19,11 @@ header {
 
         .logo {
             width: 200px;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .blue-logo{
+            display: none;
         }
 
         nav {
@@ -169,8 +174,6 @@ header {
         }
     }
 }
-
-
 
 .mask-nav-small-screen {
     z-index: 1 !important;

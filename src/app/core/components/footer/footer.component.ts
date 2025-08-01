@@ -41,10 +41,12 @@ export class FooterComponent implements OnInit {
   ];
 
   actLinks = [
+  /*
     {
       label : "Nous contacter",
       link : "/contact"
     },
+  */
     {
       label : "Ambassadeur de campagne",
       link : "/devenir-ambassadeur-de-campagne"

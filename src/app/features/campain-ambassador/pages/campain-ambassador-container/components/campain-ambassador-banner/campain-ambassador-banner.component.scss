@@ -24,9 +24,11 @@
                 h1{
                     display: flex;
                     flex-direction: column;
-                    font-size: 2.6rem;
+                    font-size: 3rem;
                     margin-bottom: 40px;
-                    font-weight: bold;
+                    font-weight: 900;
+                    line-height: 1;
+                    letter-spacing: -1px;
                 }
     
                 .ambassador-numer{
@@ -43,14 +45,15 @@
                         position: absolute;
                         width: 5px;
                         height: 100%;
-                        background-color: var(--project-primary-color);
+                        background-color: var(--project-blue-secondary-color);
                         border-radius: 10px;
                     }
     
                     span{
                         &:first-child{
                             font-weight: 900;
-                            font-size: 2.5rem;
+                            font-size: 3rem;
+                            line-height: -1px;
                             margin-bottom: 5px;
                         }
     
@@ -64,15 +67,18 @@
                     display: flex;
                     align-items: center;
                     padding: 10px 25px;
-                    color: black;
-                    background-color: white;
-                    border: 2px solid black;
+                    color: var(--project-black-primary-color);
+                    background-color: var(--project-white-primary-color);
+                    border: 2px solid var(--project-black-primary-color);
                     width: fit-content;
                     cursor: pointer;
                     margin-top: 30px;
+                    border-radius: 5px;
+                    font-weight: 500;
 
                     &:hover{
-    
+                        background-color: var(--project-yellow-primary-color);
+                        color: var(--project-black-primary-color);
                         box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;                         
                         
                         i{    
