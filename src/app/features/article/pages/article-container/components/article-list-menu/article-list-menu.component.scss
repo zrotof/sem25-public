@@ -20,12 +20,16 @@
             color: #5f5f5f;
             transition: all 0.3s ease-in-out;
             white-space: nowrap;
+
+            &:hover{
+                background-color: var(--project-blue-tertiary-color);
+            }
         }
 
         .active{
-            color: var(--project-primary-color);
-            border: 2px solid var(--project-primary-color);
-            background-color: var(--project-secondary-color);
+            color: var(--project-blue-primary-color);
+            border: 2px solid var(--project-blue-primary-color);
+            background-color: var(--project-blue-tertiary-color);
         }
     }
 }

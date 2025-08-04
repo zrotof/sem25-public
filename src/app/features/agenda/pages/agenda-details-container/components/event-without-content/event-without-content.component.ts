@@ -31,8 +31,7 @@ export class EventWithoutContentComponent {
 
   onShareOnSocialMedia( socialMedia : string ) : void {
 
-    const url = `https://amadou-ba.sn/agenda/${this.data.id}`;
-    console.log(url);
+    const url = `https://demo.matomba2025.com/agenda/${this.data.id}`;
     
     let shareLink = '';
 
@@ -40,7 +39,7 @@ export class EventWithoutContentComponent {
       case 'facebook':
         
       const messageFacebook = 
-        "🇸🇳 AMADOU BÂ - Campagne Présidentielle 2024"
+        "🇨🇲 Serge Espoir MATOMBA - Campagne Présidentielle 2025"
         +"\n\n"+
         "Nous avons le plaisir de vous informer que nous tiendrons prochainement un événement de notre campagne électorale dont les informations sont les suivantes :"
         +"\n"+
@@ -49,19 +48,19 @@ export class EventWithoutContentComponent {
         +`Date : ${this.getFormatedDate(this.data.date, this.data.hour)}`
         +"\n"+
         "Vous pourrez accéder aux détails de l'événement une fois qu'il aura eu lieu."
-        "Retrouvez aussi d'autres éléments clés de notre campagne sur notre site web : https://amadou-ba.sn/articles"
+        "Retrouvez aussi d'autres éléments clés de notre campagne sur notre site web : https://demo.matomba2025.com/articles"
         +"\n\n"+
-        "Restez informés et impliqués dans notre campagne pour l'avenir du SÉNÉGAL."
+        "Restez informés et impliqués dans notre campagne pour l'avenir du CAMEROUN."
         +"\n"+
-        "#AmadouBâ2024 #Présidentielle2024 #CampagneÉlectorale"
+        "#MATOMBA2025 #Présidentielle2025 #Cameroun"
         
-        shareLink = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://previsualisation.amadou-ba.sn/articles')}&t=ok`;
+        shareLink = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent('https://demo.matomba2025.com/articles')}&t=ok`;
         
         break;
 
       case 'whatsapp':
         const messageWhatsapp = 
-        "🇸🇳 *Évènement À Venir*"
+        "🇨🇲 *Évènement À Venir*"
         +"\n\n"+
         `Date: ${this.getFormatedDate(this.data.date, this.data.hour)}`
         +"\n"+
@@ -74,7 +73,7 @@ export class EventWithoutContentComponent {
 
       case 'x':
         const message2 = 
-        "🇸🇳 AMADOU BÂ - Campagne Présidentielle 2024"
+        "🇨🇲 Serge Espoir MATOMBA - Campagne Présidentielle 2025"
         +"\n\n"+
         `Ne manquez pas le prochain évènement du ${this.getFormatedDate(this.data.date, this.data.hour)}`
         +"\n"+

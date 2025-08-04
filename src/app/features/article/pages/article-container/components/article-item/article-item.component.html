@@ -3,7 +3,7 @@
     <h4>{{article.title}}</h4>
     <p [innerHTML]="article.description"></p>
     <span> {{article.date | convertTimeZoneToDate}} </span>
-    <ng-container *ngIf="article.hasVideo">
+    @if (article.hasVideo) {
         <fa-icon [icon]="'faVideo' | convertStringLabelToFontawesomeIcon"></fa-icon>
-    </ng-container>
+    }
 </div>

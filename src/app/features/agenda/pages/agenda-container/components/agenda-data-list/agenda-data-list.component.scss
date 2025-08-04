@@ -13,8 +13,7 @@
         overflow: hidden;
 
         &:hover{
-            background-color: var(--project-primary-color);
-            color: white;
+            background-color: var(--project-yellow-primary-color);
         }
 
         img{
@@ -42,6 +41,8 @@
                 -webkit-box-orient: vertical;
                 overflow: hidden;
                 -webkit-line-clamp: 4;
+                letter-spacing: -1px;
+                line-height: 1;
             }
         }
     }

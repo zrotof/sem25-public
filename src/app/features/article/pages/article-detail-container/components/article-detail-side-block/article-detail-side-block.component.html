@@ -7,7 +7,7 @@
                 <div class="side-article" [routerLink]="['/articles/', article.id]">
                     <img src={{article.coverImage}} alt="article.title">
                     <div class="texts">
-                        <p> {{article.title}} </p>
+                        <h5> {{article.title}} </h5>
                         <p> 
                             <fa-icon [icon]=" 'faCalendarDays' | convertStringLabelToFontawesomeIcon"></fa-icon>
                             <span>{{article.date | convertTimeZoneToDate}} </span>

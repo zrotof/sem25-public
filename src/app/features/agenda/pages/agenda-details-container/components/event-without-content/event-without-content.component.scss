@@ -8,9 +8,12 @@
     h1{
         width: 100%;
         text-align: center;
-        font-size: 2.5rem;
+        font-size: 3rem;
+        font-weight: 900;
         max-width: 1000px;
         margin-bottom: 20px;
+        letter-spacing: -1px;
+        line-height: 1;
     }
 
     .date{
@@ -34,7 +37,7 @@
         padding: 4rem 2rem;
         max-width: 700px;
         height: fit-content;
-        background-color: var(--project-primary-color);
+        background-color: #05416b;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -43,10 +46,10 @@
         .pi-info{
             font-size: 1.5rem;
             border-radius: 50%;
-            color: var(--project-primary-color);
+            color: var(--project-black-primary-color);
             margin-bottom: 30px;
             padding: 10px;
-            background-color: white;
+            background-color: var(--project-yellow-primary-color);
             font-weight: bold;
         }
 

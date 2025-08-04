@@ -1,24 +1,27 @@
-<div class="article-content" *ngIf="data">
+@if (data) {
+<div class="article-content">
     <div class="date">
-        <fa-icon [icon]=" 'faCalendarDays' | convertStringLabelToFontawesomeIcon"></fa-icon> 
+        <fa-icon [icon]=" 'faCalendarDays' | convertStringLabelToFontawesomeIcon"></fa-icon>
         <span>
-            {{data!.date | convertTimeZoneToDate}} 
-            <ng-container *ngIf="data.hour">
-                - {{data.hour}}
-            </ng-container>
-        </span> 
+            {{data!.date | convertTimeZoneToDate}}
+            @if (data.hour) {
+            - {{data.hour}}
+            }
+        </span>
     </div>
     <h2 class="title"> {{data.title}} </h2>
     <div class="media">
-        <ng-container *ngIf="data.hasVideo === false ; else video">
-            <img src={{data.coverImage}} alt={{data.title}}>
-        </ng-container>
-    
-        <ng-template #video>
-            <app-article-video-player [link]="(data.videoLink)!"></app-article-video-player>
-        </ng-template>
+        @if (data.hasVideo === false) {
+        <img src={{data.coverImage}} alt={{data.title}}>
+
+        }
+        @else {
+        <app-article-video-player [link]="(data.videoLink)!"></app-article-video-player>
+
+        }
     </div>
 
     <div class="data" [innerHtml]="data.content"></div>
-    
+
 </div>
+}

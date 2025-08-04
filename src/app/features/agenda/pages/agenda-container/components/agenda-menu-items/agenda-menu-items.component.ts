@@ -1,10 +1,12 @@
+import { NgClass } from '@angular/common';
 import { Component, EventEmitter, Input, Output, SimpleChanges } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-agenda-menu-items',
   standalone: true,
-  imports: [CommonModule],
+  imports: [
+    NgClass
+  ],
   templateUrl: './agenda-menu-items.component.html',
   styleUrls: ['./agenda-menu-items.component.scss']
 })

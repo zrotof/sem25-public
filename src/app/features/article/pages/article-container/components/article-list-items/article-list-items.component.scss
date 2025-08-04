@@ -5,10 +5,11 @@
 
     .content{
         width: 100%;
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
         flex-wrap: wrap;
         justify-content: space-between;
-        gap: 2rem;
+        gap: 1.5rem;
     }
 }
 

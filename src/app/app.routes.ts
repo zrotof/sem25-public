@@ -52,6 +52,7 @@ export const routes: Routes = [
             backgrounded : true
         }
     },
+/**
     {
         path:"contact",
         loadComponent : () => import('./features/contact/pages/contact-container/contact-container.component').then(m => m.ContactContainerComponent),
@@ -59,6 +60,7 @@ export const routes: Routes = [
           backgrounded : true
         }
     },
+*/
     {
         path:"lives",
         loadComponent : () => import('./features/live/pages/live-container/live-container.component').then(m => m.LiveContainerComponent),

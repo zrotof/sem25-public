@@ -1,37 +1,43 @@
-.agenda-container{
+.agenda-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
 
-    app-secondary-hero{
+    app-secondary-hero {
         width: 100%;
     }
 
-    .content{
+    .content {
         width: 100%;
         display: flex;
         flex-direction: column;
         margin-top: 5rem;
 
-        h2{
+        h2 {
+            display: flex;
+            flex-direction: column;
             font-size: 2.5rem;
             margin-bottom: 25px;
-            color: var(--project-primary-color);
-        }
-    
-        p{
-            color: var(--project-black-primary-color);
-            line-height: 23px;
+            color: var(--project-blue-primary-color);
+            line-height: 1;
+            letter-spacing: -1px;
         }
 
-        .datas{
+        p {
+            color: var(--project-black-primary-color);
+            max-width: 1000px;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .datas {
             display: flex;
             width: center;
             justify-content: space-between;
             margin-top: 50px;
 
-            .left{
+            .left {
                 width: 100%;
             }
 
@@ -39,31 +45,31 @@
     }
 }
 
-@media all and (max-width: 1024px){
-    .agenda-container{
-        .content{
+@media all and (max-width: 1024px) {
+    .agenda-container {
+        .content {
             margin-top: 4rem;
-    
-            h2{
+
+            h2 {
                 font-size: 2.1rem;
             }
         }
     }
 }
 
-@media all and (max-width: 900px){
-    .agenda-container{
-        .content{
+@media all and (max-width: 900px) {
+    .agenda-container {
+        .content {
             margin-top: 4rem;
-    
-            h2{
+
+            h2 {
                 font-size: 2rem;
             }
-    
-            .datas{
+
+            .datas {
                 flex-direction: column-reverse;
 
-                .left{
+                .left {
                     width: 100%;
                 }
             }
@@ -71,17 +77,17 @@
     }
 }
 
-@media all and (max-width: 425px){
-    .agenda-container{
-        .content{    
+@media all and (max-width: 425px) {
+    .agenda-container {
+        .content {
             margin-top: 3rem;
 
-            h2{
+            h2 {
                 font-size: 1.8rem;
                 text-align: center;
             }
 
-            p{
+            p {
                 font-size: 15px;
                 text-align: center;
             }

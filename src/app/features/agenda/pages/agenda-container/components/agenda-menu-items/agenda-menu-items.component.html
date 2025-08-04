@@ -1,10 +1,7 @@
 <div class="agenda-menu-items">
-    <ng-container *ngFor="let eventMenu of menuList; let i = index">
-        <button 
-            [ngClass]="eventMenu.isActive ? 'active':''"
-            (click)="getEventListByEventTypeId(eventMenu.id, i)"
-        >
-            {{eventMenu.name}}
-        </button>
-    </ng-container>
+    @for (eventMenu of menuList; track $index) {
+    <button [ngClass]="eventMenu.isActive ? 'active':''" (click)="getEventListByEventTypeId(eventMenu.id, $index)">
+        {{eventMenu.name}}
+    </button>
+    }
 </div>
