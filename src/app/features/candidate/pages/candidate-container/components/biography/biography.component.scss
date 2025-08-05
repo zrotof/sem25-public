@@ -28,31 +28,31 @@
                     display: flex;
                     list-style: none;
 
-                    li{
+                    li {
                         a {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        background-color: transparent;
-                        width: 45px;
-                        height: 45px;
-                        border-radius: 50%;
-                        margin-right: 10px;
-                        color: var(--project-blue-primary-color);
-                        background-color: var(--project-white-primary-color);
-                        box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            background-color: transparent;
+                            width: 45px;
+                            height: 45px;
+                            border-radius: 50%;
+                            margin-right: 10px;
+                            color: var(--project-blue-primary-color);
+                            background-color: var(--project-white-primary-color);
+                            box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
 
-                        &:hover {
-                            transform: scale(1.2);
-                            background-color: var(--project-yellow-primary-color);
-                            box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
-                            transition: all 0.2s ease-in-out;
-                        }
+                            &:hover {
+                                transform: scale(1.2);
+                                background-color: var(--project-yellow-primary-color);
+                                box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+                                transition: all 0.2s ease-in-out;
+                            }
 
-                        fa-icon {
-                            font-size: 1.3rem;
+                            fa-icon {
+                                font-size: 1.3rem;
+                            }
                         }
-                    }
                     }
                 }
             }
@@ -69,7 +69,7 @@
         .biography-elements {
             display: flex;
             flex-direction: column;
-            gap: 50px;
+            gap: 3rem;
 
             .biography-element {
                 display: flex;
@@ -81,6 +81,7 @@
                 background-color: var(--project-yellow-secondary-color);
                 box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
                 align-items: center;
+                position: relative;
 
                 .image-wrapper {
                     flex: 1;
@@ -124,81 +125,100 @@
     }
 }
 
-@media all and (max-width: 1024px) {
+
+@media all and (max-width: 1120px) {
     .biography-bloc {
         .content {
-            .title {
-                display: flex;
+            .introduction {
                 flex-direction: column;
                 align-items: center;
-                margin-bottom: 100px;
+                gap: 2rem;
 
-                h2 {
-                    font-size: 2.3rem;
+                .header-networks {
+                    align-items: center;
+
+                    h3 {
+                        text-align: center;
+                    }
                 }
 
                 p {
-                    line-height: 23px;
-                    font-size: 15px;
+                    text-align: center;
                 }
-            }
-
-            .biography-elements {
-                .biography-element {
-                    .texts {
-                        display: flex;
-                        flex-direction: column;
-                        width: 100%;
-
-                        h3 {
-                            font-size: 1.4rem;
-                        }
-
-                        p {
-                            font-size: 15px !important;
-                        }
-                    }
-                }
-
-
-
             }
         }
     }
 }
 
-@media all and (max-width: 768px) {
+
+@media all and (max-width: 900px) {
     .biography-bloc {
         .content {
+            .introduction {
+                flex-direction: column;
+                align-items: center;
+                gap: 2rem;
+
+                .header-networks {
+                    align-items: center;
+
+                    h3 {
+                        text-align: center;
+                    }
+
+                    .networks {
+                        li {
+                            a {
+                                width: 40px;
+                                height: 40px;
+
+                                fa-icon {
+                                    font-size: 1.2rem;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                p {
+                    text-align: center;
+                }
+            }
+
             .biography-elements {
                 .biography-element {
-                    .texts {
-                        display: flex;
-                        flex-direction: column;
+                    flex-direction: column;
+                    margin-top: 18rem;
+                    margin-bottom: 3rem;
+                    padding: 2rem 1rem;
+
+                    .image-wrapper {
+                        height: 20rem;
                         width: 100%;
+                        overflow: visible;
+                        z-index: -1;
+                        flex: unset;
+                        position: absolute;
+                        top: -18rem;
+
+                        img {
+                            object-position: top center;
+                        }
+                    }
+
+                    .texts {
                         align-items: center;
 
                         h3 {
-                            font-size: 1.2rem;
+                            font-size: 1.5rem;
                             text-align: center;
                         }
 
                         p {
-                            font-size: 15px;
                             text-align: center;
                         }
                     }
                 }
-            }
-        }
-    }
-}
-
-@media all and (max-width: 425px) {
-    .biography-bloc {
-        .content {
-            .title {
-                margin-bottom: 3rem;
             }
         }
     }

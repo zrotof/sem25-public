@@ -104,11 +104,30 @@
     }
 }
 
-@media all and (max-width: 425px){
+
+@media all and (max-width: 1024px){
+    .event-without-content{
+    
+        h1{
+            font-size: 2.5rem;
+        }
+    }
+}
+
+@media all and (max-width: 768px){
     .event-without-content{
     
         h1{
             font-size: 2rem;
+        }
+    }
+}
+
+@media all and (max-width: 425px){
+    .event-without-content{
+    
+        h1{
+            font-size: 1.8rem;
         }
     
         .share-bloc{

@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { CommonModule, DecimalPipe, NgClass, NgFor } from '@angular/common';
+import { DecimalPipe, NgClass, NgOptimizedImage } from '@angular/common';
 import { YoutuveVideoItem } from 'src/app/shared/models/replay';
 import { ConvertYoutubeTimePipe } from 'src/app/shared/pipes/ConvertYoutubeTime/convert-youtube-time.pipe';
 
@@ -7,10 +7,10 @@ import { ConvertYoutubeTimePipe } from 'src/app/shared/pipes/ConvertYoutubeTime/
   selector: 'app-video-list',
   standalone: true,
   imports: [
-    NgFor,
     NgClass,
     ConvertYoutubeTimePipe,
-    DecimalPipe
+    DecimalPipe,
+    NgOptimizedImage
   ],
   templateUrl: './video-list.component.html',
   styleUrls: ['./video-list.component.scss']

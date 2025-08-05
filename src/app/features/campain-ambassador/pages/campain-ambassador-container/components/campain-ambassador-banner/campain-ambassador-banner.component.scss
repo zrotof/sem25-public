@@ -119,13 +119,14 @@
                 max-width: 880px;
                 margin-bottom: 50px;
                 font-size: 1.8rem;
+                letter-spacing: -1px;
+                line-height: 1;
             }
 
             p{
                 max-width: 1130px;
-                line-height: 23px;
-                font-size: 17px;
-
+                line-height: 1.5;
+                font-size: 1rem;
             }
         }
         
@@ -135,76 +136,23 @@
 @media all and (max-width: 1024px){
     .campain-ambassador-banner{
         padding-top: 8rem;
-    
+
         .content{
             .hero{
                 .texts{
                     width: 400px;
         
                     h1{
-                        font-size: 2.4rem;
+                        font-size: 2.5rem;
                         margin-bottom: 30px;
                     }
         
                     .ambassador-numer{
-                        display: flex;
-                        flex-direction: column;
-                        margin-top: 10px;
-                        position: relative;
-                        padding-left: 15px;
-        
-                        &::before{
-                            top: 0;
-                            left: 0;
-                            content: "";
-                            position: absolute;
-                            width: 5px;
-                            height: 100%;
-                            background-color: var(--project-primary-color);
-                            border-radius: 10px;
-                        }
         
                         span{
                             &:first-child{
-                                font-weight: 500;
-                                font-size: 1.8rem;
-                                margin-bottom: 5px;
+                                font-size: 2rem;
                             }
-        
-                            &:last-child{
-                                font-size: 15px;
-                            }
-                        }
-                    }
-    
-                    button{
-                        display: flex;
-                        align-items: center;
-                        padding: 10px 25px;
-                        color: black;
-                        background-color: white;
-                        border: 2px solid black;
-                        width: fit-content;
-                        cursor: pointer;
-                        margin-top: 30px;
-    
-                        &:hover{
-        
-                            box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;                         
-                            
-                            i{    
-                                    transform: rotate(45deg);
-                            }
-                        }
-    
-                        span{
-                            font-size: 1rem;
-                        }
-        
-                        i{
-                            margin-left: 7px;
-                            font-size: 1.2rem;
-                            transition: all 0.2s ease-out;
                         }
                     }
                 }
@@ -242,7 +190,7 @@
                     margin-bottom: 30px;
 
                     h1{
-                        font-size: 2.4rem;
+                        font-size: 2rem;
                         display: inline-block;
                         width: 100%;
                         text-align: center;
@@ -273,9 +221,8 @@
                 .texts{
 
                     h1{
-                        font-size: 2rem;
-                        display: contents;
-
+                        display: inline-flex;
+                        font-size: 1.8rem;
                     }
         
                     .ambassador-numer{

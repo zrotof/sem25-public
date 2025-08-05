@@ -10,7 +10,6 @@ import { ProgramBannerComponent } from '../../../../shared/components/program-ba
 import { AboutCandidateComponent } from './components/about-candidate/about-candidate.component';
 import { CampainCounterEventComponent } from './components/campain-counter-event/campain-counter-event.component';
 import { SwipingHeroBannerComponent } from './components/swiping-hero-banner/swiping-hero-banner.component';
-import { HomeProgramComponent } from './components/home-program/home-program.component';
 
 @Component({
     selector: 'app-home-container',
@@ -25,8 +24,7 @@ import { HomeProgramComponent } from './components/home-program/home-program.com
       ProgramBannerComponent, 
       HomePactComponent, 
       HomeCampainAbassadorComponent, 
-      HomeLastNewsComponent,
-      HomeProgramComponent
+      HomeLastNewsComponent
     ]
 })
 export class HomeContainerComponent implements OnInit {

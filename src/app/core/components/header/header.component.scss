@@ -178,7 +178,7 @@ header {
 
 .mask-nav-small-screen {
     z-index: 1 !important;
-    background-color: #191922;
+    background-color: var(--project-blue-secondary-color);
 
     .nav-small-screen {
         height: 100%;

@@ -1,8 +1,9 @@
 <div class="navigation-small-screen">
 
-    <ul>
+    <ul class="links">
         <li>
-            <a (click)=" onNavigationClicked()" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" routerLink="/">
+            <a (click)=" onNavigationClicked()" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}"
+                routerLink="/">
                 Accueil
             </a>
         </li>
@@ -32,11 +33,12 @@
             </a>
         </li>
         <li>
-            <a (click)=" onNavigationClicked()" routerLinkActive="active-link" routerLink="/devenir-ambassadeur-de-campagne">
+            <a (click)=" onNavigationClicked()" routerLinkActive="active-link"
+                routerLink="/devenir-ambassadeur-de-campagne">
                 <span>Ambassadeur De Campagne</span>
             </a>
         </li>
-<!--
+        <!--
         <li>
             <a (click)=" onNavigationClicked()" routerLinkActive="active-link" routerLink="/dons">
                 <span>Faire Un Don</span>
@@ -48,18 +50,20 @@
                 <span>Nous Contacter</span>
             </a>
         </li>
-        
+
     </ul>
-    
+
     <div class="networks-bloc">
         <p>Suivez votre candidat sur</p>
-        <div class="networks">
-            <ng-container *ngFor="let network of networks">
-                <a href={{network.link}} target="_blank">
-                    <img src={{network.sourceImg}} alt={{network.name}}>
-                </a>
-            </ng-container>
-        </div>
+        <ul class="networks">
+            @for (network of networks; track $index) {
+                <li>
+                    <a href={{network.link}} target="_blank" data-aos="fade-left" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+                        <fa-icon [icon]="network.icon | convertStringLabelToFontawesomeIcon"></fa-icon>
+                    </a>
+                </li>
+            }
+        </ul>
     </div>
 
 </div>

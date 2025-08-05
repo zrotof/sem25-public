@@ -1,7 +1,7 @@
 .replay-menu-list{
     display: flex;
     justify-content: center;
-    margin-top: 53px;
+    margin-top: 4rem;
     
     .content{
         width: 100%;
@@ -11,16 +11,18 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            font-size: 3rem;
+            letter-spacing: -1px;
+            line-height: 1;
+            font-weight: 900;
 
             span{
                 &:first-child{
                     -webkit-text-stroke: 2px var(--project-black-primary-color); 
                     color: white;
-                    font-size: 2.5rem;
                 }
 
                 &:last-child{
-                    font-size: 2rem;
                     text-align: center;
                 }
             }
@@ -35,6 +37,7 @@
             flex-wrap: wrap;
 
             button{
+                font-size: 1rem;
                 padding: 7px 25px;
                 background-color: white;
                 border: 2px solid #b1b1b1;
@@ -48,9 +51,19 @@
             }
     
             .active{
-                color: var(--project-primary-color);
-                border: 2px solid var(--project-primary-color);
-                background-color: var(--project-secondary-color);
+                color: var(--project-blue-primary-color);
+                border: 2px solid var(--project-blue-primary-color);
+                background-color: var(--project-blue-tertiary-color);
+            }
+        }
+    }
+}
+
+@media all and (max-width: 1024px){
+    .replay-menu-list{
+        .content{
+            h1{
+                font-size: 2.5rem;
             }
         }
     }
@@ -59,10 +72,18 @@
 @media all and (max-width: 768px){
     .replay-menu-list{
         .content{
-            .replay-menu-list{
-                button{
-                    font-size: 15px;
-                }
+            h1{
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 560px){
+    .replay-menu-list{
+        .content{
+            h1{
+                font-size: 1.8rem;
             }
         }
     }

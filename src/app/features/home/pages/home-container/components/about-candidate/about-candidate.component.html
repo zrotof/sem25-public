@@ -3,14 +3,17 @@
         alt="African Icons">
     <div class="content my-container">
         <div class="top">
-            <h3>
-                NOTRE MISSION EST DE CONSOLIDER LES ACQUIS ET AVANCER DANS LE PLAN SÉNÉGAL ÉMERGENT 2035
-            </h3>
+            <h2>
+                NOTRE MISSION EST DE RÉVEILLER L’ESPOIR DES CAMEROUNAIS PAR UNE ÉDUCATION LIBÉRÉE, UNE CULTURE AFFIRMÉE
+                ET UNE SOUVERAINETÉ NATIONALE RETROUVÉE. 
+            </h2>
             <ul class="networks">
                 @for (network of networks; track $index) {
-                <a href={{network.link}} target="_blank" data-aos="fade-left" data-aos-duration="1000">
-                    <fa-icon [icon]="network.icon | convertStringLabelToFontawesomeIcon"></fa-icon>
-                </a>
+                    <li>
+                        <a href={{network.link}} target="_blank" data-aos="fade-left" data-aos-duration="1000">
+                            <fa-icon [icon]="network.icon | convertStringLabelToFontawesomeIcon"></fa-icon>
+                        </a>
+                    </li>
                 }
             </ul>
         </div>
@@ -20,10 +23,10 @@
                     alt="À propos de Serge Espoir Matomba" fill>
             </div>
             <div class="about">
-                <h4>
+                <h3>
                     <span>À propos de</span>
                     <span>Serge Espoir MATOMBA</span>
-                </h4>
+                </h3>
                 <p>
                     Entrepreneur précoce, Serge Espoir Matomba a fondé plusieurs entreprises au Cameroun et à l'étranger
                     avant de se lancer en politique avec la création du Peuple Uni pour la Rénovation Sociale (PURS) en

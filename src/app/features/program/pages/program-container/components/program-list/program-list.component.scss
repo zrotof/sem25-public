@@ -1,21 +1,21 @@
 .program-list {
     display: flex;
     justify-content: center;
+    margin-top: 12rem;
 
     .content {
         width: 100%;
         display: flex;
         flex-direction: column;
+        gap: 4rem;
 
         .title {
             display: flex;
             flex-direction: column;
-            margin-bottom: 60px;
-            margin-top: 5rem;
+            gap: 1rem;
 
             h2 {
                 color: var(--project-blue-primary-color);
-                margin-bottom: 30px;
                 font-size: 3rem;
                 font-weight: 900;
                 line-height: 1;
@@ -24,14 +24,16 @@
             }
 
             p {
-                line-height: 23px;
+                font-size: 1rem;
+                line-height: 1.5;
+                max-width: 1000px;
             }
         }
 
         .programs {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-            gap: 1.5rem;
+            gap: 1rem;
 
             .program {
                 display: flex;
@@ -92,53 +94,23 @@
     }
 }
 
-@media all and (max-width: 986px) {
+@media all and (max-width: 1024px) {
     .program-list {
+        margin-top: 8rem;
+
         .content {
-            .programs {
-                .program {
-                    width: 16rem;
-                }
-            }
-        }
-    }
-}
-
-@media all and (max-width: 845px) {
-    .program-list {
-        .content {
-
-
             .title {
-                margin-top: 4rem;
-
                 h2 {
-                    font-size: 2rem;
-                }
-
-                p {
-                    font-size: 15px;
+                    font-size: 2.5rem;
                 }
             }
 
             .programs {
                 .program {
-                    width: 14rem;
-                }
-            }
-        }
-    }
-}
-
-@media all and (max-width: 745px) {
-    .program-list {
-        .content {
-            .programs {
-                .program {
-                    width: 14rem;
-
-                    .image-bloc {
-                        height: 16rem;
+                    .texts {
+                        h3 {
+                            max-width: 100%;
+                        }
                     }
                 }
             }
@@ -146,55 +118,55 @@
     }
 }
 
-@media all and (max-width: 505px) {
+@media all and (max-width: 768px) {
     .program-list {
+        margin-top: 6rem;
+
         .content {
             .title {
-                margin-top: 3rem;
-
                 h2 {
-                    font-size: 1.7rem;
+                    font-size: 2rem;
+                }
+            }
+
+            .programs {
+                .program {
+                    .texts {
+                        h3 {
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media all and (max-width: 525px) {
+    .program-list {
+        margin-top: 5rem;
+
+        .content {
+            gap: 3rem;
+
+            .title {
+                h2 {
+                    text-align: center;
+                    font-size: 1.8rem;
+                }
+
+                p{
                     text-align: center;
                 }
             }
 
             .programs {
-                gap: 1.5rem 0.5rem;
-                justify-content: space-evenly;
-
                 .program {
-                    width: 11rem;
-
-                    .image-bloc {
-                        height: 12rem;
-
-                        .message {
-                            span {
-                                font-size: 1.1rem;
-                            }
+                    .texts {
+                        h3 {
+                            font-size: 1.1rem;
                         }
-                    }
-
-                    h4 {
-                        font-size: 1rem;
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media all and (max-width: 385px) {
-    .program-list {
-        .content {
-            .programs {
-                justify-content: center;
-
-                .program {
-                    width: 250px;
-
-                    .image-bloc {
-                        height: 16rem;
                     }
                 }
             }

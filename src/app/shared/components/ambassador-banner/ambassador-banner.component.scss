@@ -15,7 +15,8 @@
             margin-bottom: 20px;
             display: flex;
             flex-direction: column;
-
+            z-index: 2;
+            
             span {
                 font-size: 3rem;
                 font-weight: 900;

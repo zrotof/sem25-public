@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { NgIf } from '@angular/common';
+import { NgOptimizedImage } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { Article } from '../../models/blog';
 import { ConvertTimeZoneToDatePipe } from '../../pipes/convertTimeZoneToDate/convert-timezone-to-date.pipe';
@@ -15,7 +15,7 @@ import { BlogType } from '../../enums/blog-type';
     ConvertTimeZoneToDatePipe,
     ConvertStringLabelToFontawesomeIconPipe,
     FontAwesomeModule,
-    NgIf
+    NgOptimizedImage
   ],
   templateUrl: './new-item-no-descritpion.component.html',
   styleUrls: ['./new-item-no-descritpion.component.scss']

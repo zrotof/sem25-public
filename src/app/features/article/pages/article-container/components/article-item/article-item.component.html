@@ -1,9 +1,11 @@
 <div class="article-item" routerLink="/articles/{{article.id}}">
-    <img src={{article.coverImage}} alt={{article.title}}>
+    <div class="image-wrapper">
+        <img [ngSrc]="article.coverImage" alt={{article.title}} fill>
+        <span> {{article.date | convertTimeZoneToDate}} </span>
+    </div>
     <h4>{{article.title}}</h4>
     <p [innerHTML]="article.description"></p>
-    <span> {{article.date | convertTimeZoneToDate}} </span>
     @if (article.hasVideo) {
-        <fa-icon [icon]="'faVideo' | convertStringLabelToFontawesomeIcon"></fa-icon>
+    <fa-icon [icon]="'faVideo' | convertStringLabelToFontawesomeIcon"></fa-icon>
     }
 </div>

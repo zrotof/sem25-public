@@ -35,13 +35,13 @@
         .description-action {
             display: flex;
             flex-direction: column;
-            gap: 4rem;
+            gap: 3rem;
 
             p {
                 width: 100%;
                 color: var(--project-font-black);
-                line-height: 28px;
-                font-size: 17px;
+                line-height: 1.5;
+                font-size: 1rem;
             }
 
             ul {
@@ -58,6 +58,7 @@
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
+                    background-color: var(--project-blue-tertiary-color);
 
                     .image-wrapper {
                         width: 50px;
@@ -89,6 +90,7 @@
                             font-size: 1.3rem;
                             padding-right: 60px;
                             width: 100%;
+                            font-weight: 900;
                         }
 
                         p {
@@ -132,8 +134,8 @@
                 overflow: hidden;
                 flex-wrap: nowrap;
                 box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-                margin-top: 2rem;
-                
+                margin-top: 1rem;
+
                 &::before {
                     content: "";
                     position: absolute;
@@ -178,35 +180,60 @@
     }
 }
 
-@media all and (max-width: 930px) {
+
+@media all and (max-width: 1060px) {
     .program-banner {
+        margin-top: 4rem;
+
         .content {
             h2 {
-                font-size: 2.3rem;
+                span {
+                    font-size: 2.5rem;
+                }
             }
 
             .description-action {
-                flex-direction: column;
-                align-items: flex-start;
+                ul {
+                    grid-template-columns: repeat(2, 1fr);
 
-                p {
-                    font-size: 15px;
-                    line-height: 23px;
-                    width: 100%;
+                    li {
+                        .top {
+                            h3 {
+                                font-size: 1.25rem;
+                            }
+                        }
+                    }
                 }
             }
         }
     }
 }
 
-@media all and (max-width: 425px) {
+
+@media all and (max-width: 580px) {
     .program-banner {
-        margin-top: 3rem;
+        margin-top: 4rem;
 
         .content {
             h2 {
-                font-size: 1.7rem;
-                margin-bottom: 25px;
+                span {
+                    font-size: 1.8rem;
+                }
+            }
+
+            .description-action {
+                ul {
+                    grid-template-columns: repeat(1, 1fr);
+
+                    li {
+                        .top {
+                            h3 {
+                                font-size: 1.15rem;
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

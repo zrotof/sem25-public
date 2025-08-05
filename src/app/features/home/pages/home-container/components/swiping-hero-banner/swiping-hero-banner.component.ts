@@ -3,7 +3,6 @@ import { AfterViewInit, CUSTOM_ELEMENTS_SCHEMA, Component, ElementRef, Inject, O
 import { Swiper } from "swiper";
 import { RouterLink } from '@angular/router';
 import { HeroSwiperDirective } from 'src/app/core/directives/hero-swiper/hero-swiper.directive';
-
 import { ButtonPrimaryComponent } from 'src/app/shared/components/button-primary/button-primary.component';
 
 @Component({
@@ -38,35 +37,35 @@ export class SwipingHeroBannerComponent implements AfterViewInit {
     pagination: {
       el: '.swiper-pagination',
       clickable: true
-    }
+    },
+    allowTouchMove: true
   }
 
   private swiperInstance: any;
   private autoplayDelay = this.config.autoplay.delay;
 
-
   ngAfterViewInit(): void {
     this.swiper = this.swiperRef?.nativeElement.swiper;
 
-        if (isPlatformBrowser(this.platformId)) {
+    if (isPlatformBrowser(this.platformId)) {
 
-        if (this.swiperRef && this.swiperRef.nativeElement) {
-          const swiperEl = this.swiperRef.nativeElement;
+      if (this.swiperRef && this.swiperRef.nativeElement) {
+        const swiperEl = this.swiperRef.nativeElement;
 
-          Object.assign(swiperEl, this.config);
+        Object.assign(swiperEl, this.config);
 
-          // Initialiser le Custom Element Swiper (crée l'instance Swiper interne)
-          swiperEl.initialize();
+        // Initialiser le Custom Element Swiper (crée l'instance Swiper interne)
+        swiperEl.initialize();
 
-          // Récupérer l'instance Swiper pour interagir avec elle
-          this.swiperInstance = swiperEl.swiper;
+        // Récupérer l'instance Swiper pour interagir avec elle
+        this.swiperInstance = swiperEl.swiper;
 
-          // Configuration des écouteurs d'événements et démarrage de la barre de progression
-          if (this.swiperInstance) {
-            this.setupSwiperEvents();
-            this.startProgressBar(); // Démarrer la barre dès que le Swiper est prêt
-          }
+        // Configuration des écouteurs d'événements et démarrage de la barre de progression
+        if (this.swiperInstance) {
+          this.setupSwiperEvents();
+          this.startProgressBar(); // Démarrer la barre dès que le Swiper est prêt
         }
+      }
     }
   }
 
@@ -74,7 +73,7 @@ export class SwipingHeroBannerComponent implements AfterViewInit {
     param > 0 ? this.swiper.slideNext() : this.swiper.slidePrev();
   }
 
-    private setupSwiperEvents(): void {
+  private setupSwiperEvents(): void {
     if (this.swiperInstance) {
       this.swiperInstance.on('slideChangeTransitionEnd', () => {
         this.resetProgressBar();

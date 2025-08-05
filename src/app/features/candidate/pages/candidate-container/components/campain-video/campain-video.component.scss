@@ -8,7 +8,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    height: 100vh;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 
     &::before {
         position: absolute;
@@ -21,20 +24,19 @@
     }
 
     .content {
-        width: center;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-top: 80px;
-        padding-bottom: 80px;
         color: white;
         z-index: 2;
+        gap: 3rem;
 
         .image-wrapper {
             position: relative;
             width: 500px;
             height: 45rem;
             box-shadow: rgba(144, 144, 144, 0.56) 0px 0px 100px 5px;
+            flex-shrink: 0;
 
             img {
                 object-fit: cover;
@@ -45,7 +47,7 @@
         .text {
             display: flex;
             flex-direction: column;
-            width: calc(100% - 600px);
+            width: 100%;
             gap: 1.5rem;
 
             h3 {
@@ -55,12 +57,13 @@
                 color: var(--project-blue-secondary-color);
                 font-weight: 900;
                 letter-spacing: -1px;
+                line-height: 1;
             }
 
             p {
                 font-size: 1rem;
+                line-height: 1.5;
                 color: var(--project-white-primary-color);
-                line-height: 26px;
                 font-weight: 400;
             }
 
@@ -82,7 +85,7 @@
                     color: var(--project-white-primary-color);
                 }
 
-                fa-icon{
+                fa-icon {
                     margin-left: 0.5rem;
                     font-size: 1.2rem;
                 }
@@ -91,93 +94,50 @@
     }
 }
 
-@media all and (max-width: 1024px) {
+@media all and (max-width: 1060px) {
     .campain-video {
         .content {
-            padding-top: 40px;
-            padding-bottom: 40px;
+            gap: 2rem;
 
-            .image-bloc {
-                width: 400px;
-                height: 280px;
+            .image-wrapper {
+                width: 430px;
+                height: 38rem;
             }
 
             .text {
-                width: calc(100% - 500px);
 
                 h3 {
-                    span {
-                        &:first-child {
-                            font-size: 3rem;
-                        }
-
-                        &:last-child {
-                            font-size: 1.4rem;
-                        }
-                    }
-                }
-
-                p {
-                    line-height: 23px;
-                    font-size: 15px;
+                    font-size: 2.5rem;
                 }
             }
         }
     }
 }
 
-@media all and (max-width: 865px) {
+@media all and (max-width: 920px) {
     .campain-video {
         .content {
-            flex-direction: column-reverse;
+            flex-direction: column;
 
-            .image-bloc {
-                margin-top: 40px;
-                height: 230px;
+            .image-wrapper {
+                height: 23rem;
+                width: 260px;
             }
 
             .text {
-                width: 100%;
+                display: flex;
                 align-items: center;
 
-                h3 {
-                    span {
-                        text-align: center;
+                h3{
 
-                        &:first-child {
-                            font-size: 2.5rem;
-                        }
-
-                        &:last-child {
-                            font-size: 1.3rem;
-                        }
-                    }
                 }
 
-                p {
+                p{
                     text-align: center;
                 }
-            }
-        }
-    }
-}
 
-@media all and (max-width: 425px) {
-    .campain-video {
-        margin-top: 3rem;
-
-        .content {
-            flex-direction: column-reverse;
-
-            .image-bloc {
-                margin-top: 40px;
-                height: 200px;
-                width: 100%;
-            }
-
-            .text {
-                p {
-                    font-size: 14px;
+                button {
+                    margin-top: 2rem;
                 }
             }
         }

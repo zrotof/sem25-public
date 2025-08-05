@@ -9,7 +9,10 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 
     &::before {
         content: "";
@@ -60,7 +63,7 @@
                 margin-bottom: 30px;
                 color: #d7d7d7;
                 font-size: 1rem;
-                line-height: 26px;
+                line-height: 1.5;
             }
 
             button {
@@ -172,19 +175,8 @@
 
                 h3 {
                     span {
-                        &:first-child {
-                            font-size: 2.2rem;
-                        }
-
-                        &:last-child {
-                            font-size: 1.7rem;
-                        }
+                        font-size: 2.5rem;
                     }
-                }
-
-                p {
-                    margin-bottom: 20px;
-                    line-height: 23px;
                 }
             }
 
@@ -225,33 +217,20 @@
     }
 }
 
-@media all and (max-width: 425px) {
+@media all and (max-width: 560px) {
     .home-campain-abassador {
         .content {
-            padding-top: 3rem;
-            padding-bottom: 4rem;
-
             .texts-bloc {
                 h3 {
                     span {
-                        &:first-child {
-                            font-size: 1.7rem;
-                        }
-
-                        &:last-child {
-                            font-size: 1.7rem;
-                        }
+                        font-size: 1.8rem;
                     }
-                }
-
-                button {
-                    font-size: 15px;
                 }
             }
 
             form {
                 margin-top: 50px;
-                width: 95%;
+                width: 100%;
                 padding: 1rem 20px;
             }
         }

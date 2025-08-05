@@ -1,48 +1,50 @@
-.video-list{
+.video-list {
     display: flex;
     justify-content: center;
     width: 100%;
 
-    .content{
+    .content {
         width: 100%;
 
-        .videos{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+        .videos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
             width: 100%;
-            margin-top: 70px;
+            margin-top: 3rem;
             gap: 1rem;
-        
-            .video{
+
+            .video {
                 display: flex;
                 flex-direction: column;
-                width: 220px;
+                width: 100%;
                 cursor: pointer;
                 border-radius: 10px;
                 border: 1px solid transparent;
                 color: var(--project-black-primary-color);
 
-                &:hover{
+                &:hover {
                     border: 1px solid var(--project-black-primary-color);
                 }
-        
-                .top{
+
+                .top {
                     width: 100%;
-                    height: 125px;
                     position: relative;
                     border-radius: 10px 10px 0 0;
                     overflow: hidden;
-    
-                    img{
-                        object-fit: cover;
-                        object-position: center;
+                    height: 150px;
+
+                    .image-wrapper {
+                        position: relative;
                         width: 100%;
                         height: 100%;
-                        margin-bottom: 15px;
+
+                        img {
+                            object-fit: cover;
+                            object-position: center;
+                        }
                     }
-        
-                    .youtube-play-icon{
+
+                    .youtube-play-icon {
                         position: absolute;
                         top: 50%;
                         left: 50%;
@@ -55,136 +57,91 @@
                         align-items: center;
                         justify-content: center;
                         pointer-events: none;
-        
-                        i{
+
+                        i {
                             color: red;
                             font-size: 1.1em;
                         }
                     }
-        
-                    .youtube-duration{
+
+                    .youtube-duration {
                         position: absolute;
                         right: 5px;
                         bottom: 10px;
-                        background: white;
-                        color: black;
+                        background: var(--project-white-primary-color);
+                        color: var(--project-black-primary-color);
                         padding: 2px 5px;
                     }
                 }
-                
-                .bottom{
+
+                .bottom {
                     display: flex;
                     flex-direction: column;
                     width: 100%;
                     padding: 10px;
-    
-                    .youtube-statistics{
+
+                    .youtube-statistics {
                         display: flex;
                         justify-content: space-between;
                         margin-bottom: 7px;
                         font-weight: 600;
                         font-size: 15px;
                         width: 100%;
-                        
-                        small{
+
+                        small {
                             font-size: 0.9em;
                             width: fit-content;
                             text-align: center;
                             text-wrap: wrap;
 
-                            &:first-child{
+                            &:first-child {
                                 margin-right: 5px;
                             }
-                            &:last-child{
+
+                            &:last-child {
                                 margin-left: 5px;
                             }
                         }
                     }
-            
-                    p{
-                        font-size: 15px;
+
+                    p {
+                        font-size: 1rem;
+                        line-height: 1.3;
+                        letter-spacing: -1;
                         display: -webkit-box;
                         -webkit-box-orient: vertical;
                         overflow: hidden;
                         -webkit-line-clamp: 3;
+                        font-weight: 600;
                     }
                 }
             }
-    
-            .active-video{
-                background-color: var(--project-primary-color);
-                color: var(--project-white-primary-color);
-            }
-    }
-    }
-}
 
-@media all and (max-width: 768px){
-    .video-list{
-        .content{
-            .videos{
-                flex-wrap: wrap;
-                justify-content: space-between;
-                margin-top: 50px;
-            
-                .video{
-                    .bottom{
-                        p{
-                            font-size: 14px;
-                            -webkit-line-clamp: 2;
-                        }
-                    }
-                }
+            .active-video {
+                background-color: var(--project-blue-tertiary-color);
             }
         }
     }
 }
 
-@media all and (max-width: 732px){
-    .video-list{
-        .content{
-            .videos{
-                .video{
-                    width: 245px;
-                }
+@media all and (max-width: 768px) {
+    .video-list {
+        .content {
+            .videos {
+                margin-top: 2rem;
             }
         }
     }
 }
 
-@media all and (max-width: 545px){
-    .video-list{
-        .content{
-            .videos{
-                .video{
-                    width: 200px;
-                }
-            }
-        }
-    }
-}
+@media all and (max-width: 450px) {
+    .video-list {
+        .content {
+            .videos {
+                margin-top: 2rem;
 
-@media all and (max-width: 465px){
-    .video-list{
-        .content{
-            .videos{
                 .video{
-                    width: 182px;
-                }
-            }
-        }
-    }
-}
-
-@media all and (max-width: 415px){
-    .video-list{
-        .content{
-            .videos{
-                .video{
-                    width: 100%;
-
                     .top{
-                        width: 100%;
                         height: 175px;
                     }
                 }

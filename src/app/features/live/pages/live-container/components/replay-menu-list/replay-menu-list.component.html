@@ -2,18 +2,16 @@
     <div class="content my-container">
         <h2>
             <span>Accédez Aux</span>
-            <span>Replays des Émissions Précédentes</span>
+            <span>Replays Des Émissions Précédentes</span>
         </h2>
 
         <div class="menu-list">
-            <ng-container *ngFor="let replayMenu of replayMenuList; let i = index">
-                <button 
-                    [ngClass]="replayMenu.isActive ? 'active':''"
-                    (click)="getReplayListByReplayCategoryId(replayMenu.playlistId, i)"
-                >
-                    {{replayMenu.title}}
-                </button>
-            </ng-container>
+            @for (replayMenu of replayMenuList; track $index) {
+            <button [ngClass]="replayMenu.isActive ? 'active':''"
+                (click)="getReplayListByReplayCategoryId(replayMenu.playlistId, $index)">
+                {{replayMenu.title}}
+            </button>
+            }
         </div>
     </div>
 </div>

@@ -1,11 +1,24 @@
-.image-wrapper{
+.image-wrapper {
     position: relative;
-    height: 32rem;
+    height: 35rem;
     margin-bottom: 4rem;
     margin-top: 6rem;
 
-    img{
+    img {
         object-fit: cover;
-        object-position: center;
+        object-position: center 50%;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .image-wrapper {
+        height: 23rem;
+        margin-bottom: 3rem;
+    }
+}
+
+@media all and (max-width: 560px) {
+    .image-wrapper {
+        height: 14rem;
     }
 }

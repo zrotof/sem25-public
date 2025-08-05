@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { NgIf } from '@angular/common';
+import { NgOptimizedImage } from '@angular/common';
 import { Article } from 'src/app/shared/models/blog';
 import { BlogType } from 'src/app/shared/enums/blog-type';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -11,11 +11,11 @@ import { ConvertTimeZoneToDatePipe } from 'src/app/shared/pipes/convertTimeZoneT
   selector: 'app-article-item',
   standalone: true,
   imports: [
-    NgIf,
     FontAwesomeModule,
     ConvertStringLabelToFontawesomeIconPipe,
     ConvertTimeZoneToDatePipe,
-    RouterLink
+    RouterLink,
+    NgOptimizedImage
   ],
   templateUrl: './article-item.component.html',
   styleUrls: ['./article-item.component.scss']

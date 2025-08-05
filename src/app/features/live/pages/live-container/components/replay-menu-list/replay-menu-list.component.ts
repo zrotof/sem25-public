@@ -1,14 +1,15 @@
 import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { ReplayMenu } from 'src/app/shared/models/replay';
 
 @Component({
   selector: 'app-replay-menu-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [NgClass],
   templateUrl: './replay-menu-list.component.html',
   styleUrls: ['./replay-menu-list.component.scss']
 })
+
 export class ReplayMenuListComponent implements OnChanges {
 
   @Input() replayMenuList !: ReplayMenu[];

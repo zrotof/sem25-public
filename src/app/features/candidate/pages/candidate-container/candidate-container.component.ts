@@ -3,14 +3,12 @@ import { Observable } from 'rxjs';
 import { AmbassadorBanner } from 'src/app/shared/models/ambassador-banner';
 import { CampainTeam } from 'src/app/shared/models/campain-team';
 import { SecondaryHeroBanner } from 'src/app/shared/models/secondar-hero-banner';
-import { CandidateService } from 'src/app/shared/services/candidate/candidate.service';
 import { HeroBannerService } from 'src/app/shared/services/hero-banner/hero-banner.service';
 import { AsyncPipe } from '@angular/common';
 import { AmbassadorBannerComponent } from '../../../../shared/components/ambassador-banner/ambassador-banner.component';
 import { ProgramBannerComponent } from '../../../../shared/components/program-banner/program-banner.component';
 import { CampainVideoComponent } from './components/campain-video/campain-video.component';
 import { BiographyComponent } from './components/biography/biography.component';
-import { TopAboutComponent } from './components/top-about/top-about.component';
 import { BiographyHeroComponent } from './components/biography-hero/biography-hero.component';
 
 @Component({
@@ -20,7 +18,6 @@ import { BiographyHeroComponent } from './components/biography-hero/biography-he
   standalone: true,
   imports: [
     BiographyHeroComponent,
-    TopAboutComponent,
     BiographyComponent, 
     CampainVideoComponent, 
     ProgramBannerComponent, 

@@ -4,7 +4,7 @@ footer{
     justify-content: center;
     background-color: var(--project-blue-secondary-color);
     color: var(--project-black-primary-color );
-    margin-top: 120px;
+    margin-top: 3rem;
 
     .content{
         display: flex;
@@ -83,11 +83,9 @@ footer{
                         cursor: pointer;
 
                         &:hover{
-                            color: var(--project-primary-color);
-                            font-weight: 100;
+                            color: var(--project-yellow-primary-color);
 
                             a{
-                                box-shadow: rgba(0, 0, 0, 0.499) 0px 54px 55px, rgba(0, 0, 0, 0.247) 0px -12px 30px, rgba(0, 0, 0, 0.24) 0px 4px 6px, rgba(0, 0, 0, 0.348) 0px 12px 13px, rgba(0, 0, 0, 0.185) 0px -3px 5px;
                                 
                                 img{
                                     transform: scale(1.2);

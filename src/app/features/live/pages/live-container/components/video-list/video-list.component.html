@@ -1,15 +1,16 @@
 <div class="video-list">
     <div class="content my-container">
-
         <div class="videos">
-            <ng-container *ngFor="let video of videoList; let i=index">
+            @for (video of videoList; track $index) {
                 <div 
                     class="video" 
                     [ngClass]="video.isActive ? 'active-video' : ''"
-                    (click)="emitYoutubeVideoClickedEvent(video.link, i)"
+                    (click)="emitYoutubeVideoClickedEvent(video.link, $index)"
                 >
                     <div class="top">
-                        <img src={{video.image}} alt={{video.image}}>
+                        <div class="image-wrapper">
+                            <img [ngSrc]="video.image" alt={{video.image}} fill>
+                        </div>
                         <div class="youtube-play-icon">
                             <i class="pi pi-caret-right"></i>
                         </div>
@@ -27,8 +28,7 @@
                         <p> {{video.title}} </p>
                     </div>
                 </div>
-            
-            </ng-container>
+            }
         </div>
         
     </div>

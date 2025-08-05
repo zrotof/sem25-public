@@ -42,11 +42,11 @@
         content: "";
         width: 100%;
         height: 100%;
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0.6124824929971988) 93%);
         z-index: 2;
         left: 0;
         top: 0;
         pointer-events: none;
+        background: #00000070;
     }
 
     swiper-container {
@@ -77,8 +77,8 @@
                 }
             }
 
-            .third-slide{
-                img{
+            .third-slide {
+                img {
                     object-position: bottom center;
                 }
             }
@@ -96,33 +96,45 @@
         width: 100%;
         height: 100%;
         z-index: 3;
+        pointer-events: none;
 
         .texts {
             display: flex;
             flex-direction: column;
             position: absolute;
             gap: 1rem;
-            top: 40%;
+            top: 50%;
+            transform: translateY(-50%);
             left: 0;
             z-index: 2;
             padding: 0 1rem;
 
             h1 {
-                font-size: 3.5rem;
+                display: flex;
+                flex-direction: column;
+                font-size: 3rem;
                 letter-spacing: -1px;
                 line-height: 1;
                 color: var(--project-yellow-primary-color);
                 font-weight: 900;
                 max-width: 650px;
                 text-shadow: 0px 3px 1px #0000008c;
+                overflow: hidden;
+
+                span {
+
+                    &:last-child {
+                        color: var(--project-yellow-secondary-color);
+                    }
+                }
             }
 
-            p {
+            h2 {
                 font-size: 1.1rem;
-                color: var(--project-white-primary-color);
+                color: white;
                 line-height: 1.4;
-                max-width: 650px;
-                text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.496);
+                max-width: 625px;
+                font-weight: 400;
             }
 
             button {
@@ -141,6 +153,7 @@
                 box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
                 gap: 1rem;
                 border: none;
+                pointer-events: all;
 
                 &::before {
                     content: "";
@@ -189,7 +202,8 @@
             position: absolute;
             bottom: 1rem;
             padding: 0 1rem;
-            
+            pointer-events: all;
+
             .swiper-pagination {
                 display: flex;
                 align-items: center;
@@ -251,125 +265,91 @@
     }
 }
 
+@media all and (max-width: 1060px) {
+    .swiping-hero-banner {
+        .content {
+            .texts {
+                h1 {
+                    font-size: 2.5rem;
+                    max-width: 500px;
+                }
+
+                h2 {
+                    font-size: 1rem;
+                    max-width: 550px;
+                }
+
+                button {
+                    font-weight: 500;
+
+                    span {
+                        font-size: 1rem;
+                    }
+
+                    i {
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media all and (max-width: 768px) {
+    .swiping-hero-banner {
+        .content {
+            .texts {
+                h1 {
+                    font-size: 2.2rem;
+                    max-width: 500px;
+                }
 
-    swiper-container {
-        swiper-slide {
-            .my-slide {
-                .text-bloc {
-                    .text {
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%);
+                h2 {
+                    font-size: 1rem;
+                    max-width: 550px;
+                }
 
-                        .teasing {
-                            position: relative;
-                            padding: 10px 0;
-                            padding-left: 25px;
-                            margin-bottom: 10px;
+                button {
+                    font-weight: 500;
 
-                            &::before {
-                                position: absolute;
-                                height: 100%;
-                                content: "";
-                                width: 7px;
-                                border-radius: 10px;
-                                background-color: var(--project-primary-color);
-                                top: 0;
-                                left: 0;
-                            }
+                    span {
+                        font-size: 1rem;
+                    }
 
-
-                            p {
-                                font-size: 2rem;
-                                font-weight: bold;
-                                color: var(--project-secondary-color);
-                                text-shadow: 0px 3px 1px #00000023;
-                            }
-                        }
-
-                        h1 {
-                            font-size: 3.5rem;
-                            margin-bottom: 20px;
-                            text-align: center;
-                        }
-
-                        button {
-                            padding: 11px 21px;
-                            margin: auto;
-
-                            i {
-                                font-size: 1.1rem;
-                            }
-                        }
+                    i {
+                        font-size: 1.1rem;
                     }
                 }
             }
-        }
-    }
 
-    .custom-controls {
-        top: -55px;
+            .controls {
+                justify-content: center;
 
-        .controls {
-            justify-content: center;
-
-            .swiper-pagination {
-                .swiper-pagination-bullet {
-                    width: 50px;
-                    height: 7px;
+                .navigation {
+                    display: none;
                 }
-
-                .swiper-pagination-bullet-active {
-                    width: 50px;
-                    height: 6px;
-                }
-            }
-
-            .navigation {
-                display: none;
             }
         }
     }
 }
 
-@media all and (max-width: 630px) {
+@media all and (max-width: 560px) {
+    .swiping-hero-banner {
+        .content {
+            .texts {
+                align-items: center;
+                transform: translateY(-22%);
 
-    swiper-container {
-        height: 80vh;
-
-        swiper-slide {
-
-            .my-slide {
-                .text-bloc {
-                    .text {
-                        h1 {
-                            font-size: 3rem;
-                        }
-
-                        button {
-                            padding: 10px 20px;
-                        }
-                    }
+                h1 {
+                    font-size: 1.8rem;
+                    max-width: 100%;
+                    text-align: center;
                 }
-            }
-        }
-    }
 
-    .custom-controls {
-        top: -40px;
-    }
-}
-
-@media all and (max-width: 425px) {
-    swiper-container {
-        swiper-slide {
-            .first-slide {
-                background-position: 88% 0;
-            }
-
-            .second-slide {
-                background-position: 65% 0;
+                h2 {
+                    max-width: 100%;
+                    text-align: center;
+                }
             }
         }
     }

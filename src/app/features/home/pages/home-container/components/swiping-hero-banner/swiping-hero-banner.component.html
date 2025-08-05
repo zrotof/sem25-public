@@ -7,45 +7,53 @@
     <swiper-container #swiperRef appHeroSwiper [config]="config" init="false">
         <swiper-slide>
             <div class="my-slide first-slide">
-                <img ngSrc="../../../../../../../assets/img/hero-banner/main/congres-du-purs-avec-serge-espoir-matomba-cameroun.jpg" fill
-                    priority alt="">
+                <img ngSrc="../../../../../../../assets/img/hero-banner/main/congres-du-purs-avec-serge-espoir-matomba-cameroun.jpg"
+                    fill priority alt="">
             </div>
         </swiper-slide>
         <swiper-slide>
             <div class="my-slide second-slide">
-                <img ngSrc="../../../../../../../assets/img/hero-banner/main/meeting-de-campagne-serge-espoir-matomba.jpg" fill alt="">
+                <img ngSrc="../../../../../../../assets/img/hero-banner/main/meeting-de-campagne-serge-espoir-matomba.jpg"
+                    fill alt="">
             </div>
         </swiper-slide>
         <swiper-slide>
             <div class="my-slide third-slide">
-                <img ngSrc="../../../../../../../assets/img/hero-banner/main/brics-2024-serge-espoir-matomba.jpg" fill alt="">
+                <img ngSrc="../../../../../../../assets/img/hero-banner/main/brics-2024-serge-espoir-matomba.jpg" fill
+                    alt="">
             </div>
         </swiper-slide>
         <swiper-slide>
             <div class="my-slide fourth-slide">
-                <img ngSrc="../../../../../../../assets/img/hero-banner/main/serge-espoir-matomba-dans-les-rues-du-cameroun.webp" fill alt="">
+                <img ngSrc="../../../../../../../assets/img/hero-banner/main/serge-espoir-matomba-dans-les-rues-du-cameroun.webp"
+                    fill alt="">
             </div>
         </swiper-slide>
     </swiper-container>
 
     <div class="content header-container">
         <div class="texts">
-            <h1 data-aos="fade-down" data-aos-duration="1000">S.E MATOMBA 2025</h1>
-            <p>
-                Bâtissons ensemble un Cameroun libre, autonome et juste. Notre programme est fondé sur la
-                souveraineté nationale, la refondation de l'État, une économie forte et une identité
-                retrouvée pour tous les Camerounais.
-            </p>
-            <button routerLink="/le-programme" data-aos="fade-up" data-aos-duration="1000">
+            <h1>
+                <span data-aos="fade-up" data-aos-duration="1000">
+                    S.E MATOMBA, 
+                </span>
+                <span data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    pour un Cameroun souverain, éduqué et fier de son identité
+                </span>
+            </h1>
+            <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                Un projet patriotique et ambitieux pour reconstruire notre nation autour de la jeunesse, de la culture et de la justice sociale.
+            </h2>
+            <button routerLink="/le-programme" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1600" data-aos-anchor-placement="top-bottom">
                 <span>Mon Programme</span>
                 <i class="pi pi-arrow-up-right"></i>
             </button>
         </div>
 
-        <div class="controls">
+        <div class="controls" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1100" data-aos-anchor-placement="top-bottom">
             <div class="swiper-pagination"></div>
             <div class="navigation">
-                <button class="prev" (click)="onNavigationEvent(-1)">
+                <button class="prev" (click)="onNavigationEvent(-1)" >
                     <i class="pi pi-arrow-left"></i>
                 </button>
 

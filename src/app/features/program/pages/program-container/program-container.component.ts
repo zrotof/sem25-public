@@ -7,7 +7,6 @@ import { HeroBannerService } from 'src/app/shared/services/hero-banner/hero-bann
 import { ProgramsService } from 'src/app/shared/services/programs/programs.service';
 import { AsyncPipe } from '@angular/common';
 import { AmbassadorBannerComponent } from '../../../../shared/components/ambassador-banner/ambassador-banner.component';
-import { ProgramBlocComponent } from './components/program-bloc/program-bloc.component';
 import { ProgramListComponent } from './components/program-list/program-list.component';
 import { ProgramTopComponent } from './components/program-top/program-top.component';
 import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
@@ -23,7 +22,6 @@ import { ProgramModalComponent } from './components/program-modal/program-modal.
   imports: [
     AsyncPipe,
     ProgramTopComponent,
-    ProgramBlocComponent,
     AmbassadorBannerComponent,
     ProgramListComponent,
   ]

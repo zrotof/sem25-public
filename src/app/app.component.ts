@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import * as AOS from 'aos';
 import { FooterComponent } from './core/components/footer/footer.component';
 import { HeaderComponent } from './core/components/header/header.component';
 import { RouterOutlet } from '@angular/router';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -15,11 +16,14 @@ import { RouterOutlet } from '@angular/router';
     FooterComponent
   ]
 })
+
 export class AppComponent implements OnInit {
 
-  title="sem-2025"
-
+  constructor( @Inject(PLATFORM_ID) private platformId : Object){}
+  
   ngOnInit(): void {
-    AOS.init();
+    if(isPlatformBrowser(this.platformId)){
+      AOS.init();
+    }
   }
 }

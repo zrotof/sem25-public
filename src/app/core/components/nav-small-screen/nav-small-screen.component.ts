@@ -1,7 +1,9 @@
 import { NgFor } from '@angular/common';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { Network } from 'src/app/shared/models/network';
+import { ConvertStringLabelToFontawesomeIconPipe } from 'src/app/shared/pipes/convertStringLabelToFontawesomeIcon/convert-string-label-to-fontawesome-icon.pipe';
 import { UtilsService } from 'src/app/shared/services/utils/utils.service';
 
 @Component({
@@ -12,7 +14,8 @@ import { UtilsService } from 'src/app/shared/services/utils/utils.service';
   imports : [
     RouterLinkActive,
     RouterLink,
-    NgFor
+    FontAwesomeModule,
+    ConvertStringLabelToFontawesomeIconPipe
   ]
 })
 
