@@ -56,7 +56,7 @@ ol {
             display: block;
         }
 
-        .white-logo{
+        .white-logo {
             display: none;
         }
 
@@ -93,6 +93,15 @@ ol {
     width: fit-content;
     margin-top: 0.3rem;
     color: #dc3545;
+}
+
+.p-toast-message-content{
+    padding: 0.7rem;
+
+    .p-toast-detail{
+            padding: 0.7rem;
+
+    }
 }
 
 @media all and (max-width: 425px) {
