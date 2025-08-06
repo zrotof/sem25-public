@@ -83,5 +83,9 @@ export const routes: Routes = [
                 loadComponent : () => import('./features/agenda/pages/agenda-details-container/agenda-details-container.component').then(m => m.AgendaDetailsContainerComponent)
             }
         ]
+    },
+    {
+        path:"**",
+        redirectTo: "/"
     }
 ];

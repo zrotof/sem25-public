@@ -335,6 +335,9 @@
 
 @media all and (max-width: 560px) {
     .swiping-hero-banner {
+        swiper-container{
+            height: 82vh;
+        }
         .content {
             .texts {
                 align-items: center;

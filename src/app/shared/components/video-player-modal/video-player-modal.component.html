@@ -1,33 +1,46 @@
 <div class="video-container">
-  <button class="close-modal" (click)="closeModal()">
-    <i class="pi pi-times"></i>
-  </button>
-  <video  (click)="togglePlayPause()" #videoPlayer [src]="videoSource" class="video-player"></video>
-
-   <button class="play-pause" (click)="togglePlayPause()">
-      <fa-icon [icon]="isPlaying ? 'faPause' : 'faPlay' | convertStringLabelToFontawesomeIcon"></fa-icon>
+  <div class="content my-container">
+    <button class="close-modal" (click)="closeModal()">
+      <i class="pi pi-times"></i>
     </button>
 
-  <div class="controls-bar">
+    <video (click)="togglePlayPause()" #videoPlayer [src]="videoSource" class="video-player" playsinline></video>
 
-    <span class="time">{{ currentTime }} / {{ duration }}</span>
-
-    <!-- Progress Bar -->
-    <div class="progress-bar-wrapper" #progressBar (click)="seek($event)">
-      <div class="progress-bar" [style.width.%]="progress"></div>
-    </div>
-
-    <!-- Volume Control -->
-    <div class="volume-control">
-      <button class="control-button" (click)="toggleMute()">
-        <fa-icon [icon]="isMuted() ? 'faVolumeMute' : (volume === 0 ? 'faVolumeOff' : (volume <= 0.5 ? 'faVolumeDown' : 'faVolumeUp'))"></fa-icon>
+    @if (showCenterPlayButton) {
+      <button class="play-pause" (click)="togglePlayPause()">
+        <fa-icon [icon]="(isPlaying ? 'faPause' : 'faPlay') | convertStringLabelToFontawesomeIcon"></fa-icon>
       </button>
-      <input type="range" #volumeBar min="0" max="100" step="1" (input)="changeVolume($event)" class="volume-slider">
-    </div>
+    }
 
-    <!-- Fullscreen Button -->
-    <button class="control-button fullscreen" (click)="toggleFullScreen()">
-      <fa-icon [icon]="'faExpand' | convertStringLabelToFontawesomeIcon"></fa-icon>
-    </button>
+    <div class="controls-bar">
+      <span class="time">{{ currentTime }} / {{ duration }}</span>
+
+      <!-- Progress Bar -->
+      <div class="progress-bar-wrapper" #progressBar (click)="seek($event)">
+        <div class="progress-bar" [style.width.%]="progress"></div>
+      </div>
+
+      <!-- Volume Control -->
+      <div class="volume-control">
+        <button class="control-button" (click)="toggleMute()">
+          <fa-icon [icon]="(
+              isMuted()
+                ? 'faVolumeMute'
+                : volume === 0
+                ? 'faVolumeOff'
+                : volume <= 0.5
+                ? 'faVolumeDown'
+                : 'faVolumeUp') | convertStringLabelToFontawesomeIcon
+            "></fa-icon>
+        </button>
+        <input type="range" #volumeBar min="0" max="100" step="1" (input)="changeVolume($event)"
+          class="volume-slider" />
+      </div>
+
+      <!-- Fullscreen Button -->
+      <button class="control-button fullscreen" (click)="toggleFullScreen()">
+        <fa-icon [icon]="'faExpand' | convertStringLabelToFontawesomeIcon"></fa-icon>
+      </button>
+    </div>
   </div>
 </div>

@@ -137,7 +137,7 @@ header {
                             justify-content: flex-start;
 
                             &::before {
-                                background: var(--project-primary-color);
+                                background: var(--project-blue-primary-color);
                             }
 
                             &:hover {
@@ -211,12 +211,6 @@ header {
     header {
         .content {
             nav {
-                ul {
-                    li {
-                        margin-left: 13px;
-                    }
-                }
-
                 .get-involved {
                     margin-left: 40px;
                 }
@@ -236,11 +230,11 @@ header {
 
             nav {
                 ul {
+                    gap: 1.5rem;
+                    
                     li {
-                        margin-left: 13px;
-
                         a {
-                            font-size: 0.87rem;
+                            font-size: 0.9rem;
                         }
                     }
                 }
@@ -274,8 +268,8 @@ header {
 
                 span {
                     width: 30px;
-                    height: 2px;
-                    background: white;
+                    height: 3px;
+                    background: var(--project-white-primary-color);
                     border-radius: 3px;
                     transform-origin: 0% 100%;
                     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;

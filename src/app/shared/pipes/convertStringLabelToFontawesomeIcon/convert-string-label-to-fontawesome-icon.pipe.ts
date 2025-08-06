@@ -2,7 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 
 import { faHandshake } from '@fortawesome/free-regular-svg-icons'
-import { faPlay, faCalendarDays, faDownload, faPaperPlane, faEnvelope, faExpand, faPhone, faVideo, faHeart, faHome, faHandHoldingDollar, faUser, faVolumeUp, faVolumeMute } from '@fortawesome/free-solid-svg-icons'
+import { faPlay, faPause, faVolumeOff, faVolumeDown, faCalendarDays, faDownload, faPaperPlane, faEnvelope, faExpand, faPhone, faVideo, faHeart, faHome, faHandHoldingDollar, faUser, faVolumeUp, faVolumeMute } from '@fortawesome/free-solid-svg-icons'
 
 import { faFacebookF, faInstagram, faYoutube, faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
@@ -38,14 +38,20 @@ export class ConvertStringLabelToFontawesomeIconPipe implements PipeTransform {
         return faInstagram
       case 'faPaperPlane':
         return faPaperPlane
+      case 'faPause':
+        return faPause
       case 'faPlay':
         return faPlay
       case 'faPhone':
         return faPhone
       case 'faVideo':
         return faVideo
+      case 'faVolumeDown':
+        return faVolumeDown
       case 'faVolumeMute':
         return faVolumeMute
+      case 'faVolumeOff':
+        return faVolumeOff
       case 'faVolumeUp':
         return faVolumeUp
       case 'faXTwitter':
