@@ -44,24 +44,25 @@
                 <span>Faire Un Don</span>
             </a>
         </li>
--->
+
         <li>
             <a (click)=" onNavigationClicked()" routerLinkActive="active-link" routerLink="/contact">
                 <span>Nous Contacter</span>
             </a>
         </li>
-
+-->
     </ul>
 
     <div class="networks-bloc">
         <p>Suivez votre candidat sur</p>
         <ul class="networks">
             @for (network of networks; track $index) {
-                <li>
-                    <a href={{network.link}} target="_blank" data-aos="fade-left" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
-                        <fa-icon [icon]="network.icon | convertStringLabelToFontawesomeIcon"></fa-icon>
-                    </a>
-                </li>
+            <li>
+                <a href={{network.link}} target="_blank" data-aos="fade-left" data-aos-duration="1000"
+                    data-aos-anchor-placement="top-bottom">
+                    <fa-icon [icon]="network.icon | convertStringLabelToFontawesomeIcon"></fa-icon>
+                </a>
+            </li>
             }
         </ul>
     </div>

@@ -86,7 +86,7 @@ export class HomeCampainAbassadorComponent implements OnInit {
       .subscribe(
         (result) => {
           this.iscampainAmbassadorFormSubmittedAndNotErrorOnClientSide = false;
-          this.messageService.add({ severity: 'success', detail: result.message, life: 20000 ,closable: false });
+          this.messageService.add({ severity: 'success', detail: result.message, life: 10000 });
           const currentCountry = this.campainAmbassadorForm.controls['selectedCountry'].value;
           this.campainAmbassadorForm.reset();
           this.campainAmbassadorForm.controls['selectedCountry'].setValue(currentCountry);

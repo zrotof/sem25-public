@@ -1,4 +1,4 @@
-import { Component, computed, inject, input, Input, OnInit } from '@angular/core';
+import { Component, computed, inject, input , OnInit } from '@angular/core';
 import { AsyncPipe} from '@angular/common';
 import { Observable, of } from 'rxjs';
 import { SecondaryHeroBanner } from 'src/app/shared/models/secondar-hero-banner';
@@ -24,17 +24,16 @@ import { ArticleDetailSideBlockComponent} from './components/article-detail-side
 })
 export class ArticleDetailContainerComponent implements OnInit {
   
-  @Input() id !: string; ;
+  id = input.required<string>();
 
   private readonly blogService = inject(BlogService);
   secondaryHeroBannerData$ !: Observable<SecondaryHeroBanner>;
   heroBannerId: string = "actualites";
   lastArticles$ !: Observable<Article[]>
   blogCategories$ = this.blogService.getBlogCategoryList();
-  articleData$ !: Observable<any>
+  articleData = computed(()=> this.blogService.getArticleById(this.id() as string));
 
   ngOnInit(): void {
-    this.getArticleData();
     this.getSencondaryHeroBannerData(this.heroBannerId);
     this.getLastCreatedArticles();
   }
@@ -67,9 +66,5 @@ export class ArticleDetailContainerComponent implements OnInit {
   getLastCreatedArticles() : void {
     const queryParams= "limit=5"
     this.lastArticles$ = this.blogService.getBlogArticlesByRubricId(queryParams);
-  }
-
-  getArticleData() : void {
-    this.articleData$ = this.blogService.getArticleById(this.id);
   }
 }
