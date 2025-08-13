@@ -18,9 +18,9 @@ header {
         gap: 5rem;
 
         .logo {
-            width: 200px;
             transition: all 0.2s ease-in-out;
             cursor: pointer;
+            object-fit: cover;
         }
 
         .blue-logo{

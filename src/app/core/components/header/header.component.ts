@@ -1,7 +1,7 @@
 import { Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild, ViewEncapsulation } from '@angular/core';
 import { ActivationEnd, Router } from '@angular/router';
 
-import { NgClass } from '@angular/common';
+import { NgClass, NgOptimizedImage } from '@angular/common';
 
 import { MenuItem, MessageService } from 'primeng/api';
 import { MenuModule } from 'primeng/menu';
@@ -18,6 +18,7 @@ import { NavSmallScreenComponent } from '../nav-small-screen/nav-small-screen.co
   providers: [ MessageService ],
   imports:[
     NgClass,
+    NgOptimizedImage,
     MenuModule,
     DialogModule,
     NavSmallScreenComponent

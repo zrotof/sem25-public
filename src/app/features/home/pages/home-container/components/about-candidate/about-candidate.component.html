@@ -1,16 +1,16 @@
 <div class="about-candidate">
-    <img class="african-icons" ngSrc="../../../../../../../assets/img/home/about/about-gb.png" width="100" height="80"
+    <img class="african-icons" ngSrc="../../../../../../../assets/img/home/about/about-bg.webp" width="100" height="80"
         alt="African Icons">
     <div class="content my-container">
         <div class="top">
-            <h2>
+            <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
                 NOTRE MISSION EST DE RÉVEILLER L’ESPOIR DES CAMEROUNAIS PAR UNE ÉDUCATION LIBÉRÉE, UNE CULTURE AFFIRMÉE
                 ET UNE SOUVERAINETÉ NATIONALE RETROUVÉE. 
             </h2>
             <ul class="networks">
                 @for (network of networks; track $index) {
-                    <li>
-                        <a href={{network.link}} target="_blank" data-aos="fade-left" data-aos-duration="1000">
+                    <li [attr.data-aos-delay]="200*$index" data-aos="fade-left" data-aos-duration="600">
+                        <a href={{network.link}} target="_blank">
                             <fa-icon [icon]="network.icon | convertStringLabelToFontawesomeIcon"></fa-icon>
                         </a>
                     </li>
@@ -36,7 +36,7 @@
                     Cameroun, incluant la sortie du Franc CFA. Son engagement et son dynamisme ont été maintes fois
                     récompensés par des distinctions nationales.
                 </p>
-                <button routerLink="/le-candidat">En Apprendre Plus Sur Le Candidat</button>
+                <button data-aos="fade-left" data-aos-duration="1000" routerLink="/le-candidat">En Apprendre Plus Sur Le Candidat</button>
             </div>
         </div>
     </div>

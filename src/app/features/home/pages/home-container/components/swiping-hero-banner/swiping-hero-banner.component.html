@@ -7,19 +7,19 @@
     <swiper-container #swiperRef appHeroSwiper [config]="config" init="false">
         <swiper-slide>
             <div class="my-slide first-slide">
-                <img ngSrc="../../../../../../../assets/img/hero-banner/main/congres-du-purs-avec-serge-espoir-matomba-cameroun.jpg"
+                <img ngSrc="../../../../../../../assets/img/hero-banner/main/congres-du-purs-avec-serge-espoir-matomba-cameroun.webp"
                     fill priority alt="">
             </div>
         </swiper-slide>
         <swiper-slide>
             <div class="my-slide second-slide">
-                <img ngSrc="../../../../../../../assets/img/hero-banner/main/meeting-de-campagne-serge-espoir-matomba.jpg"
+                <img ngSrc="../../../../../../../assets/img/hero-banner/main/meeting-de-campagne-serge-espoir-matomba.webp"
                     fill alt="" priority>
             </div>
         </swiper-slide>
         <swiper-slide>
             <div class="my-slide third-slide">
-                <img ngSrc="../../../../../../../assets/img/hero-banner/main/serge-espoir-matomba-au-brics.jpeg" fill
+                <img ngSrc="../../../../../../../assets/img/hero-banner/main/serge-espoir-matomba-au-brics.webp" fill
                     alt="" priority>
             </div>
         </swiper-slide>
@@ -53,11 +53,11 @@
         <div class="controls" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1100" data-aos-anchor-placement="top-bottom">
             <div class="swiper-pagination"></div>
             <div class="navigation">
-                <button class="prev" (click)="onNavigationEvent(-1)" >
+                <button aria-label="Page précédente" class="prev" (click)="onNavigationEvent(-1)" >
                     <i class="pi pi-arrow-left"></i>
                 </button>
 
-                <button class="next" (click)="onNavigationEvent(1)">
+                <button aria-label="Page suivante" class="next" (click)="onNavigationEvent(1)">
                     <i class="pi pi-arrow-right"></i>
                 </button>
             </div>

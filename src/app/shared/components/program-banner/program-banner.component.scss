@@ -49,36 +49,54 @@
                 grid-template-columns: repeat(4, 1fr);
                 gap: 1rem;
                 justify-content: space-between;
+                list-style: none;
+                /* Ajout pour enlever les puces */
 
                 li {
                     padding: 1rem 1rem 2rem 1rem;
-                    border: 2px solid var(--project-black-primary-color);
+                    border: 1px solid var(--project-black-primary-color);
                     border-radius: 7px;
                     position: relative;
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
                     background-color: var(--project-blue-tertiary-color);
+                    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 
-                    .image-wrapper {
-                        width: 50px;
-                        height: 50px;
-                        position: absolute;
-                        right: -2px;
-                        top: -2px;
-                        border-radius: 0 0 0 30px;
-                        border-bottom: 2px solid var(--project-black-primary-color);
-                        border-left: 2px solid var(--project-black-primary-color);
-                        background-color: white;
 
-                        img {
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                            top: -8px;
-                            left: 5px;
-                            position: absolute;
-                        }
+                    /* Styles spécifiques pour le bento box */
+                    &:nth-child(1) {
+                        /* EDUCATION */
+                        grid-column: span 2;
+                        grid-row: span 1;
+                    }
+
+                    &:nth-child(2) {
+                        /* SECURITE */
+                        grid-column: span 1;
+                        grid-row: span 1;
+                    }
+
+                    &:nth-child(3) {
+                        /* DEVOIR MEMOIRE */
+                        grid-column: span 1;
+                        grid-row: span 2;
+                    }
+
+                    &:nth-child(4) {
+                        /* SANTE */
+                        grid-column: span 1;
+                        grid-row: span 1;
+                    }
+
+                    &:nth-child(5) {
+                        /* ECONOMIE */
+                        grid-column: span 2;
+                        grid-row: span 1;
+                    }
+
+                    &:hover {
+                        background-color: var(--project-yellow-secondary-color);
                     }
 
                     .top {
@@ -93,9 +111,15 @@
                             font-weight: 900;
                         }
 
-                        p {
-                            line-height: 1.5;
-                            font-size: 1rem;
+                        .texts {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 0.5rem;
+
+                            p {
+                                line-height: 1.5;
+                                font-size: 1rem;
+                            }
                         }
                     }
 
@@ -197,6 +221,33 @@
                     grid-template-columns: repeat(2, 1fr);
 
                     li {
+
+                        /* Styles spécifiques pour le bento box sur tablettes */
+                        &:nth-child(1) {
+                            /* EDUCATION */
+                            grid-column: span 1;
+                        }
+
+                        &:nth-child(2) {
+                            /* SECURITE */
+                            grid-column: span 1;
+                        }
+
+                        &:nth-child(3) {
+                            /* ECONOMIE */
+                            grid-column: span 2;
+                        }
+
+                        &:nth-child(4) {
+                            /* SANTE */
+                            grid-column: span 1;
+                        }
+
+                        &:nth-child(5) {
+                            /* DEVOIR MEMOIRE */
+                            grid-column: span 1;
+                        }
+
                         .top {
                             h3 {
                                 font-size: 1.25rem;
@@ -223,9 +274,21 @@
 
             .description-action {
                 ul {
+                    /* Sur les très petits écrans, tous les éléments sont sur une seule colonne */
                     grid-template-columns: repeat(1, 1fr);
 
                     li {
+
+                        /* On réinitialise les spans pour que tous les éléments prennent une seule colonne */
+                        &:nth-child(1),
+                        &:nth-child(2),
+                        &:nth-child(3),
+                        &:nth-child(4),
+                        &:nth-child(5) {
+                            grid-column: span 1;
+                            grid-row: span 1;
+                        }
+
                         .top {
                             h3 {
                                 font-size: 1.15rem;

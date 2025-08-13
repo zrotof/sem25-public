@@ -14,28 +14,28 @@
         </div>
 
         <form [formGroup]="campainAmbassadorForm" (submit)="onCampainAmbassadorForm()">
-            <div class="input-bloc">
+            <div class="input-bloc" data-aos="fade-up" data-aos-duration="1000">
                 <label>Nom</label>
                 <input formControlName="lastname" type="text" placeholder="Entrez votre nom">
                 <small *ngIf="formControls['lastname'].invalid && isFormSubmitted " class="error-feedback">Nom
                     manquant</small>
             </div>
 
-            <div class="input-bloc">
+            <div class="input-bloc" data-aos="fade-up" data-aos-duration="1000">
                 <label>Prénom</label>
                 <input formControlName="firstname" type="text" placeholder="Entrez votre prénom">
                 <small *ngIf="formControls['firstname'].invalid && isFormSubmitted " class="error-feedback">Prénom
                     manquant</small>
             </div>
 
-            <div class="input-bloc">
+            <div class="input-bloc" data-aos="fade-up" data-aos-duration="1000">
                 <label>Email</label>
                 <input formControlName="email" type="text" placeholder="Entrez votre email">
                 <small *ngIf="formControls['email'].invalid && isFormSubmitted" class="error-feedback">Adresse mail
                     manquante</small>
             </div>
 
-            <div class="phone-bloc">
+            <div class="phone-bloc" data-aos="fade-up" data-aos-duration="1000">
                 <label>Téléphone</label>
                 <div class="phone-input-bloc">
                     <p-dropdown formControlName="selectedCountry" [options]="COUNTRY_FLAGS_AND_DIAL_CODES"
@@ -60,14 +60,14 @@
 
             </div>
 
-            <div class="input-bloc">
+            <div class="input-bloc" data-aos="fade-up" data-aos-duration="1000">
                 <label>Ville</label>
                 <input type="text" formControlName="town" placeholder="Entrez votre ville">
                 <small *ngIf="formControls['town'].invalid && isFormSubmitted" class="error-feedback">Renseignez votre
                     ville</small>
             </div>
 
-            <button type="submit">
+            <button type="submit" data-aos="fade-up" data-aos-duration="2000">
                 <ng-container *ngIf="iscampainAmbassadorFormSubmittedAndNotErrorOnClientSide; else defaultText">
                     <p-progressSpinner [style]="{width: '20px', height: '20px'}" strokeWidth="8"></p-progressSpinner>
                 </ng-container>
