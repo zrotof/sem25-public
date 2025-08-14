@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
-import { NgClass, NgFor, NgOptimizedImage } from '@angular/common';
-import { Network } from 'src/app/shared/models/network';
+import { Component, inject } from '@angular/core';
+import { NgClass, NgOptimizedImage } from '@angular/common';
 import { UtilsService } from 'src/app/shared/services/utils/utils.service';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ConvertStringLabelToFontawesomeIconPipe } from 'src/app/shared/pipes/convertStringLabelToFontawesomeIcon/convert-string-label-to-fontawesome-icon.pipe';
@@ -11,28 +10,18 @@ import { ConvertStringLabelToFontawesomeIconPipe } from 'src/app/shared/pipes/co
   templateUrl: './biography.component.html',
   styleUrls: ['./biography.component.scss'],
   imports: [
-    NgFor,
     NgClass,
     NgOptimizedImage,
     FontAwesomeModule,
     ConvertStringLabelToFontawesomeIconPipe
-  ],
+  ]
 })
 
 export class BiographyComponent {
 
-  networks !: Network[];
+  private readonly utilsService = inject(UtilsService);
 
-  constructor(private utilsService: UtilsService) { }
-
-
-  ngOnInit(): void {
-    this.getSocialMediaNetworks();
-  }
-
-  getSocialMediaNetworks() {
-    this.networks = this.utilsService.getSocialMediaNetWorks();
-  }
+  networks = this.utilsService.getSocialMediaNetWorks();
 
   biographyBlocs = [
     {

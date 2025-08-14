@@ -29,11 +29,15 @@ export class ProgramBannerComponent {
       ]
     },
     {
-      title: "DEVOIR MÉMOIRE",
+      title: "RÉPARATION",
       texts: [
-        "L'exigence d'une reconnaissance officielle et la réparation des crimes coloniaux subis par son peuple camerounais. Ces réparations, qu’elles soient matérielles, symboliques ou mémorielles, seront intégrées à une politique nationale de souveraineté, de justice historique et de renaissance culturelle.", 
+        "L'exigence d'une reconnaissance officielle et la réparation des crimes coloniaux subis par son peuple camerounais. Ces réparations, qu’elles soient matérielles ou mémorielles, seront intégrées à une politique nationale de souveraineté, de justice historique et de renaissance culturelle.",
         "Cette reconnaissance des crimes coloniaux entrainera l’exigence de rompre avec les structures héritées du colonialisme(CFA, accords inégaux, concessions minières).",
-        "Néanmoins, la réparation ne serait pas seulement financière : elle inclurait un volet mémoire et transmission dans l’éducation, les musées, les archives, pour rétablir la vérité historique et restaurer la dignité du peuple camerounais.",
+        "<b>RÉCUPÉRONS CE QUI NOUS A ÉTÉ VOLÉ, BÂTISSONS L’AVENIR !</b>",
+        "- Exiger auprès de la France et de l’Europe des excuses officielles pour l’esclavage et les crimes coloniaux.",
+        "- Des réparations, y compris financières – ces fonds serviront à construire des écoles, des hôpitaux et des routes.",
+        "- Une éducation de qualité pour nos enfants grâce aux réparations",
+        "- La restitution de tous nos biens culturels et la création d’un Musée National de la Dignité Africaine"
       ]
     },
     {
@@ -47,6 +51,8 @@ export class ProgramBannerComponent {
       title: "ÉCONOMIE",
       texts: [
         "Nous prônons une industrialisation volontariste et la sortie du Franc CFA pour une monnaie nationale, afin de réduire notre dépendance aux importations.",
+        "<b>Notre propre monnaie = notre souveraineté !<b>",
+        "Sortie de la zone du franc CFA et lancement d’une monnaie nationale. Cela contribuera la création d’emplois et l’augmentation des salaires. Stabilité garantie : toutes les économies des citoyens seront conservées à taux 1:1",
         "Nous mettrons en place un fonds de garantie de souveraineté de 300 milliards de FCFA annuel pour soutenir la création d'un million de PME/PMI, générant 5 millions d'emplois directs en 5 ans"
       ]
     }

@@ -9,6 +9,8 @@ import { COUNTRY_FLAGS_AND_DIAL_CODES } from 'src/app/shared/constants/country-f
 import { AmbassadorService } from 'src/app/shared/services/ambassador/ambassador.service';
 import { DropdownModule } from 'primeng/dropdown';
 import { InputTextModule } from 'primeng/inputtext';
+import { RecaptchaV3Service } from 'src/app/shared/services/recaptcha/recaptcha-v3';
+import { RecaptchaFormAction } from 'src/app/shared/enums/recaptcha-form-action.enum';
 
 @Component({
   selector: 'app-home-campain-abassador',
@@ -41,6 +43,7 @@ export class HomeCampainAbassadorComponent implements OnInit {
     private fb: FormBuilder,
     private ambassadorService: AmbassadorService,
     private messageService: MessageService,
+    private recaptchaV3Service: RecaptchaV3Service
   ) { }
 
   ngOnInit(): void {
@@ -54,7 +57,8 @@ export class HomeCampainAbassadorComponent implements OnInit {
       email: ["", Validators.required],
       selectedCountry: [this.COUNTRY_FLAGS_AND_DIAL_CODES[30]],
       phone: ["", Validators.required],
-      town: ['', Validators.required]
+      town: ['', Validators.required],
+      companyWebsite: ['']
     })
   }
 
@@ -62,14 +66,14 @@ export class HomeCampainAbassadorComponent implements OnInit {
     return this.campainAmbassadorForm.controls;
   }
 
-  onCampainAmbassadorForm(): void {
-
-
+  async onCampainAmbassadorForm() {
     this.isFormSubmitted = true
 
     if (this.campainAmbassadorForm.invalid) {
       return;
     }
+
+    const tokenV3 = await this.recaptchaV3Service.execute(RecaptchaFormAction.AMBASSADOR);
 
     const ambassadorToSave = {
       firstname: this.campainAmbassadorForm.controls['firstname'].value,
@@ -78,6 +82,8 @@ export class HomeCampainAbassadorComponent implements OnInit {
       town: this.campainAmbassadorForm.controls['town'].value,
       phone: this.campainAmbassadorForm.controls['phone'].value,
       code: this.campainAmbassadorForm.controls['selectedCountry'].value.dialCode,
+      honeyPot: this.campainAmbassadorForm.controls['companyWebsite'].value,
+      recaptchaTokenV2: tokenV3,
     }
 
     this.iscampainAmbassadorFormSubmittedAndNotErrorOnClientSide = true;

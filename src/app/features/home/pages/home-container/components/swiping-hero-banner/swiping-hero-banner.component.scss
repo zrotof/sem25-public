@@ -122,6 +122,9 @@
                 overflow: hidden;
 
                 span {
+                    &:first-child{
+                        width: fit-content;
+                    }
 
                     &:last-child {
                         color: var(--project-yellow-secondary-color);

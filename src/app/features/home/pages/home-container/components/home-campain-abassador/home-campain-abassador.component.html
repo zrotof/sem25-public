@@ -67,6 +67,10 @@
                     ville</small>
             </div>
 
+            <!-- Honeypot -->
+            <input formControlName="companyWebsite" class="hp-input" autocomplete="off" tabindex="-1"
+                aria-hidden="true" />
+
             <button type="submit" data-aos="fade-up" data-aos-duration="2000">
                 <ng-container *ngIf="iscampainAmbassadorFormSubmittedAndNotErrorOnClientSide; else defaultText">
                     <p-progressSpinner [style]="{width: '20px', height: '20px'}" strokeWidth="8"></p-progressSpinner>

@@ -18,7 +18,7 @@
                         <h3>{{figth.title}}</h3>
                         <div class="texts">
                             @for (text of figth.texts; track $index) {
-                                <p>{{text}} </p>
+                                <p [innerHTML]="text"> </p>
                             }
                         </div>
                     </div>

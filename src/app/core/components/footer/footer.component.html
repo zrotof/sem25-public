@@ -2,16 +2,18 @@
     <div class="content my-container">
         <div class="top">
             <div class="logo-networks-apps-blocs">
-                <img src="../../../../assets/img/header/logo-black.png" alt="Amadou Bâ 2024">
+                <img ngSrc="../../../../assets/img/header/logo-black.webp" alt="Serge Espoir Matomba" width="220" height="80">
                 <p>Bâtissons ensemble un Cameroun libre, autonome et juste. Notre programme est fondé sur la
                     souveraineté nationale, la refondation de l'État, une économie forte et une identité retrouvée
                     pour tous les Camerounais.
                 </p>
                 <ul class="networks">
                     @for (network of networks; track $index) {
-                        <a href={{network.link}} target="_blank" data-aos="fade-left" data-aos-duration="1000">
-                            <fa-icon [icon]="network.icon | convertStringLabelToFontawesomeIcon"></fa-icon>
-                        </a>
+                        <li>
+                            <a href={{network.link}} target="_blank" data-aos="fade-left" [attr.data-aos-delay]="200*$index" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+                                <fa-icon [icon]="network.icon | convertStringLabelToFontawesomeIcon"></fa-icon>
+                            </a>
+                        </li>
                     }
                 </ul>
             </div>
@@ -19,22 +21,22 @@
             <div class="inform">
                 <h3>S'informer</h3>
                 <ul>
-                    <ng-container *ngFor="let item of informLinks">
-                        <li routerLink={{item.link}}> {{item.label}} </li>
-                    </ng-container>
+                    @for (item of informLinks; track $index) {
+                    <li routerLink={{item.link}}> {{item.label}} </li>
+                    }
                 </ul>
             </div>
 
             <div class="act">
                 <h3>Participer</h3>
                 <ul>
-                    <ng-container *ngFor="let item of actLinks">
-                        <li routerLink={{item.link}}> {{item.label}} </li>
-                    </ng-container>
+                    @for (item of actLinks; track $index) {
+                    <li routerLink={{item.link}}> {{item.label}} </li>
+                    }
                 </ul>
             </div>
 
-<!--
+            <!--
             <div class="apps">
                 <h3>Applications</h3>
                 <ul>

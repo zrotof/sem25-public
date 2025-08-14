@@ -10,7 +10,7 @@
             <ul class="networks">
                 @for (network of networks; track $index) {
                     <li [attr.data-aos-delay]="200*$index" data-aos="fade-left" data-aos-duration="600">
-                        <a href={{network.link}} target="_blank">
+                        <a href={{network.link}} target="_blank" [attr.aria-label]="network.name">
                             <fa-icon [icon]="network.icon | convertStringLabelToFontawesomeIcon"></fa-icon>
                         </a>
                     </li>

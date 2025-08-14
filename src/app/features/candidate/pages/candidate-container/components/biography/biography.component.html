@@ -6,11 +6,12 @@
 
                 <ul class="networks">
                     @for (network of networks; track $index) {
-                        <li>
-                            <a href={{network.link}} target="_blank" data-aos="fade-left" data-aos-duration="1000">
-                                <fa-icon [icon]="network.icon | convertStringLabelToFontawesomeIcon"></fa-icon>
-                            </a>
-                        </li>
+                    <li>
+                        <a href={{network.link}} target="_blank" data-aos="fade-left" data-aos-duration="1000"
+                            [attr.aria-label]="network.name">
+                            <fa-icon [icon]="network.icon | convertStringLabelToFontawesomeIcon"></fa-icon>
+                        </a>
+                    </li>
                     }
                 </ul>
             </div>
@@ -30,9 +31,9 @@
                 </div>
                 <div class="texts">
                     <h3> {{biography.title}} </h3>
-                    <ng-container *ngFor="let text of biography.texts">
-                        <p>{{text.text}} </p>
-                    </ng-container>
+                    @for (text of biography.texts; track $index) {
+                    <p>{{text.text}} </p>
+                    }
                 </div>
             </div>
             }

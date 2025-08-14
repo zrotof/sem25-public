@@ -4,7 +4,6 @@ import { AmbassadorBanner } from 'src/app/shared/models/ambassador-banner';
 import { CampainTeam } from 'src/app/shared/models/campain-team';
 import { SecondaryHeroBanner } from 'src/app/shared/models/secondar-hero-banner';
 import { HeroBannerService } from 'src/app/shared/services/hero-banner/hero-banner.service';
-import { AsyncPipe } from '@angular/common';
 import { AmbassadorBannerComponent } from '../../../../shared/components/ambassador-banner/ambassador-banner.component';
 import { ProgramBannerComponent } from '../../../../shared/components/program-banner/program-banner.component';
 import { CampainVideoComponent } from './components/campain-video/campain-video.component';
@@ -22,9 +21,9 @@ import { BiographyHeroComponent } from './components/biography-hero/biography-he
     CampainVideoComponent, 
     ProgramBannerComponent, 
     AmbassadorBannerComponent, 
-    AsyncPipe
   ]
 })
+
 export class CandidateContainerComponent implements OnInit {
 
   secondaryHeroBannerData$ !: Observable<SecondaryHeroBanner>;

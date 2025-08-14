@@ -3,7 +3,7 @@
         <img [ngSrc]="article.coverImage" alt={{article.title}} fill>
         <span> {{article.date | convertTimeZoneToDate}} </span>
     </div>
-    <h4>{{article.title}}</h4>
+    <h3>{{article.title}}</h3>
     <p [innerHTML]="article.description"></p>
     @if (article.hasVideo) {
     <fa-icon [icon]="'faVideo' | convertStringLabelToFontawesomeIcon"></fa-icon>

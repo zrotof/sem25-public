@@ -1,97 +1,86 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Network } from 'src/app/shared/models/network';
 import { UtilsService } from 'src/app/shared/services/utils/utils.service';
 import { RouterLink } from '@angular/router';
-import { NgFor } from '@angular/common';
+import { NgOptimizedImage } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ConvertStringLabelToFontawesomeIconPipe } from 'src/app/shared/pipes/convertStringLabelToFontawesomeIcon/convert-string-label-to-fontawesome-icon.pipe';
 
 @Component({
-    selector: 'app-footer',
-    templateUrl: './footer.component.html',
-    styleUrls: ['./footer.component.scss'],
-    standalone: true,
-    imports: [
-      NgFor, 
-      RouterLink,
-      FontAwesomeModule,
-      ConvertStringLabelToFontawesomeIconPipe
-    ]
+  selector: 'app-footer',
+  templateUrl: './footer.component.html',
+  styleUrls: ['./footer.component.scss'],
+  standalone: true,
+  imports: [
+    NgOptimizedImage,
+    RouterLink,
+    FontAwesomeModule,
+    ConvertStringLabelToFontawesomeIconPipe
+  ]
 })
 
-export class FooterComponent implements OnInit {
+export class FooterComponent {
 
-  constructor( private utilsService: UtilsService){}
+  private readonly utilsService = inject(UtilsService);
 
-  networks !: Network[] ;
-
-  apps : Network[] = [
-    {
-      sourceImg : "../../../assets/img/apps/app-store.webp",
-      link : "",
-      name : "App store",
-      icon: ""
-    },
-    {
-      sourceImg : "../../../assets/img/apps/android.webp",
-      link : "",
-      name : "Android",
-      icon:""
-    }
-  ];
+  networks = this.utilsService.getSocialMediaNetWorks();
 
   actLinks = [
-  /*
+    /*
+      {
+        label : "Nous contacter",
+        link : "/contact"
+      },
+    */
     {
-      label : "Nous contacter",
-      link : "/contact"
+      label: "Ambassadeur de campagne",
+      link: "/devenir-ambassadeur-de-campagne"
     },
-  */
     {
-      label : "Ambassadeur de campagne",
-      link : "/devenir-ambassadeur-de-campagne"
-    },
-    {
-      label : "Faire un don",
-      link : "/dons"
+      label: "Faire un don",
+      link: "/dons"
     }
   ]
 
   informLinks = [
     {
-      label : "Accueil",
-      link : ""
+      label: "Accueil",
+      link: ""
     },
     {
-      label : "Agenda",
-      link : "/agenda"
+      label: "Agenda",
+      link: "/agenda"
     },
     {
-      label : "Dernières actualités",
-      link : "/articles"
+      label: "Dernières actualités",
+      link: "/articles"
     },
     {
-      label : "Le candidat",
-      link : "/le-candidat"
+      label: "Le candidat",
+      link: "/le-candidat"
     },
     {
-      label : "Le programme",
-      link : "/le-programme"
+      label: "Le programme",
+      link: "/le-programme"
     },
     {
-      label : "Live / Replays",
-      link : "/lives"
+      label: "Live / Replays",
+      link: "/lives"
     }
   ]
 
-  ngOnInit(): void {
-      this.getSocialMediaNetworks();
-  }
-
-
-  getSocialMediaNetworks(){
-    this.networks = this.utilsService.getSocialMediaNetWorks();
-  }
-
-
+  apps: Network[] = [
+    {
+      sourceImg: "../../../assets/img/apps/app-store.webp",
+      link: "",
+      name: "App store",
+      icon: ""
+    },
+    {
+      sourceImg: "../../../assets/img/apps/android.webp",
+      link: "",
+      name: "Android",
+      icon: ""
+    }
+  ];
 }

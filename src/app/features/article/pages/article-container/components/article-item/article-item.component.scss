@@ -15,7 +15,6 @@
         margin-bottom: 10px;
         border-radius: 5px;
         overflow: hidden;
-
         position: relative;
 
         &::after {
@@ -32,12 +31,11 @@
         img {
             object-fit: cover;
             object-position: top center;
-
         }
     }
 
 
-    h4 {
+    h3 {
         display: -webkit-box;
         letter-spacing: -1px;
         line-height: 1;
@@ -84,11 +82,7 @@
 
 @media all and (max-width: 1024px) {
     .article-item {
-        .image-wrapper {
-            //height: 180px;
-        }
-
-        h4 {
+        h3 {
             font-size: 1.1rem;
         }
     }
@@ -96,15 +90,11 @@
 
 @media all and (max-width: 550px) {
     .article-item {
-        &::after {
+        .image-wrapper {
             height: 150px;
         }
 
-        img {
-            height: 150px;
-        }
-
-        h4 {
+        h3 {
             font-size: 1rem;
         }
 
@@ -123,7 +113,7 @@
             height: 200px;
         }
 
-        img {
+        .image-wrapper {
             height: 200px;
         }
 

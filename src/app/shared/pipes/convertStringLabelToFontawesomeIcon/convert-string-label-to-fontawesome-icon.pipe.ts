@@ -62,5 +62,4 @@ export class ConvertStringLabelToFontawesomeIconPipe implements PipeTransform {
         return faUser;
     }
   }
-
 }
