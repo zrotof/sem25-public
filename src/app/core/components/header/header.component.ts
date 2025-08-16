@@ -10,21 +10,20 @@ import { DialogModule } from 'primeng/dialog';
 import { NavSmallScreenComponent } from '../nav-small-screen/nav-small-screen.component';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
-  encapsulation : ViewEncapsulation.None,
-  standalone : true,
-  providers: [ MessageService ],
-  imports:[
-    NgClass,
-    NgOptimizedImage,
-    MenuModule,
-    DialogModule,
-    NavSmallScreenComponent,
-    RouterLink,
-    RouterLinkActive
-  ]
+    selector: 'app-header',
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    providers: [MessageService],
+    imports: [
+        NgClass,
+        NgOptimizedImage,
+        MenuModule,
+        DialogModule,
+        NavSmallScreenComponent,
+        RouterLink,
+        RouterLinkActive
+    ]
 })
 
 export class HeaderComponent implements OnInit{

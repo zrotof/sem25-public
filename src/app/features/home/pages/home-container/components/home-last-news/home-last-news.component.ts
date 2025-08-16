@@ -6,15 +6,14 @@ import { ArticleItemComponent } from 'src/app/features/article/pages/article-con
 import { NewItemNoDescritpionComponent } from 'src/app/shared/components/new-item-no-descritpion/new-item-no-descritpion.component';
 
 @Component({
-  selector: 'app-home-last-news',
-  standalone: true,
-  imports: [
-    CarouselModule,
-    NewItemNoDescritpionComponent
-  ],
-  templateUrl: './home-last-news.component.html',
-  styleUrls: ['./home-last-news.component.scss'],
-  encapsulation : ViewEncapsulation.None
+    selector: 'app-home-last-news',
+    imports: [
+        CarouselModule,
+        NewItemNoDescritpionComponent
+    ],
+    templateUrl: './home-last-news.component.html',
+    styleUrls: ['./home-last-news.component.scss'],
+    encapsulation: ViewEncapsulation.None
 })
 export class HomeLastNewsComponent {
 

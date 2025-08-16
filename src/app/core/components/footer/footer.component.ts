@@ -7,16 +7,15 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ConvertStringLabelToFontawesomeIconPipe } from 'src/app/shared/pipes/convertStringLabelToFontawesomeIcon/convert-string-label-to-fontawesome-icon.pipe';
 
 @Component({
-  selector: 'app-footer',
-  templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.scss'],
-  standalone: true,
-  imports: [
-    NgOptimizedImage,
-    RouterLink,
-    FontAwesomeModule,
-    ConvertStringLabelToFontawesomeIconPipe
-  ]
+    selector: 'app-footer',
+    templateUrl: './footer.component.html',
+    styleUrls: ['./footer.component.scss'],
+    imports: [
+        NgOptimizedImage,
+        RouterLink,
+        FontAwesomeModule,
+        ConvertStringLabelToFontawesomeIconPipe
+    ]
 })
 
 export class FooterComponent {

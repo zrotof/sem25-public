@@ -13,22 +13,21 @@ import { RecaptchaV3Service } from 'src/app/shared/services/recaptcha/recaptcha-
 import { RecaptchaFormAction } from 'src/app/shared/enums/recaptcha-form-action.enum';
 
 @Component({
-  selector: 'app-home-campain-abassador',
-  standalone: true,
-  imports: [
-    RouterLink,
-    ReactiveFormsModule,
-    NgIf,
-    NgOptimizedImage,
-    ProgressSpinnerModule,
-    ToastModule,
-    DropdownModule,
-    InputTextModule
-  ],
-  templateUrl: './home-campain-abassador.component.html',
-  styleUrls: ['./home-campain-abassador.component.scss'],
-  encapsulation: ViewEncapsulation.None,
-  providers: [MessageService]
+    selector: 'app-home-campain-abassador',
+    imports: [
+        RouterLink,
+        ReactiveFormsModule,
+        NgIf,
+        NgOptimizedImage,
+        ProgressSpinnerModule,
+        ToastModule,
+        DropdownModule,
+        InputTextModule
+    ],
+    templateUrl: './home-campain-abassador.component.html',
+    styleUrls: ['./home-campain-abassador.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    providers: [MessageService]
 })
 export class HomeCampainAbassadorComponent implements OnInit {
 

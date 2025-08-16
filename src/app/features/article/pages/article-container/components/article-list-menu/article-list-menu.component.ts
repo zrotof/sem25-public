@@ -3,16 +3,15 @@ import { NgClass, NgFor, NgIf } from '@angular/common';
 import { ArticleCategory } from 'src/app/shared/models/blog';
 
 @Component({
-  selector: 'app-article-list-menu',
-  standalone: true,
-  imports: [
-    NgFor,
-    NgIf,
-    NgClass
-  ],
-  templateUrl: './article-list-menu.component.html',
-  styleUrls: ['./article-list-menu.component.scss'],
-  changeDetection: ChangeDetectionStrategy.Default,
+    selector: 'app-article-list-menu',
+    imports: [
+        NgFor,
+        NgIf,
+        NgClass
+    ],
+    templateUrl: './article-list-menu.component.html',
+    styleUrls: ['./article-list-menu.component.scss'],
+    changeDetection: ChangeDetectionStrategy.Default
 })
 export class ArticleListMenuComponent implements OnChanges {
   

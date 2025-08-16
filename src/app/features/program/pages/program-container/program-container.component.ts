@@ -13,18 +13,17 @@ import { DialogService, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { ProgramModalComponent } from './components/program-modal/program-modal.component';
 
 @Component({
-  selector: 'app-program-container',
-  templateUrl: './program-container.component.html',
-  styleUrls: ['./program-container.component.scss'],
-  standalone: true,
-  providers: [DialogService],
-  encapsulation: ViewEncapsulation.None,
-  imports: [
-    AsyncPipe,
-    ProgramTopComponent,
-    AmbassadorBannerComponent,
-    ProgramListComponent,
-  ]
+    selector: 'app-program-container',
+    templateUrl: './program-container.component.html',
+    styleUrls: ['./program-container.component.scss'],
+    providers: [DialogService],
+    encapsulation: ViewEncapsulation.None,
+    imports: [
+        AsyncPipe,
+        ProgramTopComponent,
+        AmbassadorBannerComponent,
+        ProgramListComponent,
+    ]
 })
 
 export class ProgramContainerComponent implements OnInit {

@@ -6,19 +6,18 @@ import { HeroSwiperDirective } from 'src/app/core/directives/hero-swiper/hero-sw
 import { ButtonPrimaryComponent } from 'src/app/shared/components/button-primary/button-primary.component';
 
 @Component({
-  selector: 'app-swiping-hero-banner',
-  standalone: true,
-  encapsulation: ViewEncapsulation.None,
-  templateUrl: './swiping-hero-banner.component.html',
-  styleUrls: ['./swiping-hero-banner.component.scss'],
-  imports: [
-    RouterLink,
-    NgOptimizedImage,
-    HeroSwiperDirective,
-    CommonModule,
-    ButtonPrimaryComponent,
-  ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+    selector: 'app-swiping-hero-banner',
+    encapsulation: ViewEncapsulation.None,
+    templateUrl: './swiping-hero-banner.component.html',
+    styleUrls: ['./swiping-hero-banner.component.scss'],
+    imports: [
+        RouterLink,
+        NgOptimizedImage,
+        HeroSwiperDirective,
+        CommonModule,
+        ButtonPrimaryComponent,
+    ],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 
 export class SwipingHeroBannerComponent implements AfterViewInit {

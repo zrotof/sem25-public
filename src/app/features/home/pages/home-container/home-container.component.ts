@@ -17,21 +17,20 @@ import { SEO_DATA } from '../../../../shared/constants/seo.constants';
     selector: 'app-home-container',
     templateUrl: './home-container.component.html',
     styleUrls: ['./home-container.component.scss'],
-    standalone: true,
     imports: [
-      AsyncPipe,
-      SwipingHeroBannerComponent, 
-      CampainCounterEventComponent, 
-      AboutCandidateComponent, 
-      ProgramBannerComponent, 
-      HomePactComponent, 
-      HomeCampainAbassadorComponent, 
-      HomeLastNewsComponent
+        AsyncPipe,
+        SwipingHeroBannerComponent,
+        CampainCounterEventComponent,
+        AboutCandidateComponent,
+        ProgramBannerComponent,
+        HomePactComponent,
+        HomeCampainAbassadorComponent,
+        HomeLastNewsComponent
     ]
 })
+
 export class HomeContainerComponent implements OnInit {
 
-  
   private blogService = inject(BlogService);
   private seoService = inject(SeoService);
 

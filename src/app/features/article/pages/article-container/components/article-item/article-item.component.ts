@@ -8,17 +8,16 @@ import { RouterLink } from '@angular/router';
 import { ConvertTimeZoneToDatePipe } from 'src/app/shared/pipes/convertTimeZoneToDate/convert-timezone-to-date.pipe';
 
 @Component({
-  selector: 'app-article-item',
-  standalone: true,
-  imports: [
-    FontAwesomeModule,
-    ConvertStringLabelToFontawesomeIconPipe,
-    ConvertTimeZoneToDatePipe,
-    RouterLink,
-    NgOptimizedImage
-  ],
-  templateUrl: './article-item.component.html',
-  styleUrls: ['./article-item.component.scss']
+    selector: 'app-article-item',
+    imports: [
+        FontAwesomeModule,
+        ConvertStringLabelToFontawesomeIconPipe,
+        ConvertTimeZoneToDatePipe,
+        RouterLink,
+        NgOptimizedImage
+    ],
+    templateUrl: './article-item.component.html',
+    styleUrls: ['./article-item.component.scss']
 })
 export class ArticleItemComponent {
 

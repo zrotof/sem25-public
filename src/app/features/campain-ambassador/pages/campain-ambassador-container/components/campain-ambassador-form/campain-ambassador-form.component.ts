@@ -10,21 +10,20 @@ import { COUNTRY_FLAGS_AND_DIAL_CODES } from 'src/app/shared/constants/country-f
 import { DropdownModule } from 'primeng/dropdown';
 
 @Component({
-  selector: 'app-campain-ambassador-form',
-  standalone: true,
-  imports: [
-    NgIf,
-    ReactiveFormsModule,
-    ProgressSpinnerModule,
-    InputTextModule,
-    NgOptimizedImage,
-    DropdownModule,
-    ToastModule
-  ],
-  templateUrl: './campain-ambassador-form.component.html',
-  styleUrls: ['./campain-ambassador-form.component.scss'],
-  encapsulation: ViewEncapsulation.None,
-  providers: [MessageService]
+    selector: 'app-campain-ambassador-form',
+    imports: [
+        NgIf,
+        ReactiveFormsModule,
+        ProgressSpinnerModule,
+        InputTextModule,
+        NgOptimizedImage,
+        DropdownModule,
+        ToastModule
+    ],
+    templateUrl: './campain-ambassador-form.component.html',
+    styleUrls: ['./campain-ambassador-form.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    providers: [MessageService]
 })
 
 export class CampainAmbassadorFormComponent implements OnInit {

@@ -7,18 +7,17 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NavigationExtras, Router, RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-article-detail-side-block',
-  standalone: true,
-  imports: [
-    NgIf,
-    NgFor,
-    ConvertTimeZoneToDatePipe,
-    ConvertStringLabelToFontawesomeIconPipe,
-    FontAwesomeModule,
-    RouterLink
-  ],
-  templateUrl: './article-detail-side-block.component.html',
-  styleUrls: ['./article-detail-side-block.component.scss']
+    selector: 'app-article-detail-side-block',
+    imports: [
+        NgIf,
+        NgFor,
+        ConvertTimeZoneToDatePipe,
+        ConvertStringLabelToFontawesomeIconPipe,
+        FontAwesomeModule,
+        RouterLink
+    ],
+    templateUrl: './article-detail-side-block.component.html',
+    styleUrls: ['./article-detail-side-block.component.scss']
 })
 export class ArticleDetailSideBlockComponent {
 

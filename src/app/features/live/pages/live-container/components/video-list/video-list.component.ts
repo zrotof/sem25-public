@@ -4,16 +4,15 @@ import { YoutuveVideoItem } from 'src/app/shared/models/replay';
 import { ConvertYoutubeTimePipe } from 'src/app/shared/pipes/ConvertYoutubeTime/convert-youtube-time.pipe';
 
 @Component({
-  selector: 'app-video-list',
-  standalone: true,
-  imports: [
-    NgClass,
-    ConvertYoutubeTimePipe,
-    DecimalPipe,
-    NgOptimizedImage
-  ],
-  templateUrl: './video-list.component.html',
-  styleUrls: ['./video-list.component.scss']
+    selector: 'app-video-list',
+    imports: [
+        NgClass,
+        ConvertYoutubeTimePipe,
+        DecimalPipe,
+        NgOptimizedImage
+    ],
+    templateUrl: './video-list.component.html',
+    styleUrls: ['./video-list.component.scss']
 })
 export class VideoListComponent {
   @Input() videoList !: YoutuveVideoItem[];

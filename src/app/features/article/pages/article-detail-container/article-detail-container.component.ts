@@ -11,16 +11,15 @@ import { Article, ArticleCategory } from 'src/app/shared/models/blog';
 import { ArticleDetailSideBlockComponent} from './components/article-detail-side-block/article-detail-side-block.component';
 
 @Component({
-  selector: 'app-article-detail-container',
-  standalone: true,
-  imports: [
-    AsyncPipe,
-    SecondaryHeroComponent,
-    ArticleDataComponent,
-    ArticleDetailSideBlockComponent
-  ],
-  templateUrl: './article-detail-container.component.html',
-  styleUrls: ['./article-detail-container.component.scss']
+    selector: 'app-article-detail-container',
+    imports: [
+        AsyncPipe,
+        SecondaryHeroComponent,
+        ArticleDataComponent,
+        ArticleDetailSideBlockComponent
+    ],
+    templateUrl: './article-detail-container.component.html',
+    styleUrls: ['./article-detail-container.component.scss']
 })
 export class ArticleDetailContainerComponent implements OnInit {
   

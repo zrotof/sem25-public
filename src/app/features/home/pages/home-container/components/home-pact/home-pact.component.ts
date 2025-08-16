@@ -8,17 +8,16 @@ import { VideoPlayerModalComponent } from 'src/app/shared/components/video-playe
 import { NgOptimizedImage } from '@angular/common';
 
 @Component({
-  selector: 'app-home-pact',
-  standalone: true,
-  templateUrl: './home-pact.component.html',
-  styleUrls: ['./home-pact.component.scss'],
-  providers: [DialogService],
-  encapsulation: ViewEncapsulation.None,
-  imports: [
-    FontAwesomeModule,
-    ConvertStringLabelToFontawesomeIconPipe,
-    NgOptimizedImage
-  ]
+    selector: 'app-home-pact',
+    templateUrl: './home-pact.component.html',
+    styleUrls: ['./home-pact.component.scss'],
+    providers: [DialogService],
+    encapsulation: ViewEncapsulation.None,
+    imports: [
+        FontAwesomeModule,
+        ConvertStringLabelToFontawesomeIconPipe,
+        NgOptimizedImage
+    ]
 })
 export class HomePactComponent {
 

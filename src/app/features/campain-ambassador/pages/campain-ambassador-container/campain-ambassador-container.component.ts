@@ -4,15 +4,14 @@ import { CampainAmbassadorProcessComponent } from './components/campain-ambassad
 import { CampainAmbassadorFormComponent } from './components/campain-ambassador-form/campain-ambassador-form.component';
 
 @Component({
-  selector: 'app-campain-ambassador-container',
-  standalone: true,
-  imports: [
-    CampainAmbassadorBannerComponent,
-    CampainAmbassadorProcessComponent,
-    CampainAmbassadorFormComponent
-  ],
-  templateUrl: './campain-ambassador-container.component.html',
-  styleUrls: ['./campain-ambassador-container.component.scss']
+    selector: 'app-campain-ambassador-container',
+    imports: [
+        CampainAmbassadorBannerComponent,
+        CampainAmbassadorProcessComponent,
+        CampainAmbassadorFormComponent
+    ],
+    templateUrl: './campain-ambassador-container.component.html',
+    styleUrls: ['./campain-ambassador-container.component.scss']
 })
 export class CampainAmbassadorContainerComponent {
 

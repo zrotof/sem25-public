@@ -2,13 +2,12 @@ import { NgClass } from '@angular/common';
 import { Component, EventEmitter, Input, Output, SimpleChanges } from '@angular/core';
 
 @Component({
-  selector: 'app-agenda-menu-items',
-  standalone: true,
-  imports: [
-    NgClass
-  ],
-  templateUrl: './agenda-menu-items.component.html',
-  styleUrls: ['./agenda-menu-items.component.scss']
+    selector: 'app-agenda-menu-items',
+    imports: [
+        NgClass
+    ],
+    templateUrl: './agenda-menu-items.component.html',
+    styleUrls: ['./agenda-menu-items.component.scss']
 })
 
 export class AgendaMenuItemsComponent {

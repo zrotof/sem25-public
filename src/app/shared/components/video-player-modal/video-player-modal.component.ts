@@ -7,16 +7,15 @@ import { DynamicDialogConfig } from 'primeng/dynamicdialog';
 import { ConvertStringLabelToFontawesomeIconPipe } from '../../pipes/convertStringLabelToFontawesomeIcon/convert-string-label-to-fontawesome-icon.pipe';
 
 @Component({
-  selector: 'app-video-player-modal',
-  standalone: true,
-  encapsulation: ViewEncapsulation.None,
-  templateUrl: './video-player-modal.component.html',
-  styleUrl: './video-player-modal.component.scss',
-  imports: [
-    NgClass,
-    FontAwesomeModule,
-    ConvertStringLabelToFontawesomeIconPipe
-  ],
+    selector: 'app-video-player-modal',
+    encapsulation: ViewEncapsulation.None,
+    templateUrl: './video-player-modal.component.html',
+    styleUrl: './video-player-modal.component.scss',
+    imports: [
+        NgClass,
+        FontAwesomeModule,
+        ConvertStringLabelToFontawesomeIconPipe
+    ]
 })
 
 export class VideoPlayerModalComponent implements AfterViewInit, OnDestroy {

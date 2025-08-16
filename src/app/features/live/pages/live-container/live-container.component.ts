@@ -14,20 +14,19 @@ import { YoutubeVideoPlayerModalComponent } from 'src/app/shared/components/yout
 import { MessageService } from 'primeng/api';
 
 @Component({
-  selector: 'app-live-container',
-  standalone: true,
-  templateUrl: './live-container.component.html',
-  styleUrls: ['./live-container.component.scss'],
-  providers: [MessageService, DialogService],
-  imports: [
-    AsyncPipe,
-    LiveVideoPlayerComponent,
-    ReplayMenuListComponent,
-    VideoListComponent,
-    AmbassadorBannerComponent,
-    YoutubeVideoPlayerModalComponent,
-    DynamicDialog
-  ]
+    selector: 'app-live-container',
+    templateUrl: './live-container.component.html',
+    styleUrls: ['./live-container.component.scss'],
+    providers: [MessageService, DialogService],
+    imports: [
+        AsyncPipe,
+        LiveVideoPlayerComponent,
+        ReplayMenuListComponent,
+        VideoListComponent,
+        AmbassadorBannerComponent,
+        YoutubeVideoPlayerModalComponent,
+        DynamicDialog
+    ]
 })
 
 export class LiveContainerComponent implements OnInit {

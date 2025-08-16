@@ -3,14 +3,13 @@ import { NgFor, NgIf } from '@angular/common';
 import { CampainTeam } from 'src/app/shared/models/campain-team';
 
 @Component({
-  selector: 'app-campain-team',
-  standalone: true,
-  imports: [
-    NgFor,
-    NgIf
-  ],
-  templateUrl: './campain-team.component.html',
-  styleUrls: ['./campain-team.component.scss']
+    selector: 'app-campain-team',
+    imports: [
+        NgFor,
+        NgIf
+    ],
+    templateUrl: './campain-team.component.html',
+    styleUrls: ['./campain-team.component.scss']
 })
 
 export class CampainTeamComponent {

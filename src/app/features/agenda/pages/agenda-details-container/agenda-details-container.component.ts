@@ -8,16 +8,15 @@ import { EventWithContentComponent } from './components/event-with-content/event
 import { EventWithoutContentComponent } from './components/event-without-content/event-without-content.component';
 
 @Component({
-  selector: 'app-agenda-details-container',
-  standalone: true,
-  imports: [
-    AsyncPipe,
-    NgIf ,
-    EventWithContentComponent,
-    EventWithoutContentComponent
-  ],
-  templateUrl: './agenda-details-container.component.html',
-  styleUrls: ['./agenda-details-container.component.scss']
+    selector: 'app-agenda-details-container',
+    imports: [
+        AsyncPipe,
+        NgIf,
+        EventWithContentComponent,
+        EventWithoutContentComponent
+    ],
+    templateUrl: './agenda-details-container.component.html',
+    styleUrls: ['./agenda-details-container.component.scss']
 })
 
 export class AgendaDetailsContainerComponent implements OnInit {

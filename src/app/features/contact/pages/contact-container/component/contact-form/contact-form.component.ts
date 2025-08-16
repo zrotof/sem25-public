@@ -10,20 +10,19 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { ToastModule } from 'primeng/toast';
 import { ContactService } from 'src/app/shared/services/contact/contact.service';
 @Component({
-  selector: 'app-contact-form',
-  standalone: true,
-  imports: [
-    CommonModule,
-    ReactiveFormsModule,
-    FontAwesomeModule,
-    ConvertStringLabelToFontawesomeIconPipe,
-    ProgressSpinnerModule,
-    ToastModule
-  ],
-  templateUrl: './contact-form.component.html',
-  styleUrls: ['./contact-form.component.scss'],
-  encapsulation: ViewEncapsulation.None,
-  providers: [MessageService]
+    selector: 'app-contact-form',
+    imports: [
+        CommonModule,
+        ReactiveFormsModule,
+        FontAwesomeModule,
+        ConvertStringLabelToFontawesomeIconPipe,
+        ProgressSpinnerModule,
+        ToastModule
+    ],
+    templateUrl: './contact-form.component.html',
+    styleUrls: ['./contact-form.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    providers: [MessageService]
 })
 export class ContactFormComponent implements OnInit {
 

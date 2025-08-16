@@ -12,7 +12,6 @@ import { SecondaryHeroComponent } from '../../../../shared/components/secondary-
     selector: 'app-contact-container',
     templateUrl: './contact-container.component.html',
     styleUrls: ['./contact-container.component.scss'],
-    standalone: true,
     imports: [SecondaryHeroComponent, ContactFormComponent, AmbassadorBannerComponent, AsyncPipe]
 })
 export class ContactContainerComponent {

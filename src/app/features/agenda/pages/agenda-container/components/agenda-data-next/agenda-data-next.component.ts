@@ -4,15 +4,14 @@ import { RouterLink } from '@angular/router';
 import { Event } from 'src/app/shared/models/Agenda';
 
 @Component({
-  selector: 'app-agenda-data-next',
-  standalone: true,
-  imports: [
-    NgFor,
-    NgIf,
-    RouterLink
-  ],
-  templateUrl: './agenda-data-next.component.html',
-  styleUrls: ['./agenda-data-next.component.scss']
+    selector: 'app-agenda-data-next',
+    imports: [
+        NgFor,
+        NgIf,
+        RouterLink
+    ],
+    templateUrl: './agenda-data-next.component.html',
+    styleUrls: ['./agenda-data-next.component.scss']
 })
 
 export class AgendaDataNextComponent {

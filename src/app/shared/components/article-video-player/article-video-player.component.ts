@@ -3,13 +3,12 @@ import { Component, Input, OnChanges, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-article-video-player',
-  standalone: true,
-  imports: [
-    NgIf
-  ],
-  templateUrl: './article-video-player.component.html',
-  styleUrls: ['./article-video-player.component.scss']
+    selector: 'app-article-video-player',
+    imports: [
+        NgIf
+    ],
+    templateUrl: './article-video-player.component.html',
+    styleUrls: ['./article-video-player.component.scss']
 })
 export class ArticleVideoPlayerComponent implements OnInit, OnChanges {
 

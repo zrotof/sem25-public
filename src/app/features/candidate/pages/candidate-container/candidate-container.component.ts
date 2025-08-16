@@ -11,17 +11,16 @@ import { BiographyComponent } from './components/biography/biography.component';
 import { BiographyHeroComponent } from './components/biography-hero/biography-hero.component';
 
 @Component({
-  selector: 'app-candidate-container',
-  templateUrl: './candidate-container.component.html',
-  styleUrls: ['./candidate-container.component.scss'],
-  standalone: true,
-  imports: [
-    BiographyHeroComponent,
-    BiographyComponent, 
-    CampainVideoComponent, 
-    ProgramBannerComponent, 
-    AmbassadorBannerComponent, 
-  ]
+    selector: 'app-candidate-container',
+    templateUrl: './candidate-container.component.html',
+    styleUrls: ['./candidate-container.component.scss'],
+    imports: [
+        BiographyHeroComponent,
+        BiographyComponent,
+        CampainVideoComponent,
+        ProgramBannerComponent,
+        AmbassadorBannerComponent,
+    ]
 })
 
 export class CandidateContainerComponent implements OnInit {

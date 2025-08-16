@@ -9,18 +9,17 @@ import { VgBufferingModule } from '@videogular/ngx-videogular/buffering';
 import { VgStreamingModule } from '@videogular/ngx-videogular/streaming';
 
 @Component({
-  selector: 'app-live-video-player',
-  standalone: true,
-  imports: [
-    VgCoreModule,
-    VgControlsModule,
-    VgOverlayPlayModule,
-    VgBufferingModule,
-    VgStreamingModule,
-    NgIf
-  ],
-  templateUrl: './live-video-player.component.html',
-  styleUrls: ['./live-video-player.component.scss']
+    selector: 'app-live-video-player',
+    imports: [
+        VgCoreModule,
+        VgControlsModule,
+        VgOverlayPlayModule,
+        VgBufferingModule,
+        VgStreamingModule,
+        NgIf
+    ],
+    templateUrl: './live-video-player.component.html',
+    styleUrls: ['./live-video-player.component.scss']
 })
 export class LiveVideoPlayerComponent {
 

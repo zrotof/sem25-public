@@ -3,11 +3,10 @@ import { NgClass } from '@angular/common';
 import { ReplayMenu } from 'src/app/shared/models/replay';
 
 @Component({
-  selector: 'app-replay-menu-list',
-  standalone: true,
-  imports: [NgClass],
-  templateUrl: './replay-menu-list.component.html',
-  styleUrls: ['./replay-menu-list.component.scss']
+    selector: 'app-replay-menu-list',
+    imports: [NgClass],
+    templateUrl: './replay-menu-list.component.html',
+    styleUrls: ['./replay-menu-list.component.scss']
 })
 
 export class ReplayMenuListComponent implements OnChanges {

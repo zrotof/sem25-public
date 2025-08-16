@@ -7,18 +7,17 @@ import { YoutubeVideoPlayerModalComponent } from 'src/app/shared/components/yout
 import { NgOptimizedImage } from '@angular/common';
 
 @Component({
-  selector: 'app-campain-video',
-  standalone: true,
-  imports: [
-    FontAwesomeModule,
-    ConvertStringLabelToFontawesomeIconPipe,
-    RouterLink,
-    YoutubeVideoPlayerModalComponent,
-    NgOptimizedImage
-  ],
-  templateUrl: './campain-video.component.html',
-  styleUrls: ['./campain-video.component.scss'],
-  providers: [DialogService],
+    selector: 'app-campain-video',
+    imports: [
+        FontAwesomeModule,
+        ConvertStringLabelToFontawesomeIconPipe,
+        RouterLink,
+        YoutubeVideoPlayerModalComponent,
+        NgOptimizedImage
+    ],
+    templateUrl: './campain-video.component.html',
+    styleUrls: ['./campain-video.component.scss'],
+    providers: [DialogService]
 })
 export class CampainVideoComponent {
 

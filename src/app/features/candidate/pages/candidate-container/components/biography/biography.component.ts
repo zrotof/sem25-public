@@ -5,16 +5,15 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ConvertStringLabelToFontawesomeIconPipe } from 'src/app/shared/pipes/convertStringLabelToFontawesomeIcon/convert-string-label-to-fontawesome-icon.pipe';
 
 @Component({
-  selector: 'app-biography',
-  standalone: true,
-  templateUrl: './biography.component.html',
-  styleUrls: ['./biography.component.scss'],
-  imports: [
-    NgClass,
-    NgOptimizedImage,
-    FontAwesomeModule,
-    ConvertStringLabelToFontawesomeIconPipe
-  ]
+    selector: 'app-biography',
+    templateUrl: './biography.component.html',
+    styleUrls: ['./biography.component.scss'],
+    imports: [
+        NgClass,
+        NgOptimizedImage,
+        FontAwesomeModule,
+        ConvertStringLabelToFontawesomeIconPipe
+    ]
 })
 
 export class BiographyComponent {

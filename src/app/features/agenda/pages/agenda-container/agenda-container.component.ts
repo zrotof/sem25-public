@@ -12,17 +12,16 @@ import { Event } from 'src/app/shared/models/Agenda';
 import { Meta } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-agenda-container',
-  templateUrl: './agenda-container.component.html',
-  styleUrls: ['./agenda-container.component.scss'],
-  standalone: true,
-  imports: [
-    AsyncPipe,
-    SecondaryHeroComponent,
-    AgendaMenuItemsComponent,
-    AgendaDataNextComponent,
-    AgendaDataListComponent
-  ]
+    selector: 'app-agenda-container',
+    templateUrl: './agenda-container.component.html',
+    styleUrls: ['./agenda-container.component.scss'],
+    imports: [
+        AsyncPipe,
+        SecondaryHeroComponent,
+        AgendaMenuItemsComponent,
+        AgendaDataNextComponent,
+        AgendaDataListComponent
+    ]
 })
 export class AgendaContainerComponent implements OnInit {
 

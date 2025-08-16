@@ -7,16 +7,15 @@ import { ConvertStringLabelToFontawesomeIconPipe } from 'src/app/shared/pipes/co
 import { NgOptimizedImage } from '@angular/common';
 
 @Component({
-  selector: 'app-about-candidate',
-  standalone: true,
-  imports: [
-    RouterLink,
-    FontAwesomeModule,
-    ConvertStringLabelToFontawesomeIconPipe,
-    NgOptimizedImage
-],
-  templateUrl: './about-candidate.component.html',
-  styleUrls: ['./about-candidate.component.scss']
+    selector: 'app-about-candidate',
+    imports: [
+        RouterLink,
+        FontAwesomeModule,
+        ConvertStringLabelToFontawesomeIconPipe,
+        NgOptimizedImage
+    ],
+    templateUrl: './about-candidate.component.html',
+    styleUrls: ['./about-candidate.component.scss']
 })
 
 export class AboutCandidateComponent implements OnInit {

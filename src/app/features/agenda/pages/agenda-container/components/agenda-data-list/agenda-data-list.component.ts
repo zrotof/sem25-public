@@ -3,14 +3,13 @@ import { NgFor } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-agenda-data-list',
-  standalone: true,
-  imports: [
-    RouterLink,
-    NgFor
-  ],
-  templateUrl: './agenda-data-list.component.html',
-  styleUrls: ['./agenda-data-list.component.scss']
+    selector: 'app-agenda-data-list',
+    imports: [
+        RouterLink,
+        NgFor
+    ],
+    templateUrl: './agenda-data-list.component.html',
+    styleUrls: ['./agenda-data-list.component.scss']
 })
 export class AgendaDataListComponent {
 

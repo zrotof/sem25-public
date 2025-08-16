@@ -8,17 +8,16 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BlogType } from '../../enums/blog-type';
 
 @Component({
-  selector: 'app-new-item-no-descritpion',
-  standalone: true,
-  imports: [
-    RouterLink,
-    ConvertTimeZoneToDatePipe,
-    ConvertStringLabelToFontawesomeIconPipe,
-    FontAwesomeModule,
-    NgOptimizedImage
-  ],
-  templateUrl: './new-item-no-descritpion.component.html',
-  styleUrls: ['./new-item-no-descritpion.component.scss']
+    selector: 'app-new-item-no-descritpion',
+    imports: [
+        RouterLink,
+        ConvertTimeZoneToDatePipe,
+        ConvertStringLabelToFontawesomeIconPipe,
+        FontAwesomeModule,
+        NgOptimizedImage
+    ],
+    templateUrl: './new-item-no-descritpion.component.html',
+    styleUrls: ['./new-item-no-descritpion.component.scss']
 })
 export class NewItemNoDescritpionComponent {
 

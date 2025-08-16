@@ -5,18 +5,17 @@ import { ConvertStringLabelToFontawesomeIconPipe } from '../../pipes/convertStri
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @Component({
-  selector: 'app-secondary-hero',
-  standalone: true,
-  imports: [
-    NgFor,
-    NgIf,
-    NgOptimizedImage,
-    RouterLink,
-    ConvertStringLabelToFontawesomeIconPipe,
-    FontAwesomeModule
-  ],
-  templateUrl: './secondary-hero.component.html',
-  styleUrls: ['./secondary-hero.component.scss']
+    selector: 'app-secondary-hero',
+    imports: [
+        NgFor,
+        NgIf,
+        NgOptimizedImage,
+        RouterLink,
+        ConvertStringLabelToFontawesomeIconPipe,
+        FontAwesomeModule
+    ],
+    templateUrl: './secondary-hero.component.html',
+    styleUrls: ['./secondary-hero.component.scss']
 })
 export class SecondaryHeroComponent {
 

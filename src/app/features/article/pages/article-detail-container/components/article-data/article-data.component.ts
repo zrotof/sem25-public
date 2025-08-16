@@ -6,17 +6,16 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ArticleVideoPlayerComponent } from '../../../../../../shared/components/article-video-player/article-video-player.component';
 
 @Component({
-  selector: 'app-article-data',
-  standalone: true,
-  imports: [
-    ConvertTimeZoneToDatePipe,
-    ConvertStringLabelToFontawesomeIconPipe,
-    FontAwesomeModule,
-    ArticleVideoPlayerComponent
-  ],
-  templateUrl: './article-data.component.html',
-  styleUrls: ['./article-data.component.scss'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'app-article-data',
+    imports: [
+        ConvertTimeZoneToDatePipe,
+        ConvertStringLabelToFontawesomeIconPipe,
+        FontAwesomeModule,
+        ArticleVideoPlayerComponent
+    ],
+    templateUrl: './article-data.component.html',
+    styleUrls: ['./article-data.component.scss'],
+    encapsulation: ViewEncapsulation.None
 })
 export class ArticleDataComponent {
   @Input() data !: Article | null ;

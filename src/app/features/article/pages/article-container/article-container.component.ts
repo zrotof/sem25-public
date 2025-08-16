@@ -14,12 +14,11 @@ import { SecondaryHeroComponent } from '../../../../shared/components/secondary-
     selector: 'app-article-container',
     templateUrl: './article-container.component.html',
     styleUrls: ['./article-container.component.scss'],
-    standalone: true,
     imports: [
-      AsyncPipe,
-      SecondaryHeroComponent, 
-      ArticleListMenuComponent, 
-      ArticleListItemsComponent, 
+        AsyncPipe,
+        SecondaryHeroComponent,
+        ArticleListMenuComponent,
+        ArticleListItemsComponent,
     ]
 })
 

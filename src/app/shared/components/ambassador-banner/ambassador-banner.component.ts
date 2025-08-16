@@ -4,14 +4,13 @@ import { RouterLink } from '@angular/router';
 import { InputTextModule } from 'primeng/inputtext';
 
 @Component({
-  selector: 'app-ambassador-banner',
-  standalone: true,
-  imports: [
-    RouterLink,
-    InputTextModule
-  ],
-  templateUrl: './ambassador-banner.component.html',
-  styleUrls: ['./ambassador-banner.component.scss']
+    selector: 'app-ambassador-banner',
+    imports: [
+        RouterLink,
+        InputTextModule
+    ],
+    templateUrl: './ambassador-banner.component.html',
+    styleUrls: ['./ambassador-banner.component.scss']
 })
 export class AmbassadorBannerComponent {
 

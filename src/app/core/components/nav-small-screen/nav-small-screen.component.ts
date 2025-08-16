@@ -7,16 +7,15 @@ import { ConvertStringLabelToFontawesomeIconPipe } from 'src/app/shared/pipes/co
 import { UtilsService } from 'src/app/shared/services/utils/utils.service';
 
 @Component({
-  selector: 'app-nav-small-screen',
-  templateUrl: './nav-small-screen.component.html',
-  styleUrls: ['./nav-small-screen.component.scss'],
-  standalone : true,
-  imports : [
-    RouterLinkActive,
-    RouterLink,
-    FontAwesomeModule,
-    ConvertStringLabelToFontawesomeIconPipe
-  ]
+    selector: 'app-nav-small-screen',
+    templateUrl: './nav-small-screen.component.html',
+    styleUrls: ['./nav-small-screen.component.scss'],
+    imports: [
+        RouterLinkActive,
+        RouterLink,
+        FontAwesomeModule,
+        ConvertStringLabelToFontawesomeIconPipe
+    ]
 })
 
 export class NavSmallScreenComponent implements OnInit {

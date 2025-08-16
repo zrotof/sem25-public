@@ -4,14 +4,13 @@ import { RouterLink } from '@angular/router';
 import { NgOptimizedImage } from '@angular/common';
 
 @Component({
-  selector: 'app-campain-counter-event',
-  standalone: true,
-  templateUrl: './campain-counter-event.component.html',
-  styleUrls: ['./campain-counter-event.component.scss'],
-  imports : [
-    RouterLink,
-    NgOptimizedImage
-  ]
+    selector: 'app-campain-counter-event',
+    templateUrl: './campain-counter-event.component.html',
+    styleUrls: ['./campain-counter-event.component.scss'],
+    imports: [
+        RouterLink,
+        NgOptimizedImage
+    ]
 })
 export class CampainCounterEventComponent implements OnInit{
 

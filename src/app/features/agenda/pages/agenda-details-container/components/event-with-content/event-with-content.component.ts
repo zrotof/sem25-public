@@ -3,14 +3,13 @@ import { Event } from 'src/app/shared/models/Agenda';
 import { ArticleVideoPlayerComponent } from 'src/app/shared/components/article-video-player/article-video-player.component';
 
 @Component({
-  selector: 'app-event-with-content',
-  standalone: true,
-  imports: [
-    ArticleVideoPlayerComponent
-  ],
-  templateUrl: './event-with-content.component.html',
-  styleUrls: ['./event-with-content.component.scss'],
-  encapsulation : ViewEncapsulation.None
+    selector: 'app-event-with-content',
+    imports: [
+        ArticleVideoPlayerComponent
+    ],
+    templateUrl: './event-with-content.component.html',
+    styleUrls: ['./event-with-content.component.scss'],
+    encapsulation: ViewEncapsulation.None
 })
 export class EventWithContentComponent {
 
