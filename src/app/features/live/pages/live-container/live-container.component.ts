@@ -9,13 +9,16 @@ import { ReplayService } from 'src/app/shared/services/replay/replay.service';
 import { AsyncPipe } from '@angular/common';
 import { AmbassadorBannerComponent } from 'src/app/shared/components/ambassador-banner/ambassador-banner.component';
 import { AmbassadorBanner } from 'src/app/shared/models/ambassador-banner';
-import { DialogService, DynamicDialogModule, DynamicDialogRef } from 'primeng/dynamicdialog';
+import { DialogService, DynamicDialog, DynamicDialogRef } from 'primeng/dynamicdialog';
 import { YoutubeVideoPlayerModalComponent } from 'src/app/shared/components/youtube-video-player-modal/youtube-video-player-modal.component';
 import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-live-container',
   standalone: true,
+  templateUrl: './live-container.component.html',
+  styleUrls: ['./live-container.component.scss'],
+  providers: [MessageService, DialogService],
   imports: [
     AsyncPipe,
     LiveVideoPlayerComponent,
@@ -23,57 +26,54 @@ import { MessageService } from 'primeng/api';
     VideoListComponent,
     AmbassadorBannerComponent,
     YoutubeVideoPlayerModalComponent,
-    DynamicDialogModule
-  ],
-  templateUrl: './live-container.component.html',
-  styleUrls: ['./live-container.component.scss'],
-  providers:[MessageService, DialogService]
+    DynamicDialog
+  ]
 })
 
-export class LiveContainerComponent implements OnInit{
+export class LiveContainerComponent implements OnInit {
 
   liveStreamingLink = environment.streamingLink;
   menusList$ !: Observable<ReplayMenu[]>;
-  videoList$ !:Observable<YoutuveVideoItem[]>
+  videoList$ !: Observable<YoutuveVideoItem[]>
   ambassadorBanner !: AmbassadorBanner;
 
   ref !: DynamicDialogRef;
 
   constructor(
     public dialogService: DialogService,
-    private replayService : ReplayService
-  ){}
+    private replayService: ReplayService
+  ) { }
 
   ngOnInit(): void {
     this.getMenuList();
     this.initAmbassadorBanner();
   }
 
-  getMenuList() : void{
+  getMenuList(): void {
     this.menusList$ = this.replayService.getReplayMenuList();
   }
 
-  getYoutubeVideoListByReplayId($event : string) : void{
+  getYoutubeVideoListByReplayId($event: string): void {
     const playlistId = $event;
     this.videoList$ = this.replayService.getYoutubeVideoListByPlaylistId(playlistId)
   }
 
-  onOpenYoutubeVideo($event : any): void{
+  onOpenYoutubeVideo($event: any): void {
     this.ref = this.dialogService.open(YoutubeVideoPlayerModalComponent, {
       data: {
         youtubeVideo: $event
       },
       baseZIndex: 10000,
       showHeader: false,
-      maskStyleClass : "youtube-video-dialog-mask"
+      maskStyleClass: "youtube-video-dialog-mask"
     });
   }
 
-  initAmbassadorBanner() : void {
+  initAmbassadorBanner(): void {
     this.ambassadorBanner = {
-      text : "Passez à l'action et devenez un Ambassadeur de Campagne. Rejoignez notre communauté passionnée, partagez notre vision, soyez le moteur du changement.",
-      image : "../../../../assets/img/campain-ambassador/je-soutiens-serge-espoir-matomba.png",
-      alt : ''
+      text: "Passez à l'action et devenez un Ambassadeur de Campagne. Rejoignez notre communauté passionnée, partagez notre vision, soyez le moteur du changement.",
+      image: "../../../../assets/img/campain-ambassador/je-soutiens-serge-espoir-matomba.png",
+      alt: ''
     }
   }
 

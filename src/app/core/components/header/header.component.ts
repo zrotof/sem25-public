@@ -1,5 +1,5 @@
 import { Component, ElementRef, HostListener, OnInit, Renderer2, ViewChild, ViewEncapsulation } from '@angular/core';
-import { ActivationEnd, Router } from '@angular/router';
+import { ActivationEnd, Router, RouterLink, RouterLinkActive } from '@angular/router';
 
 import { NgClass, NgOptimizedImage } from '@angular/common';
 
@@ -21,7 +21,9 @@ import { NavSmallScreenComponent } from '../nav-small-screen/nav-small-screen.co
     NgOptimizedImage,
     MenuModule,
     DialogModule,
-    NavSmallScreenComponent
+    NavSmallScreenComponent,
+    RouterLink,
+    RouterLinkActive
   ]
 })
 

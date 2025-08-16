@@ -23,7 +23,7 @@ header {
             object-fit: cover;
         }
 
-        .blue-logo{
+        .blue-logo {
             display: none;
         }
 
@@ -85,7 +85,7 @@ header {
                     }
 
                     .active-link {
-                        &::before{
+                        &::before {
                             left: 0;
                         }
                     }
@@ -176,6 +176,57 @@ header {
     }
 }
 
+.navbar-background-on-scroll {
+    background-color: var(--project-white-primary-color);
+    box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+    height: 6rem;
+    transition: all 0.5s ease-in-out;
+
+    .content {
+
+        .blue-logo {
+            display: block;
+        }
+
+        .white-logo {
+            display: none;
+        }
+
+        nav {
+            ul {
+                li {
+                    a {
+                        color: var(--project-blue-primary-color);
+                        font-weight: 500;
+
+                        &::before {
+                            background: var(--project-blue-primary-color);
+                        }
+                    }
+
+                    .active-link {
+                        &::before {
+                            left: 0;
+                        }
+                    }
+                }
+            }
+
+            .get-involved {
+                font-weight: 500;
+                color: var(--project-blue-primary-color) !important;
+                border: 2px solid var(--project-blue-primary-color);
+            }
+        }
+
+        .burger {
+            span {
+                background: var(--project-blue-primary-color);
+            }
+        }
+    }
+}
+
 .mask-nav-small-screen {
     z-index: 1 !important;
     background-color: var(--project-blue-secondary-color);
@@ -206,7 +257,6 @@ header {
     }
 }
 
-
 @media all and (max-width: 1244px) {
     header {
         .content {
@@ -231,7 +281,7 @@ header {
             nav {
                 ul {
                     gap: 1.5rem;
-                    
+
                     li {
                         a {
                             font-size: 0.9rem;

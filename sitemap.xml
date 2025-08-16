@@ -6,32 +6,39 @@
     http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
   >
     <url>
-      <loc>https://amadou-ba.sn/</loc>
-      <lastmod>2023-10-23T17:54:47+00:00</lastmod>
+      <loc>https://matomba2025.com/</loc>
+      <lastmod>2025-08-16T10:54:47+00:00</lastmod>
+      <changefreq>weekly</changefreq>
       <priority>1</priority>
     </url>
 
     <url>
-      <loc>https://amadou-ba.sn/le-candidat</loc>
-      <lastmod>2023-10-23T17:54:47+00:00</lastmod>
+      <loc>https://matomba2025.com/le-candidat</loc>
+      <lastmod>2025-08-16T10:54:47+00:00</lastmod>
       <priority>0.8</priority>
     </url>
 
     <url>
-      <loc>https://amadou-ba.sn/le-programme</loc>
-      <lastmod>2023-10-23T17:54:47+00:00</lastmod>
+      <loc>https://matomba2025.com/le-programme</loc>
+      <lastmod>2025-08-16T10:54:47+00:00</lastmod>
       <priority>0.8</priority>
     </url>
 
     <url>
-      <loc>https://amadou-ba.sn/articles</loc>
-      <lastmod>2023-10-23T17:54:47+00:00</lastmod>
+      <loc>https://matomba2025.com/articles</loc>
+      <lastmod>2025-08-16T10:54:47+00:00</lastmod>
       <priority>0.8</priority>
     </url>
     
     <url>
-      <loc>https://amadou-ba.sn/agenda</loc>
-      <lastmod>2023-10-23T17:54:47+00:00</lastmod>
+      <loc>https://matomba2025.com/agenda</loc>
+      <lastmod>2025-08-16T10:54:47+00:00</lastmod>
+      <priority>0.8</priority>
+    </url>
+
+    <url>
+      <loc>https://matomba2025.com/devenir-ambassadeur-de-campagne</loc>
+      <lastmod>2025-08-16T10:54:47+00:00</lastmod>
       <priority>0.8</priority>
     </url>
   </urlset>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Article } from 'src/app/shared/models/blog';
 import { BlogService } from 'src/app/shared/services/blog/blog.service';
@@ -10,6 +10,8 @@ import { ProgramBannerComponent } from '../../../../shared/components/program-ba
 import { AboutCandidateComponent } from './components/about-candidate/about-candidate.component';
 import { CampainCounterEventComponent } from './components/campain-counter-event/campain-counter-event.component';
 import { SwipingHeroBannerComponent } from './components/swiping-hero-banner/swiping-hero-banner.component';
+import { SeoService } from 'src/app/shared/services/seo/seo.service';
+import { SEO_DATA } from '../../../../shared/constants/seo.constants';
 
 @Component({
     selector: 'app-home-container',
@@ -29,16 +31,24 @@ import { SwipingHeroBannerComponent } from './components/swiping-hero-banner/swi
 })
 export class HomeContainerComponent implements OnInit {
 
+  
+  private blogService = inject(BlogService);
+  private seoService = inject(SeoService);
+
   lastNews$ !: Observable<Article[]>;
 
-  constructor( private blogService : BlogService){}
-
   ngOnInit(): void {
-      this.getLastNews();
+    this.setSeoTags();
+    this.getLastNews();
   }
 
-  getLastNews() : void{
+  getLastNews() : void {
     const queryParams = "limit=7";
     this.lastNews$ = this.blogService.getBlogArticlesByRubricId(queryParams);
+  }
+
+  setSeoTags() {
+    const seo = SEO_DATA['home'];
+    console.log(seo);
   }
 }
